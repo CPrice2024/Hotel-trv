@@ -1,4 +1,4 @@
-import { Suspense, lazy } from "react";
+import { Suspense, lazy, useEffect, useState, type ReactNode } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { SupportChat } from "../components/guest/SupportChat";
 
@@ -37,13 +37,37 @@ const MyBookingsPage = lazy(() =>
 export function AppRouter() {
   return (
     <BrowserRouter>
+      <NavigationPages />
+      <GuestSupportChat />
+    </BrowserRouter>
+  );
+}
+
+function PageLoader() {
+  return (
+    <div className="navigation-loader" role="status" aria-live="polite">
+      <span className="navigation-loader-spinner" aria-hidden="true" />
+      <span>Loading…</span>
+    </div>
+  );
+}
+
+function PageTransition({ children }: { children: ReactNode }) {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = window.setTimeout(() => setLoading(false), 250);
+    return () => window.clearTimeout(timer);
+  }, []);
+  return <>{loading && <PageLoader />}{children}</>;
+}
+
+function NavigationPages() {
+  const location = useLocation();
+  return (
       <Suspense
-        fallback={
-          <div className="page-loading" role="status">
-            Loading hotel website…
-          </div>
-        }
+        fallback={<PageLoader />}
       >
+        <PageTransition key={location.pathname}>
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<RoomsPage />} />
@@ -56,9 +80,8 @@ export function AppRouter() {
           <Route path="/admin/*" element={<AdminPage />} />
           <Route path="*" element={<HomePage />} />
         </Routes>
+        </PageTransition>
       </Suspense>
-      <GuestSupportChat />
-    </BrowserRouter>
   );
 }
 

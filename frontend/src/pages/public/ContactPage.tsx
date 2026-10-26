@@ -44,7 +44,7 @@ export function ContactPage() {
   const config = configQuery.data;
   const hotelName = config?.name ?? "Ayele Degu International Hotel";
   const hotelPhone = config?.phone ?? "+251-11-123-4567";
-  const hotelEmail = config?.email ?? "redhamikael@gmail.com";
+  const hotelEmail = config?.email ?? "test@gmail.com";
   const hotelAddress = config?.address ?? "Dilla Town, Gedeo Zone, Ethiopia";
   const directionsUrl = config?.directionsUrl ?? "https://maps.google.com/?q=Dilla%20Town%20Ethiopia";
   const mapEmbedUrl = `https://www.google.com/maps?q=${encodeURIComponent(hotelAddress)}&output=embed`;

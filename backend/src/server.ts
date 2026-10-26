@@ -28,7 +28,7 @@ import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
 import { renderBookingEmail } from "./lib/bookingEmail.js";
 import { createAdminRouter } from "./admin.js";
-import { createChapaReference } from "./lib/bookingReference.js";
+import { createChapaReference, readChapaReference } from "./lib/bookingReference.js";
 import { Booking, InventoryNight, Room, User } from "./db/models.js";
 import type { BookingRecord } from "./db/models.js";
 
@@ -1236,7 +1236,7 @@ app.post(
     booking.holdExpiresAt = new Date(Date.now() + 31 * 60 * 1000);
     await booking.save();
     const txRef = createChapaReference();
-    const origin = process.env.PUBLIC_API_URL ?? `http://localhost:${port}`;
+    const origin = (process.env.PUBLIC_API_URL ?? `http://localhost:${port}`).replace(/\/+$/, "");
     const chapaResponse = await fetch("https://api.chapa.co/v1/transaction/initialize", {
       method: "POST",
       headers: {
@@ -1252,7 +1252,7 @@ app.post(
         phone_number: booking.guestPhone,
         tx_ref: txRef,
         callback_url: `${origin}/api/payments/chapa/webhook`,
-        return_url: `${origin}/api/payments/chapa/return`,
+        return_url: `${origin}/api/payments/chapa/return?tx_ref=${encodeURIComponent(txRef)}`,
         customization: {
           title: hotelName.slice(0, 16),
           description: `Booking ${booking._id.toString().slice(-8)}`,
@@ -1358,13 +1358,13 @@ async function settleStripePayment(
 app.get(
   "/api/payments/chapa/return",
   asyncRoute(async (request, response) => {
-    const txRef = z.string().min(1).safeParse(request.query.tx_ref);
-    if (!txRef.success) {
+    const txRef = readChapaReference(request.query);
+    if (!txRef) {
       response.redirect(getFrontendUrl("/booking/result?status=failed"));
       return;
     }
-    const email = await settleChapaPayment(txRef.data);
-    const booking = await Booking.findOne({ paymentReference: txRef.data }).select("_id");
+    const email = await settleChapaPayment(txRef);
+    const booking = await Booking.findOne({ paymentReference: txRef, paymentGateway: "chapa" }).select("_id");
     if (!email || !booking) {
       sendPaymentRedirect(response, "failed", booking?._id.toString() ?? "");
       return;
@@ -1378,20 +1378,23 @@ app.get(
   }),
 );
 
-app.post(
+const chapaCallback = asyncRoute(handleChapaCallback);
+app.route(
   "/api/payments/chapa/webhook",
-  asyncRoute(async (request, response) => {
-    const input = z.object({ tx_ref: z.string().min(1) }).safeParse(request.body);
-    if (!input.success) {
+).get(chapaCallback).post(chapaCallback);
+
+async function handleChapaCallback(request: Request, response: Response) {
+    const txRef = readChapaReference(request.method === "GET" ? request.query : request.body);
+    if (!txRef) {
       response.status(400).json({ error: "Missing Chapa transaction reference." });
       return;
     }
-    const guestEmail = await settleChapaPayment(input.data.tx_ref);
+    const guestEmail = await settleChapaPayment(txRef);
     if (!guestEmail) {
       response.status(400).json({ error: "Chapa transaction is not verified as paid." });
       return;
     }
-    const booking = await Booking.findOne({ paymentReference: input.data.tx_ref }).select("_id");
+    const booking = await Booking.findOne({ paymentReference: txRef, paymentGateway: "chapa" }).select("_id");
     if (booking) {
       try {
         await sendBookingConfirmation(booking._id.toString());
@@ -1400,8 +1403,7 @@ app.post(
       }
     }
     response.status(200).json({ received: true });
-  }),
-);
+}
 
 app.post(
   "/api/payments/stripe/webhook",
