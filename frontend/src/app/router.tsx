@@ -1,4 +1,4 @@
-import { Suspense, lazy, useEffect, useState, type ReactNode } from "react";
+import { Suspense, lazy, useDeferredValue, useEffect, useState, type ReactNode } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import { SupportChat } from "../components/guest/SupportChat";
 
@@ -46,8 +46,11 @@ export function AppRouter() {
 function PageLoader() {
   return (
     <div className="navigation-loader" role="status" aria-live="polite">
-      <span className="navigation-loader-spinner" aria-hidden="true" />
-      <span>Loading…</span>
+      <span className="navigation-loader-mark" aria-hidden="true">
+        <span className="navigation-loader-letter">A</span>
+        <span className="navigation-loader-shadow" />
+      </span>
+      <span className="sr-only">Loading page…</span>
     </div>
   );
 }
@@ -55,7 +58,7 @@ function PageLoader() {
 function PageTransition({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    const timer = window.setTimeout(() => setLoading(false), 250);
+    const timer = window.setTimeout(() => setLoading(false), 550);
     return () => window.clearTimeout(timer);
   }, []);
   return <>{loading && <PageLoader />}{children}</>;
@@ -63,12 +66,15 @@ function PageTransition({ children }: { children: ReactNode }) {
 
 function NavigationPages() {
   const location = useLocation();
+  const displayedLocation = useDeferredValue(location);
   return (
+    <>
+      {location !== displayedLocation && <PageLoader />}
       <Suspense
         fallback={<PageLoader />}
       >
-        <PageTransition key={location.pathname}>
-        <Routes>
+        <PageTransition key={displayedLocation.pathname}>
+        <Routes location={displayedLocation}>
           <Route path="/" element={<HomePage />} />
           <Route path="/rooms" element={<RoomsPage />} />
           <Route path="/services" element={<ServicesPage />} />
@@ -82,6 +88,7 @@ function NavigationPages() {
         </Routes>
         </PageTransition>
       </Suspense>
+    </>
   );
 }
 

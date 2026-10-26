@@ -793,26 +793,51 @@ h2 em {
   align-items: center;
   justify-content: center;
   gap: 16px;
-  background: var(--cream);
-  color: var(--forest);
+  background: rgb(0 0 0 / 18%);
+  color: var(--gold);
   font-size: 13px;
 }
 
-.navigation-loader-spinner {
-  width: 36px;
-  height: 36px;
-  border: 3px solid var(--line);
-  border-top-color: var(--forest);
-  border-radius: 50%;
-  animation: navigation-spin 0.7s linear infinite;
+.navigation-loader-mark {
+  position: relative;
+  display: grid;
+  place-items: center;
+  width: 110px;
+  height: 130px;
 }
 
-@keyframes navigation-spin {
-  to { transform: rotate(360deg); }
+.navigation-loader-letter {
+  font-family: var(--serif);
+  font-size: 86px;
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: 0 3px 12px rgb(0 0 0 / 30%);
+  animation: navigation-letter-float 1.4s ease-in-out infinite;
+}
+
+.navigation-loader-shadow {
+  position: absolute;
+  bottom: 7px;
+  width: 56px;
+  height: 9px;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 32%);
+  filter: blur(4px);
+  animation: navigation-shadow-float 1.4s ease-in-out infinite;
+}
+
+@keyframes navigation-letter-float {
+  0%, 100% { transform: translateY(3px); }
+  50% { transform: translateY(-13px); }
+}
+
+@keyframes navigation-shadow-float {
+  0%, 100% { transform: scaleX(1); opacity: 0.65; }
+  50% { transform: scaleX(0.65); opacity: 0.3; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .navigation-loader-spinner { animation: none; }
+  .navigation-loader-letter, .navigation-loader-shadow { animation: none; }
 }
 
 .page-loading {
@@ -1534,6 +1559,62 @@ td small {
   background: var(--paper, #fffefa);
 }
 
+.receipt-download-area {
+  margin-top: 28px;
+  text-align: left;
+  min-width: 0;
+}
+
+.booking-receipt {
+  padding: clamp(18px, 4vw, 32px);
+  border: 1px solid var(--line);
+  background: var(--paper);
+  color: var(--ink);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+
+.receipt-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding-bottom: 24px;
+  border-bottom: 2px solid var(--forest);
+}
+
+.receipt-header h2 { margin: 5px 0 0; font-size: 20px; line-height: 1.3; }
+.receipt-header .brand-mark { flex-shrink: 0; }
+.receipt-paid { margin-left: auto; padding: 5px 12px; border-radius: 20px; background: #e7f0e9; color: #245c3a; font-size: 12px; font-weight: 700; }
+.receipt-reference { display: grid; gap: 5px; padding: 20px 0; border-bottom: 1px solid var(--line); }
+.receipt-reference > span, .receipt-payment span { color: var(--muted); }
+.receipt-details { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; padding: 24px 0; }
+.receipt-details h3 { margin: 0 0 10px; color: var(--forest); font-size: 14px; font-weight: 700; }
+.receipt-details p { margin: 4px 0; }
+.receipt-payment > div { display: grid; grid-template-columns: minmax(100px, 1fr) minmax(0, 2fr); gap: 20px; padding: 13px 0; border-top: 1px solid var(--line); }
+.receipt-payment strong { text-align: right; }
+.receipt-payment .receipt-total { margin-top: 12px; padding: 18px; background: var(--forest); color: var(--paper); font-size: 18px; }
+.receipt-total span { color: inherit; }
+.receipt-footer { display: grid; gap: 8px; padding-top: 24px; font-size: 12px; color: var(--muted); }
+.receipt-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+
+@media (max-width: 560px) {
+  .receipt-header { flex-wrap: wrap; }
+  .receipt-header .brand-mark { display: none; }
+  .receipt-header h2 { font-size: 17px; }
+  .receipt-details { grid-template-columns: 1fr; gap: 18px; }
+  .receipt-payment > div { grid-template-columns: 1fr; gap: 4px; }
+  .receipt-payment strong { text-align: left; }
+  .receipt-actions .button { width: 100%; }
+}
+
+@media print {
+  body * { visibility: hidden !important; }
+  .booking-receipt, .booking-receipt * { visibility: visible !important; }
+  .booking-receipt { position: absolute; inset: 0 auto auto 0; width: 100%; margin: 0; border: 0; background: white; print-color-adjust: exact; -webkit-print-color-adjust: exact; }
+  .receipt-actions, .result-actions { display: none !important; }
+}
+
 .receipt-email-form {
   display: grid;
   gap: 10px;
@@ -2113,6 +2194,15 @@ td small {
 .currency-choice { border-radius: 8px; transition: box-shadow 150ms ease, background 150ms ease; }
 .currency-choice:focus-within { outline: 2px solid var(--forest); outline-offset: 3px; }
 .payment-provider-name { font-size: 24px; font-weight: 800; letter-spacing: -1px; }
+.currency-choice .payment-card-brands { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 7px 0 3px; }
+.currency-choice .payment-card-badge { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; height: 32px; min-width: 48px; padding: 4px 7px; gap: 4px; border: 1px solid #e1e4eb; border-radius: 5px; background: white; line-height: 1; box-shadow: 0 1px 2px rgb(0 0 0 / 4%); }
+.payment-card-visa { color: #1434cb; font-size: 18px; font-weight: 900; font-style: italic; letter-spacing: -1px; }
+.payment-card-mastercard svg { width: 42px; height: 26px; }
+.payment-card-amex { color: #006fcf; font-size: 12px; font-weight: 800; letter-spacing: -0.5px; }
+.payment-card-bank { color: #173b72; }
+.payment-card-bank svg { width: 18px; height: 18px; color: #c92339; }
+.currency-choice .payment-card-bank > span { display: block; font-size: 8px; font-weight: 700; line-height: 1.2; }
+.currency-choice > span { min-width: 0; }
 .payment-submit-chapa { background: #80c442; color: #193600; border-color: #315907; }
 .payment-submit-stripe { background: #635bff; color: white; border-color: #635bff; }
 .payment-submit:hover { filter: brightness(0.94); }

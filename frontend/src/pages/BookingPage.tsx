@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery } from "@tanstack/react-query";
-import { ArrowLeft, ArrowRight, ArrowUpRight, LoaderCircle } from "lucide-react";
+import { ArrowLeft, ArrowRight, ArrowUpRight, Landmark, LoaderCircle } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link, useLocation, useSearchParams } from "react-router-dom";
@@ -670,6 +670,19 @@ export function BookingPage() {
                       <span>
                         <strong className="payment-provider-name">stripe</strong>
                         <small>{stripeAvailable ? "Pay in US dollars (USD)" : "Currently unavailable"}</small>
+                        <span className="payment-card-brands" aria-label="Card networks and issuer examples">
+                          <span className="payment-card-badge payment-card-visa" aria-label="Visa">VISA</span>
+                          <span className="payment-card-badge payment-card-mastercard" aria-label="Mastercard">
+                            <svg viewBox="0 0 48 30" aria-hidden="true"><circle cx="18" cy="15" r="12" fill="#eb001b" /><circle cx="30" cy="15" r="12" fill="#f79e1b" fillOpacity="0.88" /></svg>
+                            <span className="sr-only">Mastercard</span>
+                          </span>
+                          <span className="payment-card-badge payment-card-amex" aria-label="American Express">AMEX</span>
+                          <span className="payment-card-badge payment-card-bank" aria-label="Bank of America card issuer">
+                            <Landmark aria-hidden="true" />
+                            <span>Bank of<br />America</span>
+                          </span>
+                        </span>
+                        <small>Bank-issued cards use their card network. Available methods appear at checkout.</small>
                       </span>
                     </label>
                   </div>

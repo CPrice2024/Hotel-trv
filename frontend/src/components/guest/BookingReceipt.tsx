@@ -1,5 +1,5 @@
-import { toPng } from "html-to-image";
-import { useRef, useState } from "react";
+
+
 import { Download } from "lucide-react";
 import type { GuestBooking } from "../../api";
 
@@ -27,39 +27,13 @@ export function BookingReceipt({
   booking,
   hotelName = "Ayele Degu International Hotel",
 }: BookingReceiptProps) {
-  const receiptRef = useRef<HTMLElement>(null);
-  const [isSaving, setIsSaving] = useState(false);
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const downloadReceipt = async () => {
-    if (!receiptRef.current) return;
-    setIsSaving(true);
-    setErrorMessage("");
-    try {
-      const dataUrl = await toPng(receiptRef.current, {
-        cacheBust: true,
-        pixelRatio: 2,
-        backgroundColor: "#fffefa",
-      });
-      const link = document.createElement("a");
-      link.download = `ayele-hotel-receipt-${booking.id}.png`;
-      link.href = dataUrl;
-      link.click();
-    } catch (error) {
-      console.error("Could not create booking receipt image:", error);
-      setErrorMessage("We could not create the receipt image. Please try again or print this page.");
-    } finally {
-      setIsSaving(false);
-    }
-  };
-
   return (
     <div className="receipt-download-area">
-      <article className="booking-receipt" ref={receiptRef}>
+      <article className="booking-receipt">
         <header className="receipt-header">
           <span className="brand-mark" aria-hidden="true">A</span>
           <div>
-            <span className="eyebrow">PAYMENT RECEIPT</span>
+            <span className="eyebrow">BOOKING SLIP</span>
             <h2>{hotelName}</h2>
           </div>
           <span className="receipt-paid">PAID</span>
@@ -108,14 +82,12 @@ export function BookingReceipt({
         <button
           className="button button-dark"
           type="button"
-          onClick={() => void downloadReceipt()}
-          disabled={isSaving}
+          onClick={() => window.print()}
         >
           <Download aria-hidden="true" />
-          {isSaving ? "Preparing receipt…" : "Download receipt screenshot"}
+          Download booking slip
         </button>
       </div>
-      {errorMessage && <p className="form-message" role="alert">{errorMessage}</p>}
     </div>
   );
 }

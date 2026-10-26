@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState, type FormEvent } from "react";
-import { MessageCircle, Send, Trash2, X } from "lucide-react";
+import { ArrowUp, MessageCircle, Send, Trash2, X } from "lucide-react";
 import { api, type HotelConfig, type Room } from "../../api";
 import { formatEtb, useUsdToEtbRate } from "../../hooks/useUsdToEtbRate";
 import "./SupportChat.css";
@@ -181,6 +181,13 @@ function getSavedLanguage(): Language {
 
 export function SupportChat() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showBackToTop, setShowBackToTop] = useState(false);
+  useEffect(() => {
+    const updateScroll = () => setShowBackToTop(window.scrollY > 400);
+    updateScroll();
+    window.addEventListener("scroll", updateScroll, { passive: true });
+    return () => window.removeEventListener("scroll", updateScroll);
+  }, []);
   const [language, setLanguage] = useState<Language>(getSavedLanguage);
   const [savedHistory] = useState(readSavedHistory);
   const [messages, setMessages] = useState<ChatMessage[]>(savedHistory.messages);
@@ -350,6 +357,21 @@ export function SupportChat() {
         </section>
       )}
 
+      <div className="support-floating-actions">
+      {showBackToTop && !isOpen && (
+        <button
+          className="back-to-top"
+          type="button"
+          aria-label="Back to top"
+          title="Back to top"
+          onClick={() => window.scrollTo({
+            top: 0,
+            behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+          })}
+        >
+          <ArrowUp aria-hidden="true" />
+        </button>
+      )}
       <button
         className={`support-chat-launcher${isOpen ? " is-open" : ""}`}
         type="button"
@@ -357,8 +379,18 @@ export function SupportChat() {
         aria-expanded={isOpen}
         onClick={() => setIsOpen((current) => !current)}
       >
-        {isOpen ? <X aria-hidden="true" /> : <MessageCircle aria-hidden="true" />}
+        {isOpen ? <X aria-hidden="true" /> : (
+          <span className="chat-character" aria-hidden="true">
+            <span className="chat-character-antenna" />
+            <span className="chat-character-face">
+              <span className="chat-character-eyes"><i /><i /></span>
+              <span className="chat-character-smile" />
+            </span>
+            <span className="chat-character-hand" />
+          </span>
+        )}
       </button>
+      </div>
     </aside>
   );
 }

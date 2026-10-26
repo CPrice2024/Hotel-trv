@@ -10,6 +10,27 @@
   font-family: var(--sans);
 }
 
+.support-floating-actions { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.back-to-top { display: grid; place-items: center; width: 44px; height: 44px; border: 1px solid #e1ded4; border-radius: 50%; background: #fffefa; color: #17352e; cursor: pointer; box-shadow: 0 4px 16px rgb(16 40 32 / 14%); animation: back-to-top-appear 220ms ease-out; }
+.back-to-top:hover { background: #17352e; color: white; }
+.back-to-top svg { width: 21px; height: 21px; }
+.chat-character { position: relative; display: block; width: 42px; height: 42px; animation: chat-character-float 3s ease-in-out infinite; }
+.chat-character-face { position: absolute; inset: 7px 3px 3px; border: 2px solid #17352e; border-radius: 12px; background: #fffefa; box-shadow: 0 3px 0 rgb(16 40 32 / 12%); }
+.chat-character-antenna { position: absolute; left: 20px; top: 0; width: 3px; height: 9px; background: #17352e; }
+.chat-character-antenna::before { content: ""; position: absolute; top: -3px; left: -2px; width: 7px; height: 7px; border-radius: 50%; background: #17352e; }
+.chat-character-eyes { display: flex; justify-content: center; gap: 10px; padding-top: 8px; }
+.chat-character-eyes i { width: 5px; height: 7px; border-radius: 50%; background: #17352e; animation: chat-character-blink 5s infinite; }
+.chat-character-smile { display: block; margin: 3px auto 0; width: 11px; height: 6px; border-bottom: 2px solid #17352e; border-radius: 0 0 12px 12px; }
+.chat-character-hand { position: absolute; right: -5px; top: 19px; width: 8px; height: 15px; border: 2px solid #17352e; border-radius: 6px; background: #fffefa; transform-origin: bottom center; animation: chat-character-wave 3s ease-in-out infinite; }
+@keyframes chat-character-float { 0%, 100% { transform: translateY(1px); } 50% { transform: translateY(-3px); } }
+@keyframes chat-character-blink { 0%, 43%, 49%, 100% { transform: scaleY(1); } 46% { transform: scaleY(0.15); } }
+@keyframes chat-character-wave { 0%, 60%, 100% { transform: rotate(20deg); } 70%, 85% { transform: rotate(45deg); } 77%, 92% { transform: rotate(0deg); } }
+@keyframes back-to-top-appear { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; transform: translateY(0); } }
+@media (prefers-reduced-motion: reduce) {
+  .chat-character, .chat-character-hand, .chat-character-eyes i, .back-to-top { animation: none; }
+}
+@media print { .support-chat { display: none !important; } }
+
 .support-chat-panel {
   display: flex;
   width: min(486px, calc(100vw - 32px));

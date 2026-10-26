@@ -16,11 +16,14 @@ export function MyBookingsPage() {
   const [booking, setBooking] = useState<GuestBooking | null>(null);
   const [errorMessage, setErrorMessage] = useState("");
   const [isSearching, setIsSearching] = useState(false);
+  const [isPaying, setIsPaying] = useState(false);
+  const [paymentError, setPaymentError] = useState("");
   const [savedBookingIds] = useState(getRememberedBookingIds);
 
   const findBooking = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     setBooking(null);
+    setPaymentError("");
     setErrorMessage("");
     setIsSearching(true);
     const normalizedEmail = guestEmail.trim().toLowerCase();
@@ -49,6 +52,23 @@ export function MyBookingsPage() {
     setBookingId(id);
     const savedEmail = getActiveBookingEmail(id);
     if (savedEmail) setGuestEmail(savedEmail);
+  };
+
+  const payNow = async () => {
+    if (!booking || isPaying) return;
+    setIsPaying(true);
+    setPaymentError("");
+    try {
+      rememberActiveBooking(booking.id, booking.guestEmail);
+      const { data } = await api.post<{ checkoutUrl: string }>("/payments/checkout", {
+        bookingId: booking.id,
+        guestEmail: booking.guestEmail,
+      });
+      window.location.assign(data.checkoutUrl);
+    } catch (error) {
+      setPaymentError(getErrorMessage(error, "Could not start payment. Please try again."));
+      setIsPaying(false);
+    }
   };
 
   return (
@@ -147,6 +167,19 @@ export function MyBookingsPage() {
                   here after the payment is verified.
                 </p>
               )}
+              {booking.paymentStatus !== "paid" && booking.status === "pending" && (
+                <div className="receipt-actions">
+                  <button
+                    className="button button-dark"
+                    type="button"
+                    onClick={() => void payNow()}
+                    disabled={isPaying || isSearching}
+                  >
+                    {isPaying ? "Opening checkout…" : "Pay now"}
+                  </button>
+                </div>
+              )}
+              {paymentError && <p className="form-message" role="alert">{paymentError}</p>}
             </section>
           )}
         </div>
