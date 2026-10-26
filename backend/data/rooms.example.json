@@ -1,0 +1,11 @@
+[
+  {
+    "name": "Enter the real room type",
+    "description": "Describe the room and its actual amenities.",
+    "imageUrl": "",
+    "inventory": 1,
+    "maxGuests": 2,
+    "priceETB": 1,
+    "priceUSD": 0.5
+  }
+]

@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Standard Room",
+    "description": "18 m², single bed, city view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.",
+    "imageUrl": "https://ayeledeguinthotel.com/admin/uploads/photos/1787959202_6a9217a2d4ba9.jpg",
+    "inventory": 1,
+    "maxGuests": 2,
+    "priceETB": 0,
+    "priceUSD": 40,
+    "testOnly": true
+  },
+  {
+    "name": "Twin Room",
+    "description": "24 m², two twin beds, city view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.",
+    "imageUrl": "https://ayeledeguinthotel.com/admin/uploads/photos/1787959527_6a9218e75125d.jpg",
+    "inventory": 1,
+    "maxGuests": 2,
+    "priceETB": 0,
+    "priceUSD": 75,
+    "testOnly": true
+  },
+  {
+    "name": "Deluxe Room",
+    "description": "30 m², king bed, mountain view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.",
+    "imageUrl": "https://ayeledeguinthotel.com/admin/uploads/photos/1787960514_6a921cc2760e1.jpg",
+    "inventory": 1,
+    "maxGuests": 2,
+    "priceETB": 0,
+    "priceUSD": 65,
+    "testOnly": true
+  },
+  {
+    "name": "Suite Room",
+    "description": "King bed with mountain view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers, plus a Jacuzzi. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.",
+    "imageUrl": "https://ayeledeguinthotel.com/admin/uploads/photos/1776632915_69e54453158c0.JPG",
+    "inventory": 1,
+    "maxGuests": 2,
+    "priceETB": 0,
+    "priceUSD": 85,
+    "testOnly": true
+  }
+]

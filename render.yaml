@@ -1,0 +1,56 @@
+services:
+  - type: web
+    name: ayele-degu-hotel
+    runtime: node
+    buildCommand: npm ci --include=dev && npm run build --workspace backend
+    startCommand: npm start
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: NODE_VERSION
+        value: "22"
+      - key: FRONTEND_URL
+        sync: false
+      - key: PUBLIC_API_URL
+        sync: false
+      - key: MONGODB_URI
+        sync: false
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_EMAIL
+        sync: false
+      - key: ADMIN_PASSWORD
+        sync: false
+      - key: HOTEL_EMAIL
+        sync: false
+      - key: HOTEL_NAME
+        value: Ayele Degu International Hotel
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: HOTEL_PHONE
+        sync: false
+      - key: HOTEL_ADDRESS
+        sync: false
+      - key: CHAPA_SECRET_KEY
+        sync: false
+      - key: STRIPE_SECRET_KEY
+        sync: false
+      - key: STRIPE_WEBHOOK_SECRET
+        sync: false
+      - key: SMTP_HOST
+        sync: false
+      - key: SMTP_PORT
+        value: "587"
+      - key: SMTP_SECURE
+        value: "false"
+      - key: SMTP_USER
+        sync: false
+      - key: SMTP_PASSWORD
+        sync: false
+      - key: SMTP_FROM
+        sync: false
+      - key: RESEND_API_KEY
+        sync: false
+      - key: RESEND_FROM_EMAIL
+        sync: false
