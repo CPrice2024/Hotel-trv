@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "test": "npm run build && node --test dist/tests/unit/etbPricing.test.js dist/tests/unit/chapaReference.test.js dist/tests/unit/adminRoutes.test.js",
+    "test": "npm run build && node --test dist/tests/unit/etbPricing.test.js dist/tests/unit/chapaReference.test.js dist/tests/unit/adminRoutes.test.js dist/tests/unit/bookingEmail.test.js",
     "dev": "tsx watch src/server.ts",
     "build": "tsc -p tsconfig.json",
     "start": "node dist/server.js",

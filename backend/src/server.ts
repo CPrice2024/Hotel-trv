@@ -26,6 +26,7 @@ import Stripe from "stripe";
 import { z } from "zod";
 import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
+import { renderBookingEmail } from "./lib/bookingEmail.js";
 import { createAdminRouter } from "./admin.js";
 import { createChapaReference } from "./lib/bookingReference.js";
 import { Booking, InventoryNight, Room, User } from "./db/models.js";
@@ -86,11 +87,13 @@ async function sendEmail({
   replyTo,
   subject,
   text,
+  html,
 }: {
   to: string;
   replyTo?: string;
   subject: string;
   text: string;
+  html?: string;
 }): Promise<void> {
   if (resend && process.env.RESEND_FROM_EMAIL) {
     const { error } = await resend.emails.send({
@@ -99,6 +102,7 @@ async function sendEmail({
       replyTo,
       subject,
       text,
+      ...(html ? { html } : {}),
     });
     if (error) {
       throw new Error(`Resend email delivery failed: ${error.message}`);
@@ -114,6 +118,7 @@ async function sendEmail({
     ...(replyTo ? { replyTo } : {}),
     subject,
     text,
+    ...(html ? { html } : {}),
   });
 }
 
@@ -463,6 +468,15 @@ async function sendBookingConfirmation(bookingId: string): Promise<void> {
   try {
     await sendEmail({
       to: booking.guestEmail,
+      html: renderBookingEmail({
+        hotelName, hotelAddress, hotelPhone: contactPhone, hotelEmail: contactEmail,
+        websiteUrl: frontendUrl, reference: booking._id.toString(),
+        guestName: booking.guestName, guestEmail: booking.guestEmail, guestPhone: booking.guestPhone,
+        roomName: booking.roomName, checkIn: booking.checkIn, checkOut: booking.checkOut,
+        nights: booking.nights, quantity: booking.quantity, guests: booking.guests,
+        currency: booking.currency, totalMinor: booking.totalMinor,
+        paymentGateway: booking.paymentGateway, paymentReference: booking.paymentReference,
+      }),
       replyTo: contactEmail || undefined,
       subject: `Booking confirmed — ${hotelName}`,
       text: [
