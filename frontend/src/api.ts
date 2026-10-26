@@ -59,6 +59,11 @@ export interface BookingRecord {
   refundRequired: boolean;
   status: "pending" | "confirmed" | "cancelled" | "completed";
   createdAt: string;
+  nights?: number;
+  paymentGateway?: "chapa" | "stripe";
+  paymentReference?: string;
+  holdExpiresAt?: string;
+  confirmationEmailSent?: boolean;
 }
 
 export interface GuestBooking {

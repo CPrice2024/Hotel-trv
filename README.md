@@ -68,6 +68,14 @@ The four room photos listed in `backend/data/rooms.json` have optimized WebP cop
 
 Guest-facing pages include an English/Amharic guided support chat for room types, listed prices, parking, and hotel services. It answers from the public room and hotel configuration, keeps chat history in the visitor's browser for up to 12 hours, and directs other questions to the configured hotel contact details. It is an automated FAQ, not a live staff or AI chat service.
 
+## Staff workspace
+
+`/admin` provides an authenticated operations workspace with separate pages for overview, rooms and rates, reservations, guest history, payments, reports, staff access, and published hotel configuration. Reservations and guests use server-side search and pagination. Reservation details include stay information, guest contacts, payment references, email delivery status, and eligible unpaid cancellation. CSV exports identify their scope: reservation exports contain the current filtered page; revenue exports contain the selected report period.
+
+Administrators can create and edit room descriptions, photos, rates, active status, and test-data classification. Confirm real inventory and rates before clearing a room's test-data flag. Existing reservations preserve their booked prices. Capacity changes are rejected when inventory nights already exist; room edits and new holds serialize through the room record to prevent allocation races. Staff accounts can read operational data and cancel eligible unpaid reservations; only administrators can edit room details, create accounts, and suspend or restore staff access. Administrator accounts are protected from suspension in this interface.
+
+Revenue reports use the reservation creation date in UTC and keep ETB and USD separate. They show recorded paid totals, not settlement balances or net revenue after refunds. Payment records cannot be manually marked paid, and the dashboard does not execute provider refunds. Hotel contact information and provider credentials continue to be managed through the deployment environment.
+
 ## Payments
 
 - ETB bookings are routed through Chapa.

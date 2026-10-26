@@ -26,6 +26,7 @@ import Stripe from "stripe";
 import { z } from "zod";
 import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
+import { createAdminRouter } from "./admin.js";
 import { createChapaReference } from "./lib/bookingReference.js";
 import { Booking, InventoryNight, Room, User } from "./db/models.js";
 import type { BookingRecord } from "./db/models.js";
@@ -719,6 +720,11 @@ app.get(
   }),
 );
 
+app.use("/api/staff", (_request, response, next) => {
+  response.set("Cache-Control", "private, no-store");
+  next();
+}, createAdminRouter(requireStaff));
+
 app.get(
   "/api/staff/dashboard",
   requireStaff(),
@@ -989,6 +995,14 @@ app.post(
     };
     try {
       await session.withTransaction(async () => {
+        // Serialize allocation with room edits so a capacity edit cannot race a new hold.
+        const lockedRoom = await Room.findOneAndUpdate(
+          { _id: room._id, inventory: room.inventory, active: true,
+            ...(isProduction ? { testOnly: { $ne: true } } : {}) },
+          { $inc: { inventoryVersion: 1 } },
+          { session, new: true },
+        );
+        if (!lockedRoom) throw new Error("ROOMS_UNAVAILABLE");
         for (const date of nights) {
           await InventoryNight.updateOne(
             { room: room._id, date },

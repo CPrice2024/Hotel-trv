@@ -5,6 +5,7 @@ interface RoomRecord {
   description: string;
   imageUrl: string;
   inventory: number;
+  inventoryVersion: number;
   maxGuests: number;
   priceETB: number;
   priceUSDCents: number;
@@ -56,6 +57,7 @@ const roomSchema = new Schema<RoomRecord>(
     description: { type: String, required: true, trim: true, maxlength: 1000 },
     imageUrl: { type: String, default: "" },
     inventory: { type: Number, required: true, min: 1 },
+    inventoryVersion: { type: Number, default: 0 },
     maxGuests: { type: Number, required: true, min: 1 },
     priceETB: { type: Number, required: true, min: 0 },
     priceUSDCents: { type: Number, required: true, min: 1 },
