@@ -1,3 +1,4 @@
+import { translateText, useLanguage } from "../../i18n/language";
 import { useQuery } from "@tanstack/react-query";
 import {
   ArrowUpRight,
@@ -36,6 +37,7 @@ const supportTeam = [
 ];
 
 export function ContactPage() {
+  useLanguage();
   const configQuery = useQuery({
     queryKey: ["hotel-config"],
     queryFn: async () => (await api.get<HotelConfig>("/public/config")).data,
@@ -56,35 +58,28 @@ export function ContactPage() {
         <section className="catalog-hero contact-hero">
           <div className="section-wrap contact-hero-inner">
             <div className="contact-hero-copy">
-              <p className="eyebrow">Need a hand?</p>
-              <h1>
-                We’re here<br />
-                <em>for every stay.</em>
+              <p className="eyebrow">{translateText("Need a hand?")}</p>
+              <h1>{translateText("We’re here")}<br />
+                <em>{translateText("for every stay.")}</em>
               </h1>
-              <p>
-                Whether you’re planning ahead or need something during your visit, our team is ready to help with
-                reservations, directions, local tips, and thoughtful service from arrival to departure.
-              </p>
+              <p>{translateText("Whether you’re planning ahead or need something during your visit, our team is ready to help with reservations, directions, local tips, and thoughtful service from arrival to departure.")}</p>
               <div className="contact-hero-actions">
-                <a className="button button-light" href={`mailto:${hotelEmail}`}>
-                  Email us <ArrowUpRight aria-hidden="true" />
+                <a className="button button-light" href={`mailto:${hotelEmail}`}>{translateText("Email us ")}<ArrowUpRight aria-hidden="true" />
                 </a>
-                <a className="button button-light button-secondary" href={directionsUrl} target="_blank" rel="noreferrer">
-                  Get directions
-                </a>
+                <a className="button button-light button-secondary" href={directionsUrl} target="_blank" rel="noreferrer">{translateText("Get directions")}</a>
               </div>
             </div>
 
             <div className="contact-hero-panel">
               <img
                 src="https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?auto=format&fit=crop&w=1200&q=80"
-                alt="Hotel front desk and welcoming reception area"
+                alt={translateText("Hotel front desk and welcoming reception area")}
                 loading="lazy"
               />
               <div className="contact-hero-panel-card">
-                <span className="card-number">24/7 SUPPORT</span>
-                <strong>{hotelName}</strong>
-                <p>{hotelAddress}</p>
+                <span className="card-number">{translateText("24/7 SUPPORT")}</span>
+                <strong>{translateText(hotelName)}</strong>
+                <p>{translateText(hotelAddress)}</p>
               </div>
             </div>
           </div>
@@ -93,26 +88,25 @@ export function ContactPage() {
         <section className="section-wrap contact-support">
           <div className="catalog-intro">
             <div>
-              <p className="eyebrow">Support that feels personal</p>
-              <h2>
-                Friendly help for<br />
-                <em>every moment</em>
+              <p className="eyebrow">{translateText("Support that feels personal")}</p>
+              <h2>{translateText("Friendly help for")}<br />
+                <em>{translateText("every moment")}</em>
               </h2>
             </div>
-            <p>From the first message to the final check-out, our team responds with warmth, clarity, and practical guidance.</p>
+            <p>{translateText("From the first message to the final check-out, our team responds with warmth, clarity, and practical guidance.")}</p>
           </div>
 
           <div className="support-grid">
-            {supportTeam.map((person) => (
+            {translateText(supportTeam.map((person) => (
               <article className="support-card" key={person.name}>
-                <img src={person.image} alt={person.name} loading="lazy" />
+                <img src={person.image} alt={translateText(person.name)} loading="lazy" />
                 <div className="support-card-body">
-                  <span className="support-card-role">{person.role}</span>
-                  <h3>{person.name}</h3>
-                  <p>{person.description}</p>
+                  <span className="support-card-role">{translateText(person.role)}</span>
+                  <h3>{translateText(person.name)}</h3>
+                  <p>{translateText(person.description)}</p>
                 </div>
               </article>
-            ))}
+            )))}
           </div>
         </section>
 
@@ -122,54 +116,47 @@ export function ContactPage() {
               <div className="contact-item">
                 <span className="contact-icon"><Phone aria-hidden="true" /></span>
                 <div>
-                  <span className="contact-label">Call us</span>
-                  <a href={`tel:${hotelPhone}`}>{hotelPhone}</a>
+                  <span className="contact-label">{translateText("Call us")}</span>
+                  <a href={`tel:${hotelPhone}`}>{translateText(hotelPhone)}</a>
                 </div>
               </div>
 
               <div className="contact-item">
                 <span className="contact-icon"><Mail aria-hidden="true" /></span>
                 <div>
-                  <span className="contact-label">Email</span>
-                  <a href={`mailto:${hotelEmail}`}>{hotelEmail}</a>
+                  <span className="contact-label">{translateText("Email")}</span>
+                  <a href={`mailto:${hotelEmail}`}>{translateText(hotelEmail)}</a>
                 </div>
               </div>
 
               <div className="contact-item">
                 <span className="contact-icon"><MapPin aria-hidden="true" /></span>
                 <div>
-                  <span className="contact-label">Visit</span>
-                  <p>{hotelAddress}</p>
+                  <span className="contact-label">{translateText("Visit")}</span>
+                  <p>{translateText(hotelAddress)}</p>
                 </div>
               </div>
 
               <div className="contact-item">
                 <span className="contact-icon"><Clock3 aria-hidden="true" /></span>
                 <div>
-                  <span className="contact-label">Support hours</span>
-                  <p>Open daily, 24/7 front desk support</p>
+                  <span className="contact-label">{translateText("Support hours")}</span>
+                  <p>{translateText("Open daily, 24/7 front desk support")}</p>
                 </div>
               </div>
             </div>
 
             <div className="contact-form-card">
-              <p className="eyebrow">Send a message</p>
-              <h3>Tell us how we can help.</h3>
+              <p className="eyebrow">{translateText("Send a message")}</p>
+              <h3>{translateText("Tell us how we can help.")}</h3>
               <form className="support-form" onSubmit={(event) => event.preventDefault()}>
-                <label>
-                  Name
-                  <input type="text" placeholder="Your name" />
+                <label>{translateText("Name")}<input type="text" placeholder={translateText("Your name")} />
                 </label>
-                <label>
-                  Email
-                  <input type="email" placeholder="you@example.com" />
+                <label>{translateText("Email")}<input type="email" placeholder={translateText("you@example.com")} />
                 </label>
-                <label>
-                  Message
-                  <textarea rows={5} placeholder="How can our team help you?" />
+                <label>{translateText("Message")}<textarea rows={5} placeholder={translateText("How can our team help you?")} />
                 </label>
-                <button className="button button-dark" type="submit">
-                  Send enquiry <ArrowUpRight aria-hidden="true" />
+                <button className="button button-dark" type="submit">{translateText("Send enquiry ")}<ArrowUpRight aria-hidden="true" />
                 </button>
               </form>
             </div>
@@ -178,17 +165,17 @@ export function ContactPage() {
           <div className="map-card" id="hotel-map">
             <div className="map-card-header">
               <div>
-                <p className="eyebrow">Find us</p>
-                <h3>Easy to reach.</h3>
+                <p className="eyebrow">{translateText("Find us")}</p>
+                <h3>{translateText("Easy to reach.")}</h3>
               </div>
               <Link className="button button-dark contact-map-route" to="/map">
-                <MapPin aria-hidden="true" /> Route me to the hotel <ArrowUpRight aria-hidden="true" />
+                <MapPin aria-hidden="true" />{translateText(" Route me to the hotel ")}<ArrowUpRight aria-hidden="true" />
               </Link>
             </div>
 
             <div className="map-frame-wrap">
               <iframe
-                title="Ayele Degu International Hotel location"
+                title={translateText("Ayele Degu International Hotel location")}
                 src={mapEmbedUrl}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -197,7 +184,7 @@ export function ContactPage() {
 
             <div className="map-footer">
               <MapPin aria-hidden="true" />
-              <span>{hotelAddress}</span>
+              <span>{translateText(hotelAddress)}</span>
             </div>
           </div>
         </section>
@@ -205,21 +192,19 @@ export function ContactPage() {
         <section className="catalog-cta">
           <div className="section-wrap catalog-cta-inner">
             <div>
-              <p className="eyebrow">Ready when you are</p>
-              <h2>
-                Let’s plan your<br />
-                <em>next visit.</em>
+              <p className="eyebrow">{translateText("Ready when you are")}</p>
+              <h2>{translateText("Let’s plan your")}<br />
+                <em>{translateText("next visit.")}</em>
               </h2>
             </div>
             <div className="catalog-cta-actions">
-              <Link className="button button-light" to="/booking">
-                Book your stay <ArrowUpRight aria-hidden="true" />
+              <Link className="button button-light" to="/booking">{translateText("Book your stay ")}<ArrowUpRight aria-hidden="true" />
               </Link>
               <a href={`tel:${hotelPhone}`}>
-                <Phone aria-hidden="true" /> {hotelPhone}
+                <Phone aria-hidden="true" /> {translateText(hotelPhone)}
               </a>
               <a href={`mailto:${hotelEmail}`}>
-                <Mail aria-hidden="true" /> {hotelEmail}
+                <Mail aria-hidden="true" /> {translateText(hotelEmail)}
               </a>
             </div>
           </div>

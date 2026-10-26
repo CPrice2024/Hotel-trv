@@ -1,0 +1,47 @@
+.hotel-picker { position: relative; min-width: 0; width: 100%; }
+.picker-trigger { display: flex; align-items: center; gap: 12px; width: 100%; min-height: 52px; padding: 13px 15px; border: 1px solid #d9ded6; border-radius: 10px; background: #fffefa; color: #788178; font: 400 13px var(--sans); text-align: start; cursor: pointer; transition: border-color 150ms ease, box-shadow 150ms ease; }
+.picker-trigger.has-value { color: var(--forest); }
+.picker-trigger:hover, .picker-trigger[aria-expanded="true"] { border-color: #87a08d; box-shadow: 0 0 0 3px rgb(23 53 46 / 5%); }
+.picker-trigger[aria-invalid="true"] { border-color: #b14a3a; }
+.picker-trigger > svg { width: 19px; height: 19px; flex: 0 0 auto; color: #789482; }
+.picker-trigger > span { flex: 1; min-width: 0; overflow-wrap: anywhere; }
+.picker-trigger .picker-chevron { width: 16px; height: 16px; transition: transform 150ms; }
+.picker-chevron.is-open { transform: rotate(180deg); }
+.picker-popover { position: absolute; top: calc(100% + 9px); inset-inline-start: 0; z-index: 25; border: 1px solid #e1e5dc; border-radius: 16px; background: #fffefa; color: #1d2823; box-shadow: 0 16px 48px rgb(16 40 32 / 16%), 0 3px 10px rgb(16 40 32 / 5%); font: 400 13px var(--sans); text-align: start; }
+.date-popover { width: min(330px, calc(100vw - 72px)); padding: 16px; }
+.picker-popover[data-side="top"] { top: auto; bottom: calc(100% + 9px); }
+.calendar-heading { display: flex; align-items: center; justify-content: space-between; gap: 8px; margin-bottom: 18px; }
+.calendar-heading strong { font-size: 14px; text-transform: capitalize; }
+.calendar-nav { display: grid; place-items: center; width: 32px; height: 32px; padding: 0; background: #f2f4ee; color: #17352e; border: 0; border-radius: 9px; cursor: pointer; }
+.calendar-nav svg { width: 16px; height: 16px; }
+.calendar-weekdays, .calendar-days { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: 3px; }
+.calendar-weekdays { margin-bottom: 6px; color: #7b847a; font-size: 10px; text-align: center; }
+.calendar-weekdays span { overflow: hidden; }
+.calendar-day { display: grid; place-items: center; min-width: 0; aspect-ratio: 1; padding: 0; border: 1px solid transparent; border-radius: 9px; background: transparent; color: #263a30; font: 500 12px var(--sans); cursor: pointer; }
+.calendar-day:hover:not(:disabled) { background: #edf2e9; }
+.calendar-day.is-today { border-color: #d0a257; }
+.calendar-day.is-selected, .calendar-day.is-selected:hover { background: #17352e; color: white; }
+.calendar-day:disabled, .calendar-nav:disabled { color: #b8bdb5; cursor: not-allowed; opacity: .55; }
+.calendar-footer { display: flex; justify-content: space-between; align-items: center; gap: 10px; border-top: 1px solid #e7e9e1; margin-top: 14px; padding-top: 12px; color: #778173; font-size: 10px; }
+.calendar-footer button { border: 0; border-radius: 6px; padding: 5px 8px; color: #17352e; background: #edf2e9; font: 600 11px var(--sans); cursor: pointer; }
+.calendar-footer button:disabled { opacity: .4; cursor: not-allowed; }
+.room-options { width: 100%; min-width: 0; max-height: min(390px, 55dvh); overflow-y: auto; overscroll-behavior: contain; padding: 8px; }
+.room-options-heading { margin: 8px 10px 10px; color: #7b847a; font-size: 10px; text-transform: uppercase; letter-spacing: .06em; }
+.room-option { display: flex; align-items: center; gap: 12px; width: 100%; padding: 12px 10px; border: 0; border-radius: 10px; background: transparent; color: #17352e; text-align: start; cursor: pointer; }
+.room-option:hover, .room-option[aria-selected="true"] { background: #edf2e9; }
+.room-option > img, .room-option-image { display: grid; place-items: center; width: 64px; height: 64px; flex: 0 0 auto; border-radius: 9px; object-fit: cover; background: #e8eee3; }
+.room-option-image svg { width: 25px; height: 25px; color: #81977b; }
+.room-option-copy { display: grid; flex: 1; min-width: 0; gap: 5px; font: 400 12px var(--sans); }
+.room-option-copy > strong { font-size: 13px; overflow-wrap: anywhere; }
+.room-option-copy > span { display: flex; align-items: center; flex-wrap: wrap; gap: 5px; color: #7b847a; font-size: 10px; }
+.room-option-copy svg { width: 12px; height: 12px; flex-shrink: 0; }
+.room-option-copy .room-option-price { color: #365442; font-size: 12px; font-weight: 600; }
+.room-option-price small { font-size: 10px; font-weight: 400; }
+.room-option-check { width: 18px; height: 18px; flex-shrink: 0; }
+.hotel-picker button:focus-visible { outline: 2px solid #c49b52; outline-offset: 2px; }
+.booking-form .form-grid > .date-field { display: grid; gap: 7px; align-content: start; }
+.date-field > label { font-size: 11px; font-weight: 600; }
+.button > svg, .text-link > svg { flex-shrink: 0; }
+html[dir="rtl"] .calendar-nav svg { transform: rotate(180deg); }
+@media (max-width: 480px) { .room-option { gap: 9px; padding: 10px 7px; } .room-option > img, .room-option-image { width: 48px; height: 54px; } }
+@media (prefers-reduced-motion: reduce) { .picker-trigger, .picker-chevron { transition: none; } }

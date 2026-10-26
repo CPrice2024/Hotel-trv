@@ -1,4 +1,5 @@
 import { useQuery } from "@tanstack/react-query";
+import { getLocale, translateText } from "../i18n/language";
 
 interface ExchangeRateResponse {
   result: string;
@@ -43,7 +44,7 @@ export function useUsdToEtbRate() {
 }
 
 export function formatEtb(amount: number) {
-  return new Intl.NumberFormat("en-ET", {
+  return new Intl.NumberFormat(getLocale(), {
     style: "currency",
     currency: "ETB",
     maximumFractionDigits: 0,
@@ -51,13 +52,13 @@ export function formatEtb(amount: number) {
 }
 
 export function convertUsdPricesToEtb(text: string, rate?: number) {
-  return text.replace(/\$(\d+(?:\.\d{1,2})?)/g, (_match, amount: string) =>
+  return translateText(text).replace(/\$(\d+(?:\.\d{1,2})?)/g, (_match, amount: string) =>
     rate ? formatEtb(Number(amount) * rate) : "price available on request",
   );
 }
 
 export function formatRateTimestamp(date: Date) {
-  return new Intl.DateTimeFormat("en", {
+  return new Intl.DateTimeFormat(getLocale(), {
     dateStyle: "medium",
     timeStyle: "short",
     timeZone: "UTC",

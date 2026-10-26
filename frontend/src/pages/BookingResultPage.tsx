@@ -1,3 +1,4 @@
+import { translateText, useLanguage } from "../i18n/language";
 import { useEffect, useState, type FormEvent } from "react";
 import { CheckCircle2, CircleAlert } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
@@ -7,6 +8,7 @@ import { clearActiveBooking, getActiveBookingEmail } from "../lib/guestBookings"
 import { SiteHeader } from "./SiteHeader";
 
 export function BookingResultPage() {
+  useLanguage();
   const [searchParams] = useSearchParams();
   const status = searchParams.get("status");
   const bookingId = searchParams.get("booking") ?? "";
@@ -119,18 +121,18 @@ export function BookingResultPage() {
       <SiteHeader />
       <main className="app-page result-page">
         <section className="result-card">
-          {failed ? (
+          {translateText(failed ? (
             <CircleAlert className="result-icon error-icon" aria-hidden="true" />
           ) : (
             <CheckCircle2 className="result-icon" aria-hidden="true" />
-          )}
-          <p className="eyebrow">Booking update</p>
-          <h1>{failed ? "Payment needs attention." : confirmed ? "You’re all set." : "One moment…"}</h1>
-          <p role="status">{message}</p>
-          {bookingId && <p className="contact-note">Booking reference: {bookingId}</p>}
-          {confirmed && !receipt && (
+          ))}
+          <p className="eyebrow">{translateText("Booking update")}</p>
+          <h1>{translateText(failed ? "Payment needs attention." : confirmed ? "You’re all set." : "One moment…")}</h1>
+          <p role="status">{translateText(message)}</p>
+          {translateText(bookingId && <p className="contact-note">{translateText("Booking reference: ")}{translateText(bookingId)}</p>)}
+          {translateText(confirmed && !receipt && (
             <form className="receipt-email-form" onSubmit={submitReceiptEmail}>
-              <label htmlFor="receipt-email">Enter the email used for this booking to load your receipt</label>
+              <label htmlFor="receipt-email">{translateText("Enter the email used for this booking to load your receipt")}</label>
               <input
                 id="receipt-email"
                 type="email"
@@ -140,16 +142,16 @@ export function BookingResultPage() {
                 required
               />
               <button className="button button-dark" type="submit" disabled={isLoadingReceipt}>
-                {isLoadingReceipt ? "Loading receipt…" : "Show my receipt"}
+                {translateText(isLoadingReceipt ? "Loading receipt…" : "Show my receipt")}
               </button>
             </form>
-          )}
-          {receiptError && <p className="form-message" role="alert">{receiptError}</p>}
-          {receipt && <BookingReceipt booking={receipt} hotelName={hotelName} />}
+          ))}
+          {translateText(receiptError && <p className="form-message" role="alert">{translateText(receiptError)}</p>)}
+          {translateText(receipt && <BookingReceipt booking={receipt} hotelName={hotelName} />)}
           <div className="result-actions">
-            <Link className="button button-dark" to="/my-bookings">My bookings</Link>
-            <Link className="button button-outline" to="/">Back to the hotel</Link>
-            {failed && <Link className="button button-outline" to="/booking">Try another payment</Link>}
+            <Link className="button button-dark" to="/my-bookings">{translateText("My bookings")}</Link>
+            <Link className="button button-outline" to="/">{translateText("Back to the hotel")}</Link>
+            {translateText(failed && <Link className="button button-outline" to="/booking">{translateText("Try another payment")}</Link>)}
           </div>
         </section>
       </main>

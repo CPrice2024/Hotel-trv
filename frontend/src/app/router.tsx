@@ -1,6 +1,9 @@
-import { Suspense, lazy, useDeferredValue, useEffect, useState, type ReactNode } from "react";
+import { Suspense, lazy, useDeferredValue, useEffect, useRef, useState, type ReactNode } from "react";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import lottie from "lottie-web";
+import loaderAnimation from "../assets/page-loader.json";
 import { SupportChat } from "../components/guest/SupportChat";
+import { translateText, useLanguage } from "../i18n/language";
 
 const AdminPage = lazy(() =>
   import("../pages/AdminPage").then((module) => ({ default: module.AdminPage })),
@@ -44,13 +47,33 @@ export function AppRouter() {
 }
 
 function PageLoader() {
+  useLanguage();
+  const animationContainer = useRef<HTMLSpanElement>(null);
+  useEffect(() => {
+    if (!animationContainer.current) return;
+    const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const animation = lottie.loadAnimation({
+      container: animationContainer.current,
+      renderer: "svg",
+      loop: true,
+      autoplay: !reducedMotion.matches,
+      animationData: structuredClone(loaderAnimation),
+    });
+    const updateMotion = () => {
+      if (reducedMotion.matches) animation.goToAndStop(24, true);
+      else animation.play();
+    };
+    updateMotion();
+    reducedMotion.addEventListener("change", updateMotion);
+    return () => {
+      reducedMotion.removeEventListener("change", updateMotion);
+      animation.destroy();
+    };
+  }, []);
   return (
     <div className="navigation-loader" role="status" aria-live="polite">
-      <span className="navigation-loader-mark" aria-hidden="true">
-        <span className="navigation-loader-letter">A</span>
-        <span className="navigation-loader-shadow" />
-      </span>
-      <span className="sr-only">Loading page…</span>
+      <span className="navigation-loader-animation" ref={animationContainer} aria-hidden="true" />
+      <span className="sr-only">{translateText("Loading page…")}</span>
     </div>
   );
 }

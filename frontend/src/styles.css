@@ -798,46 +798,16 @@ h2 em {
   font-size: 13px;
 }
 
-.navigation-loader-mark {
-  position: relative;
-  display: grid;
-  place-items: center;
-  width: 110px;
-  height: 130px;
+.navigation-loader-animation {
+  display: block;
+  width: clamp(120px, 22vw, 180px);
+  aspect-ratio: 1;
 }
 
-.navigation-loader-letter {
-  font-family: var(--serif);
-  font-size: 86px;
-  font-weight: 500;
-  line-height: 1;
-  text-shadow: 0 3px 12px rgb(0 0 0 / 30%);
-  animation: navigation-letter-float 1.4s ease-in-out infinite;
-}
-
-.navigation-loader-shadow {
-  position: absolute;
-  bottom: 7px;
-  width: 56px;
-  height: 9px;
-  border-radius: 50%;
-  background: rgb(0 0 0 / 32%);
-  filter: blur(4px);
-  animation: navigation-shadow-float 1.4s ease-in-out infinite;
-}
-
-@keyframes navigation-letter-float {
-  0%, 100% { transform: translateY(3px); }
-  50% { transform: translateY(-13px); }
-}
-
-@keyframes navigation-shadow-float {
-  0%, 100% { transform: scaleX(1); opacity: 0.65; }
-  50% { transform: scaleX(0.65); opacity: 0.3; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .navigation-loader-letter, .navigation-loader-shadow { animation: none; }
+.navigation-loader-animation svg {
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .page-loading {

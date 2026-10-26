@@ -1,6 +1,7 @@
 import { useEffect, useRef } from "react";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+import { translateText, useLanguage } from "../../i18n/language";
 
 export interface MapCoordinates {
   latitude: number;
@@ -36,6 +37,7 @@ export function HotelMapCanvas({
   clientLocation,
   route,
 }: HotelMapCanvasProps) {
+  const language = useLanguage();
   const mapElement = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -73,7 +75,7 @@ export function HotelMapCanvas({
       ];
       L.marker(clientLatLng, { icon: clientIcon })
         .addTo(map)
-        .bindPopup("Your current location");
+        .bindPopup(translateText("Your current location"));
       visiblePoints.push(clientLatLng);
     }
 
@@ -95,14 +97,14 @@ export function HotelMapCanvas({
       resizeObserver.disconnect();
       map.remove();
     };
-  }, [clientLocation, hotelAddress, hotelLocation, hotelName, route]);
+  }, [clientLocation, hotelAddress, hotelLocation, hotelName, route, language]);
 
   return (
     <div
       ref={mapElement}
       className="hotel-map-canvas"
       role="region"
-      aria-label={`Interactive map showing ${hotelName} and your location`}
+      aria-label={translateText(`Interactive map showing ${hotelName} and your location`)}
     />
   );
 }

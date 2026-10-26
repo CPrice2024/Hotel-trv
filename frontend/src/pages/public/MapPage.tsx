@@ -1,3 +1,4 @@
+import { translateText, useLanguage } from "../../i18n/language";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowUpRight, LocateFixed, MapPin, Navigation } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
@@ -51,6 +52,7 @@ function locationErrorMessage(error: unknown): string {
 }
 
 export function MapPage() {
+  useLanguage();
   const configQuery = useQuery({
     queryKey: ["hotel-config"],
     queryFn: async () => (await api.get<HotelConfig>("/public/config")).data,
@@ -199,30 +201,29 @@ export function MapPage() {
       <SiteHeader />
       <main className="catalog-page hotel-map-page">
         <section className="catalog-hero hotel-map-hero">
-          <p className="eyebrow">Find your way to us</p>
-          <h1>
-            Your stay is<br />
-            <em>within reach.</em>
+          <p className="eyebrow">{translateText("Find your way to us")}</p>
+          <h1>{translateText("Your stay is")}<br />
+            <em>{translateText("within reach.")}</em>
           </h1>
-          <p>See your location and get a route to {hotelName}.</p>
+          <p>{translateText("See your location and get a route to ")}{translateText(hotelName)}{translateText(".")}</p>
         </section>
 
         <section className="section-wrap hotel-map-content">
           <div className="hotel-map-details">
             <div>
-              <p className="eyebrow">Visit us</p>
-              <h2>{hotelName}</h2>
+              <p className="eyebrow">{translateText("Visit us")}</p>
+              <h2>{translateText(hotelName)}</h2>
               <p className="hotel-map-address">
                 <MapPin aria-hidden="true" />
-                {hotelAddress}
+                {translateText(hotelAddress)}
               </p>
             </div>
             <div className="hotel-map-directions">
               <p className="hotel-location-status" role="status">
                 <LocateFixed aria-hidden="true" />
-                {locationStatus === "locating" && "Detecting your location…"}
-                {locationStatus === "found" && "Your location is shown on the map."}
-                {locationStatus === "unavailable" && (locationMessage || "Location unavailable.")}
+                {translateText(locationStatus === "locating" && "Detecting your location…")}
+                {translateText(locationStatus === "found" && "Your location is shown on the map.")}
+                {translateText(locationStatus === "unavailable" && (locationMessage || "Location unavailable."))}
               </p>
               <button
                 className="button button-dark"
@@ -231,43 +232,40 @@ export function MapPage() {
                 disabled={!hotelLocation || isRouting}
               >
                 <Navigation aria-hidden="true" />
-                {isRouting ? "Calculating route…" : "Route me to the hotel"}
+                {translateText(isRouting ? "Calculating route…" : "Route me to the hotel")}
               </button>
-              {routeSummary && (
-                <p className="hotel-route-summary" role="status">{routeSummary}</p>
-              )}
-              {routeError && <p className="location-error" role="alert">{routeError}</p>}
+              {translateText(routeSummary && (
+                <p className="hotel-route-summary" role="status">{translateText(routeSummary)}</p>
+              ))}
+              {translateText(routeError && <p className="location-error" role="alert">{translateText(routeError)}</p>)}
               <a
                 className="hotel-map-external-link"
                 href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${hotelName}, ${hotelAddress}`)}`}
                 target="_blank"
                 rel="noreferrer"
-              >
-                View hotel in Google Maps <ArrowUpRight aria-hidden="true" />
+              >{translateText("View hotel in Google Maps ")}<ArrowUpRight aria-hidden="true" />
               </a>
             </div>
           </div>
 
-          {configQuery.isLoading && (
-            <p className="catalog-message" role="status">Loading hotel details…</p>
-          )}
-          {configQuery.isError && (
+          {translateText(configQuery.isLoading && (
+            <p className="catalog-message" role="status">{translateText("Loading hotel details…")}</p>
+          ))}
+          {translateText(configQuery.isError && (
+            <p className="catalog-message catalog-error" role="alert">{translateText("We could not load the hotel address. Please try again later.")}</p>
+          ))}
+          {translateText(hotelLocationQuery.isLoading && (
+            <p className="catalog-message" role="status">{translateText("Finding the hotel on the map…")}</p>
+          ))}
+          {translateText(hotelLocationQuery.isError && (
             <p className="catalog-message catalog-error" role="alert">
-              We could not load the hotel address. Please try again later.
-            </p>
-          )}
-          {hotelLocationQuery.isLoading && (
-            <p className="catalog-message" role="status">Finding the hotel on the map…</p>
-          )}
-          {hotelLocationQuery.isError && (
-            <p className="catalog-message catalog-error" role="alert">
-              {hotelLocationQuery.error instanceof Error
+              {translateText(hotelLocationQuery.error instanceof Error
                 ? hotelLocationQuery.error.message
-                : "We could not find the hotel on the map."}
+                : "We could not find the hotel on the map.")}
             </p>
-          )}
+          ))}
 
-          {hotelLocation && (
+          {translateText(hotelLocation && (
             <HotelMapCanvas
               hotelName={hotelName}
               hotelAddress={hotelAddress}
@@ -275,10 +273,8 @@ export function MapPage() {
               clientLocation={clientLocation}
               route={route}
             />
-          )}
-          <p className="hotel-map-privacy">
-            Your browser asks before sharing your location. If you request a route, your coordinates are sent to the public OpenStreetMap routing service to calculate it.
-          </p>
+          ))}
+          <p className="hotel-map-privacy">{translateText("Your browser asks before sharing your location. If you request a route, your coordinates are sent to the public OpenStreetMap routing service to calculate it.")}</p>
         </section>
       </main>
     </>

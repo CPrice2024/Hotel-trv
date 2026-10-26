@@ -1,3 +1,4 @@
+import { formatStayDate, translateText, useLanguage } from "../../i18n/language";
 import { useState, type FormEvent } from "react";
 import { Search } from "lucide-react";
 import { Link } from "react-router-dom";
@@ -11,6 +12,7 @@ import {
 import { SiteHeader } from "../SiteHeader";
 
 export function MyBookingsPage() {
+  useLanguage();
   const [bookingId, setBookingId] = useState("");
   const [guestEmail, setGuestEmail] = useState("");
   const [booking, setBooking] = useState<GuestBooking | null>(null);
@@ -76,36 +78,27 @@ export function MyBookingsPage() {
       <SiteHeader />
       <main className="app-page my-bookings-page">
         <div className="section-wrap">
-          <Link className="back-link" to="/">
-            Back to the hotel
-          </Link>
+          <Link className="back-link" to="/">{translateText("Back to the hotel")}</Link>
           <header className="page-heading">
-            <p className="eyebrow">Your stay, all in one place</p>
-            <h1>My <em>bookings.</em></h1>
-            <p>
-              Enter your booking reference and the email address used at checkout
-              to view your booking and payment status.
-            </p>
+            <p className="eyebrow">{translateText("Your stay, all in one place")}</p>
+            <h1>{translateText("My ")}<em>{translateText("bookings.")}</em></h1>
+            <p>{translateText("Enter your booking reference and the email address used at checkout to view your booking and payment status.")}</p>
           </header>
 
           <form
             className="booking-lookup-form"
             onSubmit={(event) => void findBooking(event)}
           >
-            <label>
-              Booking reference
-              <input
+            <label>{translateText("Booking reference")}<input
                 type="text"
                 autoComplete="off"
                 value={bookingId}
                 onChange={(event) => setBookingId(event.target.value)}
-                placeholder="Enter your booking reference"
+                placeholder={translateText("Enter your booking reference")}
                 required
               />
             </label>
-            <label>
-              Booking email
-              <input
+            <label>{translateText("Booking email")}<input
                 type="email"
                 autoComplete="email"
                 value={guestEmail}
@@ -115,59 +108,55 @@ export function MyBookingsPage() {
             </label>
             <button className="button button-dark" type="submit" disabled={isSearching}>
               <Search aria-hidden="true" />
-              {isSearching ? "Searching…" : "Find booking"}
+              {translateText(isSearching ? "Searching…" : "Find booking")}
             </button>
           </form>
-          {errorMessage && (
-            <p className="form-message" role="alert">{errorMessage}</p>
-          )}
+          {translateText(errorMessage && (
+            <p className="form-message" role="alert">{translateText(errorMessage)}</p>
+          ))}
 
-          {savedBookingIds.length > 0 && (
+          {translateText(savedBookingIds.length > 0 && (
             <section className="saved-bookings">
-              <h2>Recent booking references on this device</h2>
-              <p>Choose a reference, then enter the booking email to view its details.</p>
+              <h2>{translateText("Recent booking references on this device")}</h2>
+              <p>{translateText("Choose a reference, then enter the booking email to view its details.")}</p>
               <div>
-                {savedBookingIds.map((id) => (
+                {translateText(savedBookingIds.map((id) => (
                   <button type="button" key={id} onClick={() => selectSavedBooking(id)}>
-                    {id}
+                    {translateText(id)}
                   </button>
-                ))}
+                )))}
               </div>
             </section>
-          )}
+          ))}
 
-          {booking && (
+          {translateText(booking && (
             <section className="my-booking-result" aria-live="polite">
-              <div className={`booking-status-pill booking-status-${booking.paymentStatus}`}>
-                Payment {booking.paymentStatus}
+              <div className={`booking-status-pill booking-status-${booking.paymentStatus}`}>{translateText("Payment ")}{translateText(booking.paymentStatus)}
               </div>
-              <h2>{booking.roomName}</h2>
-              <p className="my-booking-reference">Booking reference: {booking.id}</p>
+              <h2>{translateText(booking.roomName)}</h2>
+              <p className="my-booking-reference">{translateText("Booking reference: ")}{booking.id}</p>
               <div className="my-booking-details">
-                <p><span>Guest</span><strong>{booking.guestName}</strong></p>
-                <p><span>Stay dates</span><strong>{booking.checkIn} – {booking.checkOut}</strong></p>
+                <p><span>{translateText("Guest")}</span><strong>{booking.guestName}</strong></p>
+                <p><span>{translateText("Stay dates")}</span><strong>{formatStayDate(booking.checkIn)}{translateText(" – ")}{formatStayDate(booking.checkOut)}</strong></p>
                 <p>
-                  <span>Length of stay</span>
-                  <strong>{booking.nights} {booking.nights === 1 ? "night" : "nights"}</strong>
+                  <span>{translateText("Length of stay")}</span>
+                  <strong>{translateText(booking.nights)} {translateText(booking.nights === 1 ? "night" : "nights")}</strong>
                 </p>
                 <p>
-                  <span>Rooms and guests</span>
+                  <span>{translateText("Rooms and guests")}</span>
                   <strong>
-                    {booking.quantity} {booking.quantity === 1 ? "room" : "rooms"} ·{" "}
-                    {booking.guests} {booking.guests === 1 ? "guest" : "guests"}
+                    {translateText(booking.quantity)} {translateText(booking.quantity === 1 ? "room" : "rooms")}{translateText(" ·")}{translateText(" ")}
+                    {translateText(booking.guests)} {translateText(booking.guests === 1 ? "guest" : "guests")}
                   </strong>
                 </p>
-                <p><span>Booking status</span><strong>{booking.status}</strong></p>
+                <p><span>{translateText("Booking status")}</span><strong>{translateText(booking.status)}</strong></p>
               </div>
-              {booking.paymentStatus === "paid" ? (
+              {translateText(booking.paymentStatus === "paid" ? (
                 <BookingReceipt booking={booking} />
               ) : (
-                <p className="booking-payment-notice" role="status">
-                  Payment is {booking.paymentStatus}. A receipt will be available
-                  here after the payment is verified.
-                </p>
-              )}
-              {booking.paymentStatus !== "paid" && booking.status === "pending" && (
+                <p className="booking-payment-notice" role="status">{translateText("Payment is ")}{translateText(booking.paymentStatus)}{translateText(". A receipt will be available here after the payment is verified.")}</p>
+              ))}
+              {translateText(booking.paymentStatus !== "paid" && booking.status === "pending" && (
                 <div className="receipt-actions">
                   <button
                     className="button button-dark"
@@ -175,13 +164,13 @@ export function MyBookingsPage() {
                     onClick={() => void payNow()}
                     disabled={isPaying || isSearching}
                   >
-                    {isPaying ? "Opening checkout…" : "Pay now"}
+                    {translateText(isPaying ? "Opening checkout…" : "Pay now")}
                   </button>
                 </div>
-              )}
-              {paymentError && <p className="form-message" role="alert">{paymentError}</p>}
+              ))}
+              {translateText(paymentError && <p className="form-message" role="alert">{translateText(paymentError)}</p>)}
             </section>
-          )}
+          ))}
         </div>
       </main>
     </>

@@ -1,3 +1,4 @@
+import { translateText, useLanguage } from "../../i18n/language";
 import { ArrowUpRight, Clock3, Dumbbell, MapPin, Plane, Sparkles, Utensils, Users, Waves } from "lucide-react";
 import { Link } from "react-router-dom";
 import { SiteHeader } from "../SiteHeader";
@@ -55,54 +56,52 @@ const services = [
 ];
 
 export function AmenitiesPage() {
+  useLanguage();
   return (
     <>
       <SiteHeader />
       <main className="catalog-page">
         <section className="catalog-hero services-hero">
-          <p className="eyebrow">A little more for your stay</p>
-          <h1>Thoughtful services.<br /><em>Warm hospitality.</em></h1>
-          <p>From your first arrival to a well-earned moment of rest, we are here to make your visit easier.</p>
-          <a className="button button-light" href="#service-list">
-            Explore services <ArrowUpRight aria-hidden="true" />
+          <p className="eyebrow">{translateText("A little more for your stay")}</p>
+          <h1>{translateText("Thoughtful services.")}<br /><em>{translateText("Warm hospitality.")}</em></h1>
+          <p>{translateText("From your first arrival to a well-earned moment of rest, we are here to make your visit easier.")}</p>
+          <a className="button button-light" href="#service-list">{translateText("Explore services ")}<ArrowUpRight aria-hidden="true" />
           </a>
         </section>
 
         <section className="catalog-section section-wrap" id="service-list">
           <div className="catalog-intro">
             <div>
-              <p className="eyebrow">Here to help</p>
-              <h2>Make yourself <em>at home.</em></h2>
+              <p className="eyebrow">{translateText("Here to help")}</p>
+              <h2>{translateText("Make yourself ")}<em>{translateText("at home.")}</em></h2>
             </div>
-            <p>Explore the facilities and guest services listed by Ayele Degu International Hotel.</p>
+            <p>{translateText("Explore the facilities and guest services listed by Ayele Degu International Hotel.")}</p>
           </div>
 
           <div className="service-list">
-            {services.map(({ icon: Icon, title, detail, hours }) => (
+            {translateText(services.map(({ icon: Icon, title, detail, hours }) => (
               <article className="service-list-card" key={title}>
                 <span className="service-list-icon"><Icon aria-hidden="true" /></span>
                 <div>
-                  <h3>{title}</h3>
-                  <p>{detail}</p>
-                  <span className="service-list-hours">{hours}</span>
+                  <h3>{translateText(title)}</h3>
+                  <p>{translateText(detail)}</p>
+                  <span className="service-list-hours">{translateText(hours)}</span>
                 </div>
               </article>
-            ))}
+            )))}
           </div>
-          <p className="service-confirmation-note">
-            Please contact the hotel to confirm availability, details, and any applicable charges before your visit.
-          </p>
+          <p className="service-confirmation-note">{translateText("Please contact the hotel to confirm availability, details, and any applicable charges before your visit.")}</p>
         </section>
 
         <section className="catalog-cta">
           <div className="section-wrap catalog-cta-inner">
             <div>
-              <p className="eyebrow">We look forward to welcoming you</p>
-              <h2>Plan a stay<br /><em>that feels easy.</em></h2>
+              <p className="eyebrow">{translateText("We look forward to welcoming you")}</p>
+              <h2>{translateText("Plan a stay")}<br /><em>{translateText("that feels easy.")}</em></h2>
             </div>
             <div className="catalog-cta-actions">
-              <Link className="button button-light" to="/booking">Find your room <ArrowUpRight aria-hidden="true" /></Link>
-              <Link to="/#contact">Get in touch</Link>
+              <Link className="button button-light" to="/booking">{translateText("Find your room ")}<ArrowUpRight aria-hidden="true" /></Link>
+              <Link to="/#contact">{translateText("Get in touch")}</Link>
             </div>
           </div>
         </section>

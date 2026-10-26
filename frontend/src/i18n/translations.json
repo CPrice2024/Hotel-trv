@@ -1,0 +1,2522 @@
+{
+  "Rooms": {
+    "fr": "Chambres",
+    "ar": "الغرف",
+    "am": "ክፍሎች",
+    "om": "Kutaalee"
+  },
+  "Services": {
+    "fr": "Services",
+    "ar": "الخدمات",
+    "am": "አገልግሎቶች",
+    "om": "Tajaajiloota"
+  },
+  "Experience": {
+    "fr": "Expérience",
+    "ar": "التجربة",
+    "am": "ተሞክሮ",
+    "om": "Muuxannoo"
+  },
+  "Contact": {
+    "fr": "Contact",
+    "ar": "اتصل بنا",
+    "am": "ያግኙን",
+    "om": "Nu qunnamaa"
+  },
+  "Map": {
+    "fr": "Carte",
+    "ar": "الخريطة",
+    "am": "ካርታ",
+    "om": "Kaartaa"
+  },
+  "Our story": {
+    "fr": "Notre histoire",
+    "ar": "قصتنا",
+    "am": "ታሪካችን",
+    "om": "Seenaa keenya"
+  },
+  "My bookings": {
+    "fr": "Mes réservations",
+    "ar": "حجوزاتي",
+    "am": "ቦታ ማስያዣዎቼ",
+    "om": "Qabannoowwan koo"
+  },
+  "Book Now": {
+    "fr": "Réserver",
+    "ar": "احجز الآن",
+    "am": "አሁን ያስይዙ",
+    "om": "Amma qabadhaa"
+  },
+  "Choose language": {
+    "fr": "Choisir la langue",
+    "ar": "اختر اللغة",
+    "am": "ቋንቋ ይምረጡ",
+    "om": "Afaan filadhaa"
+  },
+  "International": {
+    "fr": "International",
+    "ar": "دولية",
+    "am": "ዓለም አቀፍ",
+    "om": "Idil addunyaa"
+  },
+  "Local": {
+    "fr": "Local",
+    "ar": "محلية",
+    "am": "አካባቢያዊ",
+    "om": "Naannoo"
+  },
+  "Main navigation": {
+    "fr": "Navigation principale",
+    "ar": "التنقل الرئيسي",
+    "am": "ዋና መዳረሻ",
+    "om": "Naanna'insa ijoo"
+  },
+  "Open navigation menu": {
+    "fr": "Ouvrir le menu",
+    "ar": "فتح قائمة التنقل",
+    "am": "የመዳረሻ ዝርዝር ይክፈቱ",
+    "om": "Tarree naanna'insa bani"
+  },
+  "Close navigation menu": {
+    "fr": "Fermer le menu",
+    "ar": "إغلاق قائمة التنقل",
+    "am": "የመዳረሻ ዝርዝር ይዝጉ",
+    "om": "Tarree naanna'insa cufi"
+  },
+  "Back": {
+    "fr": "Retour",
+    "ar": "رجوع",
+    "am": "ተመለስ",
+    "om": "Deebi'i"
+  },
+  "Back to the hotel": {
+    "fr": "Retour à l’hôtel",
+    "ar": "العودة إلى الفندق",
+    "am": "ወደ ሆቴሉ ተመለስ",
+    "om": "Gara hoteelaatti deebi'i"
+  },
+  "Back to top": {
+    "fr": "Haut de page",
+    "ar": "العودة للأعلى",
+    "am": "ወደ ላይ ተመለስ",
+    "om": "Gara gubbaatti deebi'i"
+  },
+  "Back to change room": {
+    "fr": "Changer de chambre",
+    "ar": "تغيير الغرفة",
+    "am": "ክፍል ለመቀየር ተመለስ",
+    "om": "Kutaa jijjiiruuf deebi'i"
+  },
+  "Check availability": {
+    "fr": "Vérifier la disponibilité",
+    "ar": "تحقق من التوفر",
+    "am": "መኖሩን ያረጋግጡ",
+    "om": "Argamuu mirkaneessi"
+  },
+  "Check dates and rooms": {
+    "fr": "Vérifier dates et chambres",
+    "ar": "تحقق من التواريخ والغرف",
+    "am": "ቀኖችን እና ክፍሎችን ይፈትሹ",
+    "om": "Guyyootaa fi kutaalee ilaali"
+  },
+  "Book this room": {
+    "fr": "Réserver cette chambre",
+    "ar": "احجز هذه الغرفة",
+    "am": "ይህን ክፍል ያስይዙ",
+    "om": "Kutaa kana qabadhaa"
+  },
+  "Book your stay": {
+    "fr": "Réserver votre séjour",
+    "ar": "احجز إقامتك",
+    "am": "ቆይታዎን ያስይዙ",
+    "om": "Turtii keessan qabadhaa"
+  },
+  "Our rooms": {
+    "fr": "Nos chambres",
+    "ar": "غرفنا",
+    "am": "ክፍሎቻችን",
+    "om": "Kutaalee keenya"
+  },
+  "Room": {
+    "fr": "Chambre",
+    "ar": "غرفة",
+    "am": "ክፍል",
+    "om": "Kutaa"
+  },
+  "Room type": {
+    "fr": "Type de chambre",
+    "ar": "نوع الغرفة",
+    "am": "የክፍል አይነት",
+    "om": "Gosa kutaa"
+  },
+  "Room Types": {
+    "fr": "Types de chambres",
+    "ar": "أنواع الغرف",
+    "am": "የክፍል አይነቶች",
+    "om": "Gosoota kutaa"
+  },
+  "Select room": {
+    "fr": "Choisir la chambre",
+    "ar": "اختر الغرفة",
+    "am": "ክፍል ይምረጡ",
+    "om": "Kutaa filadhaa"
+  },
+  "Select a room": {
+    "fr": "Choisir une chambre",
+    "ar": "اختر غرفة",
+    "am": "ክፍል ይምረጡ",
+    "om": "Kutaa tokko filadhaa"
+  },
+  "Selected room": {
+    "fr": "Chambre choisie",
+    "ar": "الغرفة المختارة",
+    "am": "የተመረጠ ክፍል",
+    "om": "Kutaa filatame"
+  },
+  "Choose your room": {
+    "fr": "Choisissez votre chambre",
+    "ar": "اختر غرفتك",
+    "am": "ክፍልዎን ይምረጡ",
+    "om": "Kutaa keessan filadhaa"
+  },
+  "Choose a room.": {
+    "fr": "Choisissez une chambre.",
+    "ar": "اختر غرفة.",
+    "am": "ክፍል ይምረጡ።",
+    "om": "Kutaa tokko filadhaa."
+  },
+  "Choose a room type to continue.": {
+    "fr": "Choisissez un type de chambre pour continuer.",
+    "ar": "اختر نوع الغرفة للمتابعة.",
+    "am": "ለመቀጠል የክፍል አይነት ይምረጡ።",
+    "om": "Itti fufuuf gosa kutaa filadhaa."
+  },
+  "Guest": {
+    "fr": "Client",
+    "ar": "الضيف",
+    "am": "እንግዳ",
+    "om": "Keessummaa"
+  },
+  "Guests": {
+    "fr": "Voyageurs",
+    "ar": "الضيوف",
+    "am": "እንግዶች",
+    "om": "Keessummoota"
+  },
+  "guest": {
+    "fr": "voyageur",
+    "ar": "ضيف",
+    "am": "እንግዳ",
+    "om": "keessummaa"
+  },
+  "guests": {
+    "fr": "voyageurs",
+    "ar": "ضيوف",
+    "am": "እንግዶች",
+    "om": "keessummoota"
+  },
+  "room": {
+    "fr": "chambre",
+    "ar": "غرفة",
+    "am": "ክፍል",
+    "om": "kutaa"
+  },
+  "rooms": {
+    "fr": "chambres",
+    "ar": "غرف",
+    "am": "ክፍሎች",
+    "om": "kutaalee"
+  },
+  "night": {
+    "fr": "nuit",
+    "ar": "ليلة",
+    "am": "ሌሊት",
+    "om": "halkan"
+  },
+  "nights": {
+    "fr": "nuits",
+    "ar": "ليالٍ",
+    "am": "ሌሊቶች",
+    "om": "halkanoota"
+  },
+  "Rooms and guests": {
+    "fr": "Chambres et voyageurs",
+    "ar": "الغرف والضيوف",
+    "am": "ክፍሎች እና እንግዶች",
+    "om": "Kutaalee fi keessummoota"
+  },
+  "Guests and rooms": {
+    "fr": "Voyageurs et chambres",
+    "ar": "الضيوف والغرف",
+    "am": "እንግዶች እና ክፍሎች",
+    "om": "Keessummootaa fi kutaalee"
+  },
+  "Check-in": {
+    "fr": "Arrivée",
+    "ar": "تسجيل الوصول",
+    "am": "መግቢያ",
+    "om": "Seensa"
+  },
+  "Check-out": {
+    "fr": "Départ",
+    "ar": "تسجيل المغادرة",
+    "am": "መውጫ",
+    "om": "Ba'insa"
+  },
+  "Stay": {
+    "fr": "Séjour",
+    "ar": "الإقامة",
+    "am": "ቆይታ",
+    "om": "Turtii"
+  },
+  "Stay dates": {
+    "fr": "Dates du séjour",
+    "ar": "تواريخ الإقامة",
+    "am": "የቆይታ ቀኖች",
+    "om": "Guyyoota turtii"
+  },
+  "Length of stay": {
+    "fr": "Durée du séjour",
+    "ar": "مدة الإقامة",
+    "am": "የቆይታ ርዝመት",
+    "om": "Dheerina turtii"
+  },
+  "Name": {
+    "fr": "Nom",
+    "ar": "الاسم",
+    "am": "ስም",
+    "om": "Maqaa"
+  },
+  "Full name": {
+    "fr": "Nom complet",
+    "ar": "الاسم الكامل",
+    "am": "ሙሉ ስም",
+    "om": "Maqaa guutuu"
+  },
+  "Your name": {
+    "fr": "Votre nom",
+    "ar": "اسمك",
+    "am": "ስምዎ",
+    "om": "Maqaa keessan"
+  },
+  "Email": {
+    "fr": "E-mail",
+    "ar": "البريد الإلكتروني",
+    "am": "ኢሜይል",
+    "om": "Imeelii"
+  },
+  "Phone number": {
+    "fr": "Téléphone",
+    "ar": "رقم الهاتف",
+    "am": "ስልክ ቁጥር",
+    "om": "Lakkoofsa bilbilaa"
+  },
+  "Message": {
+    "fr": "Message",
+    "ar": "الرسالة",
+    "am": "መልዕክት",
+    "om": "Ergaa"
+  },
+  "How can we help?": {
+    "fr": "Comment vous aider ?",
+    "ar": "كيف يمكننا مساعدتك؟",
+    "am": "እንዴት ልንረዳዎ?",
+    "om": "Akkamitti isin gargaarra?"
+  },
+  "How can our team help you?": {
+    "fr": "Comment notre équipe peut-elle vous aider ?",
+    "ar": "كيف يمكن لفريقنا مساعدتك؟",
+    "am": "ቡድናችን እንዴት ሊረዳዎ ይችላል?",
+    "om": "Gareen keenya akkamitti isin gargaaruu danda'a?"
+  },
+  "Send enquiry": {
+    "fr": "Envoyer la demande",
+    "ar": "إرسال الاستفسار",
+    "am": "ጥያቄ ይላኩ",
+    "om": "Gaaffii ergaa"
+  },
+  "Send a message": {
+    "fr": "Envoyer un message",
+    "ar": "أرسل رسالة",
+    "am": "መልዕክት ይላኩ",
+    "om": "Ergaa ergaa"
+  },
+  "Send message": {
+    "fr": "Envoyer",
+    "ar": "إرسال الرسالة",
+    "am": "መልዕክት ይላኩ",
+    "om": "Ergaa ergi"
+  },
+  "Sending…": {
+    "fr": "Envoi…",
+    "ar": "جارٍ الإرسال…",
+    "am": "በመላክ ላይ…",
+    "om": "Ergaa jira…"
+  },
+  "Call us": {
+    "fr": "Appelez-nous",
+    "ar": "اتصل بنا",
+    "am": "ይደውሉልን",
+    "om": "Nuuf bilbilaa"
+  },
+  "Email us": {
+    "fr": "Écrivez-nous",
+    "ar": "راسلنا",
+    "am": "ኢሜይል ይላኩልን",
+    "om": "Imeelii nuuf ergaa"
+  },
+  "Email the hotel": {
+    "fr": "Écrire à l’hôtel",
+    "ar": "راسل الفندق",
+    "am": "ለሆቴሉ ኢሜይል ይላኩ",
+    "om": "Hoteelichaaf imeelii ergaa"
+  },
+  "Get directions": {
+    "fr": "Obtenir l’itinéraire",
+    "ar": "احصل على الاتجاهات",
+    "am": "አቅጣጫ ያግኙ",
+    "om": "Kallattii argadhaa"
+  },
+  "Route me to the hotel": {
+    "fr": "Itinéraire vers l’hôtel",
+    "ar": "أرشدني إلى الفندق",
+    "am": "ወደ ሆቴሉ መንገድ አሳየኝ",
+    "om": "Karaa gara hoteelaa na agarsiisi"
+  },
+  "Find us": {
+    "fr": "Nous trouver",
+    "ar": "موقعنا",
+    "am": "ያግኙን",
+    "om": "Nu argadhaa"
+  },
+  "Visit": {
+    "fr": "Visite",
+    "ar": "زرنا",
+    "am": "ይጎብኙ",
+    "om": "Daawwadhaa"
+  },
+  "Visit us": {
+    "fr": "Rendez-nous visite",
+    "ar": "تفضل بزيارتنا",
+    "am": "ይጎብኙን",
+    "om": "Nu daawwadhaa"
+  },
+  "Get in touch": {
+    "fr": "Contactez-nous",
+    "ar": "تواصل معنا",
+    "am": "ያግኙን",
+    "om": "Nu qunnamaa"
+  },
+  "Support hours": {
+    "fr": "Horaires d’assistance",
+    "ar": "ساعات الدعم",
+    "am": "የድጋፍ ሰዓታት",
+    "om": "Sa'aatii deeggarsaa"
+  },
+  "24/7 SUPPORT": {
+    "fr": "ASSISTANCE 24 H/24",
+    "ar": "دعم على مدار الساعة",
+    "am": "የ24/7 ድጋፍ",
+    "om": "DEEGGARSA 24/7"
+  },
+  "International Hotel": {
+    "fr": "Hôtel international",
+    "ar": "فندق دولي",
+    "am": "ዓለም አቀፍ ሆቴል",
+    "om": "Hoteela Idil Addunyaa"
+  },
+  "Restaurant": {
+    "fr": "Restaurant",
+    "ar": "المطعم",
+    "am": "ምግብ ቤት",
+    "om": "Mana nyaataa"
+  },
+  "Fitness center": {
+    "fr": "Salle de sport",
+    "ar": "مركز اللياقة",
+    "am": "የአካል ብቃት ማዕከል",
+    "om": "Giddugala ispoortii"
+  },
+  "Spa": {
+    "fr": "Spa",
+    "ar": "المنتجع الصحي",
+    "am": "ስፓ",
+    "om": "Ispaa"
+  },
+  "Conference hall": {
+    "fr": "Salle de conférence",
+    "ar": "قاعة المؤتمرات",
+    "am": "የስብሰባ አዳራሽ",
+    "om": "Galma walgahii"
+  },
+  "Airport shuttle": {
+    "fr": "Navette aéroport",
+    "ar": "نقل المطار",
+    "am": "የአየር ማረፊያ ማመላለሻ",
+    "om": "Geejjiba buufata xiyyaaraa"
+  },
+  "Secure parking": {
+    "fr": "Parking sécurisé",
+    "ar": "موقف آمن",
+    "am": "ደህንነቱ የተጠበቀ ፓርኪንግ",
+    "om": "Iddoo konkolaataa nageenya qabu"
+  },
+  "Parking": {
+    "fr": "Parking",
+    "ar": "موقف السيارات",
+    "am": "ፓርኪንግ",
+    "om": "Iddoo konkolaataa"
+  },
+  "Room service": {
+    "fr": "Service en chambre",
+    "ar": "خدمة الغرف",
+    "am": "የክፍል አገልግሎት",
+    "om": "Tajaajila kutaa"
+  },
+  "Daily housekeeping": {
+    "fr": "Ménage quotidien",
+    "ar": "تنظيف يومي",
+    "am": "ዕለታዊ ጽዳት",
+    "om": "Qulqullina guyyaa guyyaa"
+  },
+  "Daily service": {
+    "fr": "Service quotidien",
+    "ar": "خدمة يومية",
+    "am": "ዕለታዊ አገልግሎት",
+    "om": "Tajaajila guyyaa guyyaa"
+  },
+  "Guest services": {
+    "fr": "Services aux clients",
+    "ar": "خدمات الضيوف",
+    "am": "የእንግዳ አገልግሎቶች",
+    "om": "Tajaajila keessummootaa"
+  },
+  "Amenities": {
+    "fr": "Équipements",
+    "ar": "المرافق",
+    "am": "መገልገያዎች",
+    "om": "Mijeeffamoota"
+  },
+  "Front desk": {
+    "fr": "Réception",
+    "ar": "الاستقبال",
+    "am": "መስተንግዶ",
+    "om": "Simannaa"
+  },
+  "Reservations": {
+    "fr": "Réservations",
+    "ar": "الحجوزات",
+    "am": "ቦታ ማስያዣዎች",
+    "om": "Qabannoowwan"
+  },
+  "Concierge": {
+    "fr": "Conciergerie",
+    "ar": "الكونسيرج",
+    "am": "እንግዳ አገልግሎት",
+    "om": "Tajaajila keessummaa"
+  },
+  "Prices": {
+    "fr": "Tarifs",
+    "ar": "الأسعار",
+    "am": "ዋጋዎች",
+    "om": "Gatiiwwan"
+  },
+  "Payment": {
+    "fr": "Paiement",
+    "ar": "الدفع",
+    "am": "ክፍያ",
+    "om": "Kaffaltii"
+  },
+  "Payment provider": {
+    "fr": "Prestataire de paiement",
+    "ar": "مزود الدفع",
+    "am": "የክፍያ አቅራቢ",
+    "om": "Dhiyeessaa kaffaltii"
+  },
+  "Payment method": {
+    "fr": "Mode de paiement",
+    "ar": "طريقة الدفع",
+    "am": "የክፍያ ዘዴ",
+    "om": "Mala kaffaltii"
+  },
+  "Payment reference": {
+    "fr": "Référence du paiement",
+    "ar": "مرجع الدفع",
+    "am": "የክፍያ ማጣቀሻ",
+    "om": "Wabii kaffaltii"
+  },
+  "Payment is": {
+    "fr": "Le paiement est",
+    "ar": "حالة الدفع",
+    "am": "ክፍያው",
+    "om": "Kaffaltiin"
+  },
+  "unpaid": {
+    "fr": "impayé",
+    "ar": "غير مدفوع",
+    "am": "አልተከፈለም",
+    "om": "hin kaffalamne"
+  },
+  "paid": {
+    "fr": "payé",
+    "ar": "مدفوع",
+    "am": "ተከፍሏል",
+    "om": "kaffalameera"
+  },
+  "failed": {
+    "fr": "échoué",
+    "ar": "فشل",
+    "am": "አልተሳካም",
+    "om": "hin milkoofne"
+  },
+  "pending": {
+    "fr": "en attente",
+    "ar": "قيد الانتظار",
+    "am": "በመጠባበቅ ላይ",
+    "om": "eeggachaa jira"
+  },
+  "confirmed": {
+    "fr": "confirmé",
+    "ar": "مؤكد",
+    "am": "ተረጋግጧል",
+    "om": "mirkanaa'eera"
+  },
+  "cancelled": {
+    "fr": "annulé",
+    "ar": "ملغى",
+    "am": "ተሰርዟል",
+    "om": "haqameera"
+  },
+  "completed": {
+    "fr": "terminé",
+    "ar": "مكتمل",
+    "am": "ተጠናቋል",
+    "om": "xumurameera"
+  },
+  "PAID": {
+    "fr": "PAYÉ",
+    "ar": "مدفوع",
+    "am": "ተከፍሏል",
+    "om": "KAFFALAMEERA"
+  },
+  "Verified": {
+    "fr": "Vérifié",
+    "ar": "تم التحقق",
+    "am": "ተረጋግጧል",
+    "om": "Mirkanaa'eera"
+  },
+  "Pay now": {
+    "fr": "Payer maintenant",
+    "ar": "ادفع الآن",
+    "am": "አሁን ይክፈሉ",
+    "om": "Amma kaffalaa"
+  },
+  "Opening checkout…": {
+    "fr": "Ouverture du paiement…",
+    "ar": "جارٍ فتح الدفع…",
+    "am": "ክፍያ በመክፈት ላይ…",
+    "om": "Kaffaltii banaa jira…"
+  },
+  "Pay in Ethiopian Birr (ETB)": {
+    "fr": "Payer en birr éthiopien (ETB)",
+    "ar": "الدفع بالبر الإثيوبي (ETB)",
+    "am": "በኢትዮጵያ ብር ይክፈሉ (ETB)",
+    "om": "Birrii Itoophiyaatiin kaffalaa (ETB)"
+  },
+  "Pay in US dollars (USD)": {
+    "fr": "Payer en dollars US (USD)",
+    "ar": "الدفع بالدولار الأمريكي (USD)",
+    "am": "በአሜሪካ ዶላር ይክፈሉ (USD)",
+    "om": "Doolaara Ameerikaatiin kaffalaa (USD)"
+  },
+  "Review and choose payment": {
+    "fr": "Vérifier et choisir le paiement",
+    "ar": "راجع واختر الدفع",
+    "am": "ይገምግሙና ክፍያ ይምረጡ",
+    "om": "Ilaalaa kaffaltii filadhaa"
+  },
+  "Review payment": {
+    "fr": "Vérifier le paiement",
+    "ar": "مراجعة الدفع",
+    "am": "ክፍያ ይገምግሙ",
+    "om": "Kaffaltii ilaalaa"
+  },
+  "Continue to payment": {
+    "fr": "Passer au paiement",
+    "ar": "المتابعة للدفع",
+    "am": "ወደ ክፍያ ይቀጥሉ",
+    "om": "Gara kaffaltiitti itti fufaa"
+  },
+  "Continue to dates": {
+    "fr": "Choisir les dates",
+    "ar": "المتابعة للتواريخ",
+    "am": "ወደ ቀኖች ይቀጥሉ",
+    "om": "Gara guyyootaa itti fufaa"
+  },
+  "Continue to guest details": {
+    "fr": "Renseigner les voyageurs",
+    "ar": "المتابعة لبيانات الضيف",
+    "am": "ወደ እንግዳ ዝርዝር ይቀጥሉ",
+    "om": "Gara odeeffannoo keessummaa itti fufaa"
+  },
+  "Hold room and pay with": {
+    "fr": "Réserver et payer avec",
+    "ar": "احجز الغرفة وادفع عبر",
+    "am": "ክፍል ያስይዙና ይክፈሉ በ",
+    "om": "Kutaa qabadhaa fi kaffalaa karaa"
+  },
+  "Securing your booking…": {
+    "fr": "Réservation en cours…",
+    "ar": "جارٍ تأمين حجزك…",
+    "am": "ቦታ በማስያዝ ላይ…",
+    "om": "Qabannoo keessan eeggachaa jira…"
+  },
+  "Booking hold created": {
+    "fr": "Chambre temporairement réservée",
+    "ar": "تم حجز الغرفة مؤقتًا",
+    "am": "ክፍል ለጊዜው ተይዟል",
+    "om": "Kutaan yeroo muraasaaf qabameera"
+  },
+  "Finish payment before": {
+    "fr": "Terminez le paiement avant",
+    "ar": "أكمل الدفع قبل",
+    "am": "ከዚህ በፊት ክፍያ ይጨርሱ",
+    "om": "Kaffaltii kana dura xumuraa"
+  },
+  "to keep this room hold.": {
+    "fr": "pour conserver cette chambre.",
+    "ar": "للاحتفاظ بالغرفة.",
+    "am": "ይህን ክፍል ለማስቀመጥ።",
+    "om": "qabannoo kutaa kana eeguuf."
+  },
+  "Total paid": {
+    "fr": "Total payé",
+    "ar": "إجمالي المدفوع",
+    "am": "ጠቅላላ የተከፈለ",
+    "om": "Waliigala kaffalame"
+  },
+  "BOOKING SLIP": {
+    "fr": "FICHE DE RÉSERVATION",
+    "ar": "قسيمة الحجز",
+    "am": "የቦታ ማስያዣ ደረሰኝ",
+    "om": "WARAQAA QABANNOO"
+  },
+  "Download booking slip": {
+    "fr": "Télécharger la fiche",
+    "ar": "تنزيل قسيمة الحجز",
+    "am": "የቦታ ማስያዣ ደረሰኝ ያውርዱ",
+    "om": "Waraqaa qabannoo buufadhaa"
+  },
+  "Booking reference": {
+    "fr": "Référence de réservation",
+    "ar": "مرجع الحجز",
+    "am": "የቦታ ማስያዣ ማጣቀሻ",
+    "om": "Wabii qabannoo"
+  },
+  "Booking reference:": {
+    "fr": "Référence :",
+    "ar": "مرجع الحجز:",
+    "am": "የቦታ ማስያዣ ማጣቀሻ፦",
+    "om": "Wabii qabannoo:"
+  },
+  "Booking email": {
+    "fr": "E-mail de réservation",
+    "ar": "بريد الحجز",
+    "am": "የቦታ ማስያዣ ኢሜይል",
+    "om": "Imeelii qabannoo"
+  },
+  "Booking status": {
+    "fr": "Statut de réservation",
+    "ar": "حالة الحجز",
+    "am": "የቦታ ማስያዣ ሁኔታ",
+    "om": "Haala qabannoo"
+  },
+  "Booking status:": {
+    "fr": "Statut de réservation :",
+    "ar": "حالة الحجز:",
+    "am": "የቦታ ማስያዣ ሁኔታ፦",
+    "om": "Haala qabannoo:"
+  },
+  "Booking update": {
+    "fr": "État de réservation",
+    "ar": "تحديث الحجز",
+    "am": "የቦታ ማስያዣ ዝማኔ",
+    "om": "Odeeffannoo qabannoo"
+  },
+  "Find booking": {
+    "fr": "Trouver la réservation",
+    "ar": "البحث عن الحجز",
+    "am": "ቦታ ማስያዣ ይፈልጉ",
+    "om": "Qabannoo barbaadaa"
+  },
+  "Searching…": {
+    "fr": "Recherche…",
+    "ar": "جارٍ البحث…",
+    "am": "በመፈለግ ላይ…",
+    "om": "Barbaadaa jira…"
+  },
+  "Show my receipt": {
+    "fr": "Afficher mon reçu",
+    "ar": "عرض الإيصال",
+    "am": "ደረሰኜን አሳይ",
+    "om": "Nagahee koo agarsiisi"
+  },
+  "Loading receipt…": {
+    "fr": "Chargement du reçu…",
+    "ar": "جارٍ تحميل الإيصال…",
+    "am": "ደረሰኝ በመጫን ላይ…",
+    "om": "Nagahee fe'aa jira…"
+  },
+  "Enter your booking reference": {
+    "fr": "Votre référence de réservation",
+    "ar": "أدخل مرجع الحجز",
+    "am": "የቦታ ማስያዣ ማጣቀሻ ያስገቡ",
+    "om": "Wabii qabannoo keessan galchaa"
+  },
+  "Recent booking references on this device": {
+    "fr": "Réservations récentes sur cet appareil",
+    "ar": "الحجوزات الأخيرة على هذا الجهاز",
+    "am": "በዚህ መሣሪያ ያሉ የቅርብ ጊዜ ማስያዣዎች",
+    "om": "Qabannoowwan dhihoo meeshaa kana irratti"
+  },
+  "Choose a reference, then enter the booking email to view its details.": {
+    "fr": "Choisissez une référence puis l’e-mail de réservation.",
+    "ar": "اختر مرجعًا ثم أدخل بريد الحجز لعرض التفاصيل.",
+    "am": "ማጣቀሻ ይምረጡና ዝርዝሩን ለማየት ኢሜይል ያስገቡ።",
+    "om": "Wabii filadhaa; bal'ina ilaaluuf imeelii qabannoo galchaa."
+  },
+  "Your stay, all in one place": {
+    "fr": "Votre séjour au même endroit",
+    "ar": "إقامتك في مكان واحد",
+    "am": "ቆይታዎ በአንድ ቦታ",
+    "om": "Turtiin keessan bakka tokkotti"
+  },
+  "My": {
+    "fr": "Mes",
+    "ar": "حجوزاتي",
+    "am": "የእኔ",
+    "om": "Koo"
+  },
+  "bookings.": {
+    "fr": "réservations.",
+    "ar": "الحجوزات.",
+    "am": "ቦታ ማስያዣዎች።",
+    "om": "qabannoowwan."
+  },
+  "Payment needs attention.": {
+    "fr": "Paiement à vérifier.",
+    "ar": "الدفع بحاجة للمراجعة.",
+    "am": "ክፍያው ማረጋገጥ ይፈልጋል።",
+    "om": "Kaffaltiin ilaalamuu qaba."
+  },
+  "We’re confirming your payment securely.": {
+    "fr": "Nous vérifions votre paiement.",
+    "ar": "نتحقق من دفعتك بأمان.",
+    "am": "ክፍያዎን በደህንነት እያረጋገጥን ነው።",
+    "om": "Kaffaltii keessan nageenyaan mirkaneessaa jirra."
+  },
+  "Payment confirmed. Your receipt is ready below.": {
+    "fr": "Paiement confirmé. Votre reçu est ci-dessous.",
+    "ar": "تم تأكيد الدفع. الإيصال أدناه.",
+    "am": "ክፍያ ተረጋግጧል። ደረሰኝዎ ከታች ዝግጁ ነው።",
+    "om": "Kaffaltiin mirkanaa'eera. Nagaheen keessan armaan gaditti qophaa'eera."
+  },
+  "Payment confirmed. Your booking receipt is ready.": {
+    "fr": "Paiement confirmé. Votre reçu est prêt.",
+    "ar": "تم تأكيد الدفع. إيصال الحجز جاهز.",
+    "am": "ክፍያ ተረጋግጧል። የማስያዣ ደረሰኝዎ ዝግጁ ነው።",
+    "om": "Kaffaltiin mirkanaa'eera. Nagaheen qabannoo keessan qophaa'eera."
+  },
+  "You’re all set.": {
+    "fr": "Tout est prêt.",
+    "ar": "كل شيء جاهز.",
+    "am": "ሁሉም ዝግጁ ነው።",
+    "om": "Hunduu qophaa'eera."
+  },
+  "One moment…": {
+    "fr": "Un instant…",
+    "ar": "لحظة…",
+    "am": "አንድ አፍታ…",
+    "om": "Yeroo muraasa…"
+  },
+  "Try another payment": {
+    "fr": "Réessayer le paiement",
+    "ar": "جرّب الدفع مجددًا",
+    "am": "ሌላ ክፍያ ይሞክሩ",
+    "om": "Kaffaltii biraa yaalaa"
+  },
+  "Thank you for choosing": {
+    "fr": "Merci d’avoir choisi",
+    "ar": "شكرًا لاختيارك",
+    "am": "ስለመረጡን እናመሰግናለን",
+    "om": "Filachuu keessaniif galatoomaa"
+  },
+  "Email for confirmation": {
+    "fr": "E-mail de confirmation",
+    "ar": "بريد التأكيد",
+    "am": "የማረጋገጫ ኢሜይል",
+    "om": "Imeelii mirkaneessaa"
+  },
+  "Who is staying?": {
+    "fr": "Qui séjourne ?",
+    "ar": "من سيقيم؟",
+    "am": "ማን ይቆያል?",
+    "om": "Eenyutu tura?"
+  },
+  "Choose your dates and guests": {
+    "fr": "Choisissez dates et voyageurs",
+    "ar": "اختر التواريخ والضيوف",
+    "am": "ቀኖችንና እንግዶችን ይምረጡ",
+    "om": "Guyyootaa fi keessummoota filadhaa"
+  },
+  "Booking progress": {
+    "fr": "Étapes de réservation",
+    "ar": "مراحل الحجز",
+    "am": "የቦታ ማስያዣ ሂደት",
+    "om": "Adeemsa qabannoo"
+  },
+  "Booking receipt details": {
+    "fr": "Détails du reçu",
+    "ar": "تفاصيل إيصال الحجز",
+    "am": "የማስያዣ ደረሰኝ ዝርዝር",
+    "om": "Bal'ina nagahee qabannoo"
+  },
+  "Estimated payment total": {
+    "fr": "Total estimé",
+    "ar": "إجمالي الدفع التقديري",
+    "am": "ግምታዊ ጠቅላላ ክፍያ",
+    "om": "Waliigala kaffaltii tilmaamame"
+  },
+  "Indicative room price": {
+    "fr": "Tarif indicatif",
+    "ar": "سعر الغرفة التقديري",
+    "am": "ግምታዊ የክፍል ዋጋ",
+    "om": "Gatii kutaa tilmaamame"
+  },
+  "Room price currency": {
+    "fr": "Devise du tarif",
+    "ar": "عملة سعر الغرفة",
+    "am": "የክፍል ዋጋ ምንዛሬ",
+    "om": "Maallaqa gatii kutaa"
+  },
+  "Auto": {
+    "fr": "Auto",
+    "ar": "تلقائي",
+    "am": "ራስ-ሰር",
+    "om": "Ofumaan"
+  },
+  "Auto follows your payment currency.": {
+    "fr": "Auto suit votre devise de paiement.",
+    "ar": "التلقائي يتبع عملة الدفع.",
+    "am": "ራስ-ሰር የክፍያ ምንዛሬዎን ይከተላል።",
+    "om": "Ofumaan maallaqa kaffaltii keessan hordofa."
+  },
+  "Display currency only. Choose your payment method at checkout.": {
+    "fr": "Devise d’affichage uniquement. Choisissez le paiement à la caisse.",
+    "ar": "عملة العرض فقط. اختر طريقة الدفع عند الإتمام.",
+    "am": "የማሳያ ምንዛሬ ብቻ። የክፍያ ዘዴዎን በመጨረሻ ይምረጡ።",
+    "om": "Maallaqa agarsiisaa qofa. Mala kaffaltii yeroo xumuraa filadhaa."
+  },
+  "USD/ETB rate used": {
+    "fr": "Taux USD/ETB appliqué",
+    "ar": "سعر صرف USD/ETB المستخدم",
+    "am": "የተጠቀመው USD/ETB ምንዛሬ",
+    "om": "Jijjiirraa USD/ETB fayyadame"
+  },
+  "Currently unavailable": {
+    "fr": "Indisponible actuellement",
+    "ar": "غير متاح حاليًا",
+    "am": "ለጊዜው አይገኝም",
+    "om": "Yeroo ammaa hin argamu"
+  },
+  "Hotel Support": {
+    "fr": "Assistance de l’hôtel",
+    "ar": "دعم الفندق",
+    "am": "የሆቴል ድጋፍ",
+    "om": "Deeggarsa hoteelaa"
+  },
+  "Hotel support chat": {
+    "fr": "Discussion d’assistance",
+    "ar": "محادثة دعم الفندق",
+    "am": "የሆቴል ድጋፍ ውይይት",
+    "om": "Mariin deeggarsa hoteelaa"
+  },
+  "Open hotel support chat": {
+    "fr": "Ouvrir l’assistance",
+    "ar": "فتح محادثة الدعم",
+    "am": "የሆቴል ድጋፍ ይክፈቱ",
+    "om": "Deeggarsa hoteelaa bani"
+  },
+  "Close support chat": {
+    "fr": "Fermer l’assistance",
+    "ar": "إغلاق محادثة الدعم",
+    "am": "የድጋፍ ውይይት ይዝጉ",
+    "om": "Marii deeggarsaa cufi"
+  },
+  "Support conversation": {
+    "fr": "Discussion d’assistance",
+    "ar": "محادثة الدعم",
+    "am": "የድጋፍ ውይይት",
+    "om": "Marii deeggarsaa"
+  },
+  "Automated help · instant replies": {
+    "fr": "Aide automatisée · réponses instantanées",
+    "ar": "مساعدة آلية · ردود فورية",
+    "am": "ራስ-ሰር እርዳታ · ፈጣን ምላሽ",
+    "om": "Gargaarsa ofumaan · deebii battalaa"
+  },
+  "Type your message": {
+    "fr": "Votre message",
+    "ar": "اكتب رسالتك",
+    "am": "መልዕክትዎን ይጻፉ",
+    "om": "Ergaa keessan barreessaa"
+  },
+  "Type your message...": {
+    "fr": "Votre message...",
+    "ar": "اكتب رسالتك...",
+    "am": "መልዕክትዎን ይጻፉ...",
+    "om": "Ergaa keessan barreessaa..."
+  },
+  "Clear now": {
+    "fr": "Effacer",
+    "ar": "مسح الآن",
+    "am": "አሁን አጽዳ",
+    "om": "Amma qulqulleessi"
+  },
+  "Chat history clears after 12 hours": {
+    "fr": "Historique effacé après 12 heures",
+    "ar": "يُمسح سجل المحادثة بعد 12 ساعة",
+    "am": "የውይይት ታሪክ ከ12 ሰዓት በኋላ ይጠፋል",
+    "om": "Seenaan marii sa'aatii 12 booda haqama"
+  },
+  "Frequently asked questions": {
+    "fr": "Questions fréquentes",
+    "ar": "الأسئلة الشائعة",
+    "am": "ተደጋጋሚ ጥያቄዎች",
+    "om": "Gaaffilee irra deddeebi'aman"
+  },
+  "Need Help?": {
+    "fr": "Besoin d’aide ?",
+    "ar": "تحتاج مساعدة؟",
+    "am": "እርዳታ ይፈልጋሉ?",
+    "om": "Gargaarsa barbaadduu?"
+  },
+  "Welcome! How can we help you today?": {
+    "fr": "Bienvenue ! Comment vous aider ?",
+    "ar": "مرحبًا! كيف نساعدك اليوم؟",
+    "am": "እንኳን ደህና መጡ! ዛሬ እንዴት ልንረዳዎ?",
+    "om": "Baga nagaan dhuftan! Har'a akkamitti isin gargaarra?"
+  },
+  "For more help, contact the hotel:": {
+    "fr": "Pour plus d’aide, contactez l’hôtel :",
+    "ar": "لمزيد من المساعدة، اتصل بالفندق:",
+    "am": "ለተጨማሪ እርዳታ ሆቴሉን ያግኙ፦",
+    "om": "Gargaarsa dabalataaf hoteelicha qunnamaa:"
+  },
+  "Standard Room": {
+    "fr": "Chambre standard",
+    "ar": "غرفة عادية",
+    "am": "መደበኛ ክፍል",
+    "om": "Kutaa idilee"
+  },
+  "Twin Room": {
+    "fr": "Chambre à deux lits",
+    "ar": "غرفة بسريرين",
+    "am": "ባለሁለት አልጋ ክፍል",
+    "om": "Kutaa siree lamaa"
+  },
+  "Deluxe Room": {
+    "fr": "Chambre de luxe",
+    "ar": "غرفة ديلوكس",
+    "am": "ዴሉክስ ክፍል",
+    "om": "Kutaa dilaksii"
+  },
+  "Suite": {
+    "fr": "Suite",
+    "ar": "جناح",
+    "am": "ስዊት",
+    "om": "Suuyitii"
+  },
+  "A warm welcome awaits": {
+    "fr": "Un accueil chaleureux vous attend",
+    "ar": "ترحيب دافئ بانتظارك",
+    "am": "ሞቅ ያለ አቀባበል ይጠብቅዎታል",
+    "om": "Simannaan ho'aan isin eeggata"
+  },
+  "Make room": {
+    "fr": "Faites place",
+    "ar": "أفسح المجال",
+    "am": "ቦታ ይስጡ",
+    "om": "Bakka kennaa"
+  },
+  "for": {
+    "fr": "pour",
+    "ar": "لـ",
+    "am": "ለ",
+    "om": "dhaaf"
+  },
+  "something": {
+    "fr": "quelque chose de",
+    "ar": "شيء",
+    "am": "አንድ ነገር",
+    "om": "waan tokko"
+  },
+  "beautiful.": {
+    "fr": "beau.",
+    "ar": "جميل.",
+    "am": "ውብ።",
+    "om": "bareedaa."
+  },
+  "A thoughtful place to pause, connect, and feel at home—wherever your journey takes you.": {
+    "fr": "Un lieu accueillant pour se reposer, se retrouver et se sentir chez soi, où que vous alliez.",
+    "ar": "مكان للاسترخاء والتواصل والشعور بالراحة أينما تأخذك رحلتك.",
+    "am": "ጉዞዎ ወዴትም ቢወስድዎ ለማረፍ፣ ለመገናኘትና እንደ ቤት ለመሰማት የተዘጋጀ ቦታ።",
+    "om": "Bakka boqotan, wal qunnaman, akkuma manaatti itti dhaga'amu; imalli keessan eessayyuu isin haa geessu."
+  },
+  "Discover your stay": {
+    "fr": "Découvrez votre séjour",
+    "ar": "اكتشف إقامتك",
+    "am": "ቆይታዎን ያግኙ",
+    "om": "Turtii keessan argadhaa"
+  },
+  "A place to belong": {
+    "fr": "Un lieu où se sentir chez soi",
+    "ar": "مكان تنتمي إليه",
+    "am": "የራስዎ የሚሰማዎ ቦታ",
+    "om": "Bakka kan keessan ta'e"
+  },
+  "Travel brings us together.": {
+    "fr": "Le voyage nous réunit.",
+    "ar": "السفر يجمعنا.",
+    "am": "ጉዞ አንድ ያደርገናል።",
+    "om": "Imalli walitti nu fida."
+  },
+  "Hospitality makes it feel like home.": {
+    "fr": "L’hospitalité nous fait sentir chez nous.",
+    "ar": "الضيافة تجعلنا نشعر وكأننا في المنزل.",
+    "am": "እንግዳ አቀባበል እንደ ቤት ያሰማል።",
+    "om": "Keessummeessuun akka manaatti namaaf dhaga'amsiisa."
+  },
+  "Whether you’re here for a moment or a little longer, we believe the best stays are made of thoughtful details, genuine care, and space to make the experience your own.": {
+    "fr": "Pour une courte visite ou un long séjour, nous privilégions les attentions, le soin et votre confort.",
+    "ar": "سواء كانت زيارتك قصيرة أو طويلة، نؤمن بأن أفضل الإقامات تجمع التفاصيل المدروسة والعناية الصادقة والراحة.",
+    "am": "ቆይታዎ አጭርም ሆነ ረዥም፣ ምርጥ ቆይታ በጥንቃቄ ከተዘጋጁ ዝርዝሮችና ከልብ እንክብካቤ ይመጣል።",
+    "om": "Turtiin keessan gabaabaa yookaan dheeraa haa ta'u, turtiin gaariin kunuunsa dhugaa fi mijannaa irraa akka uumamu amanna."
+  },
+  "Find your kind of stay": {
+    "fr": "Trouvez le séjour qui vous ressemble",
+    "ar": "اعثر على إقامتك المناسبة",
+    "am": "የሚስማማዎን ቆይታ ያግኙ",
+    "om": "Turtii isinitti tolu argadhaa"
+  },
+  "Settle in": {
+    "fr": "Installez-vous",
+    "ar": "استقر",
+    "am": "ዘና ይበሉ",
+    "om": "Qubadhaa"
+  },
+  "beautifully.": {
+    "fr": "en beauté.",
+    "ar": "بجمال.",
+    "am": "በውበት።",
+    "om": "bareedinaan."
+  },
+  "Comfort for the everyday.": {
+    "fr": "Le confort au quotidien.",
+    "ar": "راحة كل يوم.",
+    "am": "ለዕለት ተዕለት ምቾት።",
+    "om": "Mijannaa guyyaa guyyaa."
+  },
+  "Space for the exceptional.": {
+    "fr": "Un espace pour l’exceptionnel.",
+    "ar": "مساحة للاستثنائي.",
+    "am": "ለልዩ ጊዜዎች ቦታ።",
+    "om": "Bakka yeroo addaatiif."
+  },
+  "/ STAY": {
+    "fr": "/ SÉJOUR",
+    "ar": "/ إقامة",
+    "am": "/ ቆይታ",
+    "om": "/ TURTII"
+  },
+  "/ ROOM": {
+    "fr": "/ CHAMBRE",
+    "ar": "/ غرفة",
+    "am": "/ ክፍል",
+    "om": "/ KUTAA"
+  },
+  "/ night": {
+    "fr": "/ nuit",
+    "ar": "/ ليلة",
+    "am": "/ ሌሊት",
+    "om": "/ halkan"
+  },
+  "/ night · indicative conversion": {
+    "fr": "/ nuit · conversion indicative",
+    "ar": "/ ليلة · تحويل تقديري",
+    "am": "/ ሌሊት · ግምታዊ ምንዛሬ",
+    "om": "/ halkan · jijjiirraa tilmaamaa"
+  },
+  "Indicative exchange rate · updated": {
+    "fr": "Taux indicatif · mis à jour",
+    "ar": "سعر صرف تقديري · تحديث",
+    "am": "ግምታዊ ምንዛሬ · የተዘመነ",
+    "om": "Jijjiirraa tilmaamaa · haaromfame"
+  },
+  "Loading Birr price…": {
+    "fr": "Chargement du tarif en birr…",
+    "ar": "جارٍ تحميل السعر بالبر…",
+    "am": "የብር ዋጋ በመጫን ላይ…",
+    "om": "Gatii birrii fe'aa jira…"
+  },
+  "Birr price unavailable": {
+    "fr": "Tarif en birr indisponible",
+    "ar": "السعر بالبر غير متاح",
+    "am": "የብር ዋጋ አይገኝም",
+    "om": "Gatiin birrii hin argamu"
+  },
+  "Birr estimate unavailable right now.": {
+    "fr": "Estimation en birr indisponible.",
+    "ar": "تقدير البر غير متاح حاليًا.",
+    "am": "የብር ግምት ለጊዜው አይገኝም።",
+    "om": "Tilmaamni birrii yeroo ammaa hin argamu."
+  },
+  "Birr estimate temporarily unavailable": {
+    "fr": "Estimation en birr temporairement indisponible",
+    "ar": "تقدير البر غير متاح مؤقتًا",
+    "am": "የብር ግምት ለጊዜው አይገኝም",
+    "om": "Tilmaamni birrii yeroodhaaf hin argamu"
+  },
+  "Birr estimate unavailable": {
+    "fr": "Estimation en birr indisponible",
+    "ar": "تقدير البر غير متاح",
+    "am": "የብር ግምት አይገኝም",
+    "om": "Tilmaamni birrii hin argamu"
+  },
+  "Birr estimate unavailable; try again later.": {
+    "fr": "Estimation en birr indisponible ; réessayez plus tard.",
+    "ar": "تقدير البر غير متاح؛ حاول لاحقًا.",
+    "am": "የብር ግምት አይገኝም፤ ቆይተው ይሞክሩ።",
+    "om": "Tilmaamni birrii hin argamu; booda yaalaa."
+  },
+  "Local test inventory": {
+    "fr": "Stock de test local",
+    "ar": "مخزون اختبار محلي",
+    "am": "የአካባቢ ሙከራ ክፍሎች",
+    "om": "Kuusaa yaalii naannoo"
+  },
+  "Loading room options…": {
+    "fr": "Chargement des chambres…",
+    "ar": "جارٍ تحميل الغرف…",
+    "am": "ክፍሎችን በመጫን ላይ…",
+    "om": "Kutaalee fe'aa jira…"
+  },
+  "Loading available rooms…": {
+    "fr": "Chargement des chambres disponibles…",
+    "ar": "جارٍ تحميل الغرف المتاحة…",
+    "am": "ክፍት ክፍሎችን በመጫን ላይ…",
+    "om": "Kutaalee jiran fe'aa jira…"
+  },
+  "Loading available room types…": {
+    "fr": "Chargement des types de chambres…",
+    "ar": "جارٍ تحميل أنواع الغرف…",
+    "am": "የክፍል አይነቶችን በመጫን ላይ…",
+    "om": "Gosoota kutaa fe'aa jira…"
+  },
+  "Room details could not be loaded. Please try again later.": {
+    "fr": "Impossible de charger les chambres. Réessayez plus tard.",
+    "ar": "تعذر تحميل تفاصيل الغرف. حاول لاحقًا.",
+    "am": "የክፍል ዝርዝር መጫን አልተቻለም። ቆይተው ይሞክሩ።",
+    "om": "Bal'ina kutaa fe'uun hin danda'amne. Booda yaalaa."
+  },
+  "No room options are available right now. Please contact the hotel.": {
+    "fr": "Aucune chambre disponible actuellement. Contactez l’hôtel.",
+    "ar": "لا تتوفر غرف حاليًا. يرجى الاتصال بالفندق.",
+    "am": "ለጊዜው ክፍሎች አይገኙም። ሆቴሉን ያግኙ።",
+    "om": "Yeroo ammaa kutaaleen hin jiran. Hoteelicha qunnamaa."
+  },
+  "Birr prices are indicative conversions from the public USD/ETB rate, updated": {
+    "fr": "Les tarifs en birr sont indicatifs, calculés selon le taux USD/ETB public, mis à jour",
+    "ar": "أسعار البر تحويلات تقديرية بسعر USD/ETB العام، المحدث في",
+    "am": "የብር ዋጋዎች ከሕዝብ USD/ETB ምንዛሬ የተሰሉ ግምቶች ናቸው፣ የተዘመነ",
+    "om": "Gatiiwwan birrii jijjiirraa USD/ETB irraa tilmaamaman, kan haaromfaman"
+  },
+  "UTC. The final charge uses the payment currency and room rate confirmed at checkout.": {
+    "fr": "UTC. Le montant final suit la devise et le tarif confirmés au paiement.",
+    "ar": "UTC. تُحتسب الدفعة النهائية بالعملة والسعر المؤكدين عند الدفع.",
+    "am": "UTC። የመጨረሻው ክፍያ በተረጋገጠው ምንዛሬና የክፍል ዋጋ ይሆናል።",
+    "om": "UTC. Kaffaltiin dhumaa maallaqaa fi gatii kutaa yeroo kaffaltii mirkanaa'e fayyadama."
+  },
+  "UTC. Your final charge uses the payment currency and room rate confirmed at checkout.": {
+    "fr": "UTC. Le montant final suit la devise et le tarif confirmés au paiement.",
+    "ar": "UTC. تُحتسب دفعتك النهائية بالعملة والسعر المؤكدين عند الدفع.",
+    "am": "UTC። የመጨረሻ ክፍያዎ በተረጋገጠው ምንዛሬና ዋጋ ይሆናል።",
+    "om": "UTC. Kaffaltiin keessan dhumaa maallaqaa fi gatii kutaa mirkanaa'e fayyadama."
+  },
+  "UTC. Final checkout uses the chosen payment currency and its confirmed room rate.": {
+    "fr": "UTC. Le paiement final suit la devise choisie et le tarif confirmé.",
+    "ar": "UTC. الدفع النهائي بالعملة المختارة وسعر الغرفة المؤكد.",
+    "am": "UTC። የመጨረሻ ክፍያ በተመረጠው ምንዛሬና በተረጋገጠው ዋጋ ይሆናል።",
+    "om": "UTC. Kaffaltiin dhumaa maallaqa filatamee fi gatii kutaa mirkanaa'e fayyadama."
+  },
+  "The current Birr estimate could not be loaded. Please try again later or contact the hotel for pricing.": {
+    "fr": "Estimation en birr indisponible. Réessayez ou contactez l’hôtel.",
+    "ar": "تعذر تحميل تقدير البر. حاول لاحقًا أو اتصل بالفندق للأسعار.",
+    "am": "የብር ግምት መጫን አልተቻለም። ቆይተው ይሞክሩ ወይም ሆቴሉን ያግኙ።",
+    "om": "Tilmaama birrii fe'uun hin danda'amne. Booda yaalaa yookaan gatiif hoteelicha qunnamaa."
+  },
+  "Ready when you are.": {
+    "fr": "À votre convenance.",
+    "ar": "جاهزون عندما تكون مستعدًا.",
+    "am": "እርስዎ ሲዘጋጁ ዝግጁ ነን።",
+    "om": "Yeroo isin qophooftan qophaa'oodha."
+  },
+  "Ready when you are": {
+    "fr": "À votre convenance",
+    "ar": "جاهزون لك",
+    "am": "እርስዎ ሲዘጋጁ",
+    "om": "Yeroo isin qophooftan"
+  },
+  "Thoughtful facilities": {
+    "fr": "Des équipements bien pensés",
+    "ar": "مرافق مدروسة",
+    "am": "በጥንቃቄ የተዘጋጁ መገልገያዎች",
+    "om": "Mijeeffamoota sirriitti qophaa'an"
+  },
+  "Here to make your stay": {
+    "fr": "Pour rendre votre séjour",
+    "ar": "لنجعل إقامتك",
+    "am": "ቆይታዎን ለማድረግ",
+    "om": "Turtii keessan gochuuf"
+  },
+  "easier.": {
+    "fr": "plus simple.",
+    "ar": "أسهل.",
+    "am": "ቀላል።",
+    "om": "salphaa."
+  },
+  "Dining, wellness, meetings": {
+    "fr": "Restauration, bien-être, réunions",
+    "ar": "طعام وعافية واجتماعات",
+    "am": "ምግብ፣ ጤና፣ ስብሰባዎች",
+    "om": "Nyaata, fayyaa, walgahii"
+  },
+  "and help along the way.": {
+    "fr": "et assistance à chaque étape.",
+    "ar": "ومساعدة في كل خطوة.",
+    "am": "እና በመንገድዎ ላይ ድጋፍ።",
+    "om": "fi gargaarsa imala keessanii."
+  },
+  "Open daily from 7:00 AM to 10:00 PM.": {
+    "fr": "Ouvert chaque jour de 7 h à 22 h.",
+    "ar": "مفتوح يوميًا من 7 صباحًا إلى 10 مساءً.",
+    "am": "በየቀኑ ከ7:00 AM እስከ 10:00 PM ክፍት ነው።",
+    "om": "Guyyaa hunda 7:00 AM hanga 10:00 PM banaadha."
+  },
+  "Gym access, open from 6:00 AM to 10:00 PM.": {
+    "fr": "Salle de sport ouverte de 6 h à 22 h.",
+    "ar": "صالة رياضية من 6 صباحًا إلى 10 مساءً.",
+    "am": "ጂም ከ6:00 AM እስከ 10:00 PM ክፍት ነው።",
+    "om": "Jiimiin 6:00 AM hanga 10:00 PM banaadha."
+  },
+  "Wellness facilities open from 9:00 AM to 8:00 PM.": {
+    "fr": "Espace bien-être ouvert de 9 h à 20 h.",
+    "ar": "مرافق العافية من 9 صباحًا إلى 8 مساءً.",
+    "am": "የጤና መገልገያዎች ከ9:00 AM እስከ 8:00 PM ክፍት ናቸው።",
+    "om": "Mijeeffamoonni fayyaa 9:00 AM hanga 8:00 PM banaadha."
+  },
+  "Meeting and event space for up to 100 people.": {
+    "fr": "Espace de réunion pour 100 personnes maximum.",
+    "ar": "قاعة اجتماعات وفعاليات حتى 100 شخص.",
+    "am": "እስከ 100 ሰዎች የሚይዝ የስብሰባ ቦታ።",
+    "om": "Bakka walgahii fi sagantaa nama 100 tajaajilu."
+  },
+  "Arrange pickup with the front desk at least 24 hours ahead.": {
+    "fr": "Organisez la navette avec la réception au moins 24 h à l’avance.",
+    "ar": "رتب النقل مع الاستقبال قبل 24 ساعة على الأقل.",
+    "am": "ማመላለሻ ከ24 ሰዓት በፊት ከመስተንግዶ ጋር ያዘጋጁ።",
+    "om": "Geejjiba yoo xiqqaate sa'aatii 24 dura simannaa waliin qopheessaa."
+  },
+  "Complimentary secure guest parking.": {
+    "fr": "Parking sécurisé gratuit pour les clients.",
+    "ar": "موقف آمن مجاني للضيوف.",
+    "am": "ለእንግዶች ነፃ ደህንነቱ የተጠበቀ ፓርኪንግ።",
+    "om": "Iddoo konkolaataa nageenya qabu bilisaa keessummootaaf."
+  },
+  "24/7 room service and daily housekeeping.": {
+    "fr": "Service en chambre 24 h/24 et ménage quotidien.",
+    "ar": "خدمة غرف على مدار الساعة وتنظيف يومي.",
+    "am": "የ24/7 የክፍል አገልግሎትና ዕለታዊ ጽዳት።",
+    "om": "Tajaajila kutaa 24/7 fi qulqullina guyyaa guyyaa."
+  },
+  "Breakfast and extra beds are listed as available features; confirm inclusions and charges when booking. Extra bed:": {
+    "fr": "Petit-déjeuner et lits supplémentaires proposés ; confirmez les frais à la réservation. Lit supplémentaire :",
+    "ar": "الإفطار والأسرّة الإضافية متاحة؛ تحقق من الرسوم عند الحجز. سرير إضافي:",
+    "am": "ቁርስና ተጨማሪ አልጋ ይገኛሉ፤ ክፍያዎችን ሲያስይዙ ያረጋግጡ። ተጨማሪ አልጋ፦",
+    "om": "Ciree fi sireen dabalataa jiru; kaffaltii yeroo qabannoo mirkaneessaa. Siree dabalataa:"
+  },
+  "price available on request": {
+    "fr": "tarif sur demande",
+    "ar": "السعر عند الطلب",
+    "am": "ዋጋ በጥያቄ ይገኛል",
+    "om": "gatiin yoo gaafattan ni argama"
+  },
+  "Located in Dilla Town, in Ethiopia’s Gedeo Zone.": {
+    "fr": "Situé à Dilla, dans la zone de Gedeo en Éthiopie.",
+    "ar": "يقع في مدينة ديلا بمنطقة غيديو في إثيوبيا.",
+    "am": "በኢትዮጵያ በጌዴኦ ዞን በዲላ ከተማ ይገኛል።",
+    "om": "Itoophiyaa, Godina Gede'oo, magaalaa Dillaatti argama."
+  },
+  "The feeling stays with you": {
+    "fr": "Des souvenirs qui restent",
+    "ar": "شعور يبقى معك",
+    "am": "ስሜቱ ከእርስዎ ጋር ይቆያል",
+    "om": "Miirri sun isin waliin tura"
+  },
+  "Good stays are": {
+    "fr": "Les beaux séjours sont",
+    "ar": "الإقامات الجميلة",
+    "am": "መልካም ቆይታዎች",
+    "om": "Turtiin gaariin"
+  },
+  "made of moments.": {
+    "fr": "faits de moments.",
+    "ar": "تصنعها اللحظات.",
+    "am": "ከአፍታዎች የተሠሩ።",
+    "om": "yeroowwan irraa uumama."
+  },
+  "It’s the ease of arriving. The comfort of settling in. The feeling that someone thought of the little things. We’re here to make every part of your visit feel a little more special.": {
+    "fr": "Arriver sereinement, s’installer confortablement et apprécier les petites attentions : nous rendons chaque instant de votre visite spécial.",
+    "ar": "سهولة الوصول وراحة الاستقرار والعناية بالتفاصيل الصغيرة. نحن هنا لنجعل كل لحظة من زيارتك مميزة.",
+    "am": "ቀላል መድረስ፣ በምቾት መቆየትና ለትንንሽ ነገሮች እንክብካቤ። የጉብኝትዎን እያንዳንዱን ክፍል ልዩ ለማድረግ እዚህ ነን።",
+    "om": "Salphinaan dhufuu, mijannaadhaan qubachuu fi kunuunsa wantoota xixiqqoo. Kutaa daawwannaa keessanii hunda adda gochuuf as jirra."
+  },
+  "Let’s make a plan": {
+    "fr": "Préparons votre séjour",
+    "ar": "لنخطط معًا",
+    "am": "እቅድ እናውጣ",
+    "om": "Karoora haa baafannu"
+  },
+  "Start with a hello": {
+    "fr": "Commencez par un bonjour",
+    "ar": "ابدأ بالتحية",
+    "am": "በሰላምታ ይጀምሩ",
+    "om": "Nagaa gaafachuun jalqabaa"
+  },
+  "Your next stay": {
+    "fr": "Votre prochain séjour",
+    "ar": "إقامتك القادمة",
+    "am": "የሚቀጥለው ቆይታዎ",
+    "om": "Turtii keessan itti aanu"
+  },
+  "starts": {
+    "fr": "commence",
+    "ar": "تبدأ",
+    "am": "ይጀምራል",
+    "om": "jalqaba"
+  },
+  "right here.": {
+    "fr": "ici même.",
+    "ar": "هنا.",
+    "am": "እዚሁ።",
+    "om": "asuma."
+  },
+  "Have a question or planning a visit? Send our team a message.": {
+    "fr": "Une question ou une visite prévue ? Écrivez à notre équipe.",
+    "ar": "لديك سؤال أو تخطط لزيارة؟ أرسل رسالة لفريقنا.",
+    "am": "ጥያቄ አለዎት ወይስ ጉብኝት እያቀዱ ነው? ለቡድናችን መልዕክት ይላኩ።",
+    "om": "Gaaffii qabduu yookaan daawwannaa karoorfattu? Garee keenyaaf ergaa ergaa."
+  },
+  "Your message is emailed directly to the hotel team.": {
+    "fr": "Votre message est envoyé directement à l’hôtel.",
+    "ar": "تُرسل رسالتك مباشرة إلى فريق الفندق.",
+    "am": "መልዕክትዎ በቀጥታ ለሆቴሉ ቡድን ይላካል።",
+    "om": "Ergaan keessan kallattiin garee hoteelaatti ergama."
+  },
+  "Thanks—your message has been sent.": {
+    "fr": "Merci, votre message a été envoyé.",
+    "ar": "شكرًا، تم إرسال رسالتك.",
+    "am": "እናመሰግናለን፤ መልዕክትዎ ተልኳል።",
+    "om": "Galatoomaa; ergaan keessan ergameera."
+  },
+  "Hotel address and map directions will appear here once configured.": {
+    "fr": "L’adresse et l’itinéraire apparaîtront ici une fois configurés.",
+    "ar": "سيظهر عنوان الفندق والاتجاهات هنا بعد إعدادها.",
+    "am": "የሆቴሉ አድራሻና አቅጣጫዎች ሲዘጋጁ እዚህ ይታያሉ።",
+    "om": "Teessoon hoteelaa fi kallattiin yeroo qophaa'an asitti mul'atu."
+  },
+  "Thoughtful stays. Genuine welcome.": {
+    "fr": "Des séjours soignés. Un accueil sincère.",
+    "ar": "إقامة مدروسة. ترحيب صادق.",
+    "am": "በእንክብካቤ የተዘጋጀ ቆይታ። ከልብ አቀባበል።",
+    "om": "Turtii kunuunsa qabu. Simannaa dhugaa."
+  },
+  "A room for every kind of stay": {
+    "fr": "Une chambre pour chaque séjour",
+    "ar": "غرفة لكل إقامة",
+    "am": "ለእያንዳንዱ ቆይታ ክፍል",
+    "om": "Kutaa turtii hundaaf"
+  },
+  "Find your place": {
+    "fr": "Trouvez votre espace",
+    "ar": "اعثر على مكانك",
+    "am": "ቦታዎን ያግኙ",
+    "om": "Bakka keessan argadhaa"
+  },
+  "to unwind.": {
+    "fr": "pour vous détendre.",
+    "ar": "للاسترخاء.",
+    "am": "ዘና ለማለት።",
+    "om": "boqochuuf."
+  },
+  "Thoughtful comforts, welcoming spaces, and a restful stay in Dilla.": {
+    "fr": "Confort, espaces accueillants et repos à Dilla.",
+    "ar": "راحة ومساحات مرحبة وإقامة هادئة في ديلا.",
+    "am": "በዲላ ምቾት፣ ሞቅ ያለ ቦታና የእረፍት ቆይታ።",
+    "om": "Mijannaa, bakka simannaa fi boqonnaa Dillaatti."
+  },
+  "Explore rooms": {
+    "fr": "Découvrir les chambres",
+    "ar": "استكشف الغرف",
+    "am": "ክፍሎችን ይመልከቱ",
+    "om": "Kutaalee ilaalaa"
+  },
+  "Stay a little": {
+    "fr": "Séjournez",
+    "ar": "أقم",
+    "am": "ይቆዩ",
+    "om": "Turaa"
+  },
+  "more comfortably.": {
+    "fr": "plus confortablement.",
+    "ar": "براحة أكبر.",
+    "am": "በተሻለ ምቾት።",
+    "om": "caalaatti mijannaadhaan."
+  },
+  "Choose a room to see its current rate and start planning your visit.": {
+    "fr": "Choisissez une chambre pour voir son tarif et préparer votre visite.",
+    "ar": "اختر غرفة لمعرفة سعرها والتخطيط لزيارتك.",
+    "am": "ዋጋውን ለማየትና ጉብኝትዎን ለማቀድ ክፍል ይምረጡ።",
+    "om": "Gatii ilaaluuf kutaa filadhaa; daawwannaa keessan karoorfadhaa."
+  },
+  "per night · up to": {
+    "fr": "par nuit · jusqu’à",
+    "ar": "لكل ليلة · حتى",
+    "am": "በሌሊት · እስከ",
+    "om": "halkanitti · hanga"
+  },
+  "Up to": {
+    "fr": "Jusqu’à",
+    "ar": "حتى",
+    "am": "እስከ",
+    "om": "Hanga"
+  },
+  "Listed nightly rates": {
+    "fr": "Tarifs par nuit",
+    "ar": "الأسعار الليلية",
+    "am": "የሌሊት ዋጋዎች",
+    "om": "Gatiiwwan halkanii"
+  },
+  "Contact us for current rates": {
+    "fr": "Contactez-nous pour les tarifs",
+    "ar": "اتصل بنا للأسعار الحالية",
+    "am": "ለወቅታዊ ዋጋ ያግኙን",
+    "om": "Gatii ammaa argachuuf nu qunnamaa"
+  },
+  "Room options are being prepared.": {
+    "fr": "Les chambres sont en préparation.",
+    "ar": "جارٍ تجهيز خيارات الغرف.",
+    "am": "የክፍል አማራጮች እየተዘጋጁ ነው።",
+    "om": "Filannoowwan kutaa qophaa'aa jiru."
+  },
+  "Please contact the hotel, or check back soon.": {
+    "fr": "Contactez l’hôtel ou revenez bientôt.",
+    "ar": "اتصل بالفندق أو عُد قريبًا.",
+    "am": "ሆቴሉን ያግኙ ወይም ቆይተው ይመለሱ።",
+    "om": "Hoteelicha qunnamaa yookaan yeroo dhihootti deebi'aa."
+  },
+  "Ready to make": {
+    "fr": "Prêt à faire",
+    "ar": "هل أنت مستعد",
+    "am": "ዝግጁ ነዎት",
+    "om": "Qophooftaniittuu"
+  },
+  "a little room?": {
+    "fr": "un peu de place ?",
+    "ar": "لحجز غرفة؟",
+    "am": "ትንሽ ቦታ ለመስጠት?",
+    "om": "bakka xiqqoo qopheessuuf?"
+  },
+  "A little more for your stay": {
+    "fr": "Un plus pour votre séjour",
+    "ar": "المزيد لإقامتك",
+    "am": "ለቆይታዎ ትንሽ ተጨማሪ",
+    "om": "Turtii keessaniif dabalata"
+  },
+  "Thoughtful services.": {
+    "fr": "Des services attentionnés.",
+    "ar": "خدمات مدروسة.",
+    "am": "በእንክብካቤ የተዘጋጁ አገልግሎቶች።",
+    "om": "Tajaajiloota kunuunsa qaban."
+  },
+  "Warm hospitality.": {
+    "fr": "Une hospitalité chaleureuse.",
+    "ar": "ضيافة دافئة.",
+    "am": "ሞቅ ያለ እንግዳ አቀባበል።",
+    "om": "Keessummeessuu ho'aa."
+  },
+  "From your first arrival to a well-earned moment of rest, we are here to make your visit easier.": {
+    "fr": "De votre arrivée à votre repos, nous facilitons votre visite.",
+    "ar": "من وصولك وحتى استراحتك، نحن هنا لتسهيل زيارتك.",
+    "am": "ከመጀመሪያ መድረስዎ እስከ እረፍትዎ ድረስ ጉብኝትዎን ቀላል ለማድረግ እዚህ ነን።",
+    "om": "Dhufaatii keessanii hanga boqonnaatti daawwannaa keessan salphisuuf as jirra."
+  },
+  "Explore services": {
+    "fr": "Découvrir les services",
+    "ar": "استكشف الخدمات",
+    "am": "አገልግሎቶችን ይመልከቱ",
+    "om": "Tajaajiloota ilaalaa"
+  },
+  "Here to help": {
+    "fr": "À votre service",
+    "ar": "هنا لمساعدتك",
+    "am": "ለመርዳት እዚህ ነን",
+    "om": "Isin gargaaruuf as jirra"
+  },
+  "Make yourself": {
+    "fr": "Sentez-vous",
+    "ar": "اشعر",
+    "am": "እንደ ራስዎ",
+    "om": "Akka"
+  },
+  "at home.": {
+    "fr": "chez vous.",
+    "ar": "وكأنك في المنزل.",
+    "am": "ቤት።",
+    "om": "mana keessanii."
+  },
+  "Explore the facilities and guest services listed by Ayele Degu International Hotel.": {
+    "fr": "Découvrez les équipements et services de l’hôtel Ayele Degu.",
+    "ar": "استكشف مرافق وخدمات فندق أيلي ديغو الدولي.",
+    "am": "የአየለ ደጉ ዓለም አቀፍ ሆቴልን መገልገያዎችና አገልግሎቶች ይመልከቱ።",
+    "om": "Mijeeffamootaa fi tajaajiloota Hoteela Idil Addunyaa Ayele Degu ilaalaa."
+  },
+  "Enjoy a meal at the hotel restaurant.": {
+    "fr": "Savourez un repas au restaurant de l’hôtel.",
+    "ar": "استمتع بوجبة في مطعم الفندق.",
+    "am": "በሆቴሉ ምግብ ቤት ምግብ ይደሰቱ።",
+    "om": "Mana nyaataa hoteelaatti nyaata nyaadhaa."
+  },
+  "Keep up your routine while you are away.": {
+    "fr": "Gardez vos habitudes pendant votre séjour.",
+    "ar": "حافظ على روتينك أثناء السفر.",
+    "am": "በጉዞ ላይ የእለት ተግባርዎን ይቀጥሉ።",
+    "om": "Yeroo imalaatti shaakala keessan itti fufaa."
+  },
+  "Take time to rest and recharge.": {
+    "fr": "Prenez le temps de vous ressourcer.",
+    "ar": "خذ وقتًا للراحة واستعادة النشاط.",
+    "am": "ለማረፍና ለመታደስ ጊዜ ይውሰዱ።",
+    "om": "Boqochuu fi haaromfamuuf yeroo fudhadhaa."
+  },
+  "A dedicated space for meetings and events.": {
+    "fr": "Un espace dédié aux réunions et événements.",
+    "ar": "مساحة مخصصة للاجتماعات والفعاليات.",
+    "am": "ለስብሰባና ዝግጅቶች የተዘጋጀ ቦታ።",
+    "om": "Bakka walgahii fi sagantaaf qophaa'e."
+  },
+  "Arrange transportation with the front desk.": {
+    "fr": "Organisez le transport avec la réception.",
+    "ar": "رتب النقل مع الاستقبال.",
+    "am": "መጓጓዣ ከመስተንግዶ ጋር ያዘጋጁ።",
+    "om": "Geejjiba simannaa waliin qopheessaa."
+  },
+  "Assistance and room service are available around the clock.": {
+    "fr": "Assistance et service en chambre 24 h/24.",
+    "ar": "المساعدة وخدمة الغرف متاحتان على مدار الساعة.",
+    "am": "ድጋፍና የክፍል አገልግሎት ቀንና ሌሊት ይገኛሉ።",
+    "om": "Gargaarsii fi tajaajilli kutaa sa'aatii hunda jiru."
+  },
+  "Complimentary secure parking for hotel guests.": {
+    "fr": "Parking sécurisé gratuit pour les clients.",
+    "ar": "موقف آمن مجاني لنزلاء الفندق.",
+    "am": "ለሆቴሉ እንግዶች ነፃ ፓርኪንግ።",
+    "om": "Iddoo konkolaataa nageenya qabu bilisaa keessummoota hoteelaaf."
+  },
+  "A little extra care to help you feel at home.": {
+    "fr": "Des attentions pour vous sentir chez vous.",
+    "ar": "عناية إضافية لتشعر كأنك في المنزل.",
+    "am": "እንደ ቤት እንዲሰማዎ ተጨማሪ እንክብካቤ።",
+    "om": "Akka manaatti akka isinitti dhaga'amu kunuunsa dabalataa."
+  },
+  "Available for guests": {
+    "fr": "Disponible pour les clients",
+    "ar": "متاح للضيوف",
+    "am": "ለእንግዶች ይገኛል",
+    "om": "Keessummootaaf ni argama"
+  },
+  "Available · 24/7": {
+    "fr": "Disponible · 24 h/24",
+    "ar": "متاح · على مدار الساعة",
+    "am": "ይገኛል · 24/7",
+    "om": "Ni argama · 24/7"
+  },
+  "Capacity · Up to 100 guests": {
+    "fr": "Capacité · 100 personnes maximum",
+    "ar": "السعة · حتى 100 ضيف",
+    "am": "አቅም · እስከ 100 እንግዶች",
+    "om": "Dandeettii · hanga keessummoota 100"
+  },
+  "Please arrange at least 24 hours ahead": {
+    "fr": "Réservez au moins 24 h à l’avance",
+    "ar": "يرجى الترتيب قبل 24 ساعة على الأقل",
+    "am": "ከ24 ሰዓት በፊት ያዘጋጁ",
+    "om": "Yoo xiqqaate sa'aatii 24 dura qopheessaa"
+  },
+  "Open daily · 7:00 AM–10:00 PM": {
+    "fr": "Tous les jours · 7 h–22 h",
+    "ar": "يوميًا · 7 صباحًا–10 مساءً",
+    "am": "በየቀኑ · 7:00 AM–10:00 PM",
+    "om": "Guyyaa hunda · 7:00 AM–10:00 PM"
+  },
+  "Open daily · 6:00 AM–10:00 PM": {
+    "fr": "Tous les jours · 6 h–22 h",
+    "ar": "يوميًا · 6 صباحًا–10 مساءً",
+    "am": "በየቀኑ · 6:00 AM–10:00 PM",
+    "om": "Guyyaa hunda · 6:00 AM–10:00 PM"
+  },
+  "Open daily · 9:00 AM–8:00 PM": {
+    "fr": "Tous les jours · 9 h–20 h",
+    "ar": "يوميًا · 9 صباحًا–8 مساءً",
+    "am": "በየቀኑ · 9:00 AM–8:00 PM",
+    "om": "Guyyaa hunda · 9:00 AM–8:00 PM"
+  },
+  "Please contact the hotel to confirm availability, details, and any applicable charges before your visit.": {
+    "fr": "Contactez l’hôtel pour confirmer la disponibilité, les détails et les frais avant votre visite.",
+    "ar": "اتصل بالفندق لتأكيد التوفر والتفاصيل والرسوم قبل زيارتك.",
+    "am": "ከጉብኝትዎ በፊት መኖሩን፣ ዝርዝሩንና ክፍያዎችን ለማረጋገጥ ሆቴሉን ያግኙ።",
+    "om": "Daawwannaa dura argamuu, bal'inaa fi kaffaltii mirkaneessuuf hoteelicha qunnamaa."
+  },
+  "Need a hand?": {
+    "fr": "Besoin d’un coup de main ?",
+    "ar": "تحتاج مساعدة؟",
+    "am": "እርዳታ ይፈልጋሉ?",
+    "om": "Gargaarsa barbaadduu?"
+  },
+  "We’re here": {
+    "fr": "Nous sommes là",
+    "ar": "نحن هنا",
+    "am": "እዚህ ነን",
+    "om": "As jirra"
+  },
+  "for every stay.": {
+    "fr": "pour chaque séjour.",
+    "ar": "لكل إقامة.",
+    "am": "ለእያንዳንዱ ቆይታ።",
+    "om": "turtii hundaaf."
+  },
+  "Whether you’re planning ahead or need something during your visit, our team is ready to help with reservations, directions, local tips, and thoughtful service from arrival to departure.": {
+    "fr": "Avant ou pendant votre visite, notre équipe vous aide pour les réservations, les itinéraires et les conseils locaux.",
+    "ar": "قبل الزيارة أو خلالها، فريقنا جاهز لمساعدتك في الحجز والاتجاهات والنصائح المحلية من الوصول إلى المغادرة.",
+    "am": "ቀድመው እያቀዱም ሆነ በጉብኝትዎ ጊዜ እርዳታ ሲፈልጉ፣ ቡድናችን በማስያዝ፣ በአቅጣጫና በአካባቢ ምክሮች ሊረዳዎ ዝግጁ ነው።",
+    "om": "Daawwannaa dura yookaan yeroo turtii keessaniitti, gareen keenya qabannoo, kallattii fi gorsa naannootiin isin gargaaruuf qophaa'eera."
+  },
+  "Support that feels personal": {
+    "fr": "Une assistance personnalisée",
+    "ar": "دعم بلمسة شخصية",
+    "am": "የቅርብ የሚሰማ ድጋፍ",
+    "om": "Deeggarsa dhuunfaa"
+  },
+  "Friendly help for": {
+    "fr": "Une aide chaleureuse pour",
+    "ar": "مساعدة ودودة لكل",
+    "am": "ወዳጃዊ እርዳታ ለ",
+    "om": "Gargaarsa michoomaa"
+  },
+  "every moment": {
+    "fr": "chaque instant",
+    "ar": "لحظة",
+    "am": "እያንዳንዱ አፍታ",
+    "om": "yeroo hundaaf"
+  },
+  "From the first message to the final check-out, our team responds with warmth, clarity, and practical guidance.": {
+    "fr": "Du premier message au départ, notre équipe répond avec chaleur et conseils pratiques.",
+    "ar": "من أول رسالة إلى المغادرة، يقدم فريقنا ترحيبًا وإرشادات واضحة وعملية.",
+    "am": "ከመጀመሪያ መልዕክት እስከ መጨረሻ መውጫ ድረስ ቡድናችን በሞቅ ያለ አቀባበልና በግልጽ መመሪያ ይረዳዎታል።",
+    "om": "Ergaa jalqabaa hanga ba'insaatti gareen keenya simannaa ho'aa fi qajeelfama ifaa kenna."
+  },
+  "Arrival and in-stay assistance": {
+    "fr": "Assistance à l’arrivée et pendant le séjour",
+    "ar": "المساعدة عند الوصول وخلال الإقامة",
+    "am": "በመድረስና በቆይታ ወቅት ድጋፍ",
+    "om": "Gargaarsa dhufaatii fi turtii"
+  },
+  "Check-in coordination, room details, Wi-Fi, and guest requests handled by our front office team.": {
+    "fr": "Notre réception gère l’arrivée, les chambres, le Wi-Fi et vos demandes.",
+    "ar": "فريق الاستقبال يساعد في الوصول وتفاصيل الغرف والواي فاي وطلبات الضيوف.",
+    "am": "ቡድናችን መግቢያን፣ የክፍል ዝርዝርን፣ Wi-Fi እና የእንግዳ ጥያቄዎችን ያስተናግዳል።",
+    "om": "Gareen simannaa seensa, bal'ina kutaa, Wi-Fi fi gaaffii keessummootaa keessummeessa."
+  },
+  "Planning and booking support": {
+    "fr": "Assistance à la réservation",
+    "ar": "دعم التخطيط والحجز",
+    "am": "የዕቅድና የማስያዝ ድጋፍ",
+    "om": "Deeggarsa karooraa fi qabannoo"
+  },
+  "Flexible stay planning, room upgrades, dates, and special arrangements for longer or group visits.": {
+    "fr": "Séjours flexibles, surclassements et organisation des visites longues ou en groupe.",
+    "ar": "تخطيط مرن وترقية الغرف وترتيبات للإقامات الطويلة والمجموعات.",
+    "am": "ተለዋዋጭ የቆይታ ዕቅድ፣ የክፍል ማሻሻያና ለረዥም ወይም ለቡድን ጉብኝት ዝግጅቶች።",
+    "om": "Karoora turtii jijjiiramuu danda'u, fooyya'iinsa kutaa fi qophii turtii dheeraa yookaan garee."
+  },
+  "Local guidance and recommendations": {
+    "fr": "Conseils et recommandations locales",
+    "ar": "إرشادات وتوصيات محلية",
+    "am": "የአካባቢ መመሪያና ምክሮች",
+    "om": "Qajeelfamaa fi gorsa naannoo"
+  },
+  "City tips, transport help, and itinerary ideas so your time in Dilla feels effortless.": {
+    "fr": "Conseils sur la ville, transports et itinéraires pour profiter de Dilla.",
+    "ar": "نصائح المدينة والنقل وخطط الرحلات لتستمتع بوقتك في ديلا.",
+    "am": "በዲላ ቆይታዎ ቀላል እንዲሆን የከተማ ምክሮች፣ የመጓጓዣ ድጋፍና የጉዞ ዕቅዶች።",
+    "om": "Yeroon keessan Dillaatti salphaa akka ta'u gorsa magaalaa, gargaarsa geejjibaa fi karoora imalaa."
+  },
+  "Open daily, 24/7 front desk support": {
+    "fr": "Réception ouverte chaque jour, 24 h/24",
+    "ar": "استقبال يومي على مدار الساعة",
+    "am": "በየቀኑ የ24/7 መስተንግዶ ድጋፍ",
+    "om": "Deeggarsa simannaa guyyaa hunda 24/7"
+  },
+  "Tell us how we can help.": {
+    "fr": "Dites-nous comment vous aider.",
+    "ar": "أخبرنا كيف نساعدك.",
+    "am": "እንዴት ልንረዳዎ እንደምንችል ይንገሩን።",
+    "om": "Akkamitti isin gargaaruu akka dandeenyu nutti himaa."
+  },
+  "Easy to reach.": {
+    "fr": "Facile d’accès.",
+    "ar": "يسهل الوصول إلينا.",
+    "am": "ለመድረስ ቀላል።",
+    "om": "Dhaquuf salphaa."
+  },
+  "Let’s plan your": {
+    "fr": "Préparons votre",
+    "ar": "لنخطط",
+    "am": "እናቅድ የእርስዎን",
+    "om": "Haa karoorfannu"
+  },
+  "next visit.": {
+    "fr": "prochaine visite.",
+    "ar": "لزيارتك القادمة.",
+    "am": "የሚቀጥለውን ጉብኝት።",
+    "om": "daawwannaa keessan itti aanu."
+  },
+  "Dilla Town, Gedeo Zone, Ethiopia": {
+    "fr": "Dilla, zone de Gedeo, Éthiopie",
+    "ar": "مدينة ديلا، منطقة غيديو، إثيوبيا",
+    "am": "ዲላ ከተማ፣ ጌዴኦ ዞን፣ ኢትዮጵያ",
+    "om": "Magaalaa Dilla, Godina Gede'oo, Itoophiyaa"
+  },
+  ". A receipt will be available here after the payment is verified.": {
+    "fr": ". Le reçu sera disponible ici après vérification du paiement.",
+    "ar": ". سيتوفر الإيصال هنا بعد تأكيد الدفع.",
+    "am": "። ክፍያው ከተረጋገጠ በኋላ ደረሰኝ እዚህ ይገኛል።",
+    "om": ". Kaffaltiin erga mirkanaa'ee booda nagaheen asitti argama."
+  },
+  "A stay cannot exceed 60 nights. Contact the hotel for longer stays.": {
+    "fr": "Le séjour ne peut dépasser 60 nuits. Contactez l’hôtel pour une durée supérieure.",
+    "ar": "لا تتجاوز الإقامة 60 ليلة. اتصل بالفندق لإقامة أطول.",
+    "am": "ቆይታ ከ60 ሌሊቶች መብለጥ አይችልም። ለረዥም ቆይታ ሆቴሉን ያግኙ።",
+    "om": "Turtiin halkan 60 caaluu hin danda'u. Turtii dheeraaf hoteelicha qunnamaa."
+  },
+  "A stay to look forward to": {
+    "fr": "Un séjour à attendre avec plaisir",
+    "ar": "إقامة تتطلع إليها",
+    "am": "በጉጉት የሚጠብቁት ቆይታ",
+    "om": "Turtii hawwiin eeggatan"
+  },
+  "Choose a room to see its price": {
+    "fr": "Choisissez une chambre pour voir son tarif",
+    "ar": "اختر غرفة لمعرفة سعرها",
+    "am": "ዋጋውን ለማየት ክፍል ይምረጡ",
+    "om": "Gatii ilaaluuf kutaa filadhaa"
+  },
+  "Choose your dates and room. Your rooms are held temporarily while you complete payment.": {
+    "fr": "Choisissez vos dates et votre chambre. Elle sera réservée temporairement pendant le paiement.",
+    "ar": "اختر التواريخ والغرفة. تُحجز غرفك مؤقتًا أثناء إكمال الدفع.",
+    "am": "ቀኖችዎንና ክፍልዎን ይምረጡ። ክፍያ እስኪጨርሱ ክፍሎቹ ለጊዜው ይያዛሉ።",
+    "om": "Guyyootaa fi kutaa filadhaa. Hanga kaffaltii xumurtanitti kutaaleen yeroodhaaf qabamu."
+  },
+  "Contact the hotel for the current rate": {
+    "fr": "Contactez l’hôtel pour le tarif actuel",
+    "ar": "اتصل بالفندق لمعرفة السعر الحالي",
+    "am": "ለወቅታዊ ዋጋ ሆቴሉን ያግኙ",
+    "om": "Gatii ammaa argachuuf hoteelicha qunnamaa"
+  },
+  "Could not start checkout. Please try again.": {
+    "fr": "Impossible de démarrer le paiement. Réessayez.",
+    "ar": "تعذر بدء الدفع. حاول مجددًا.",
+    "am": "ክፍያ መጀመር አልተቻለም። እንደገና ይሞክሩ።",
+    "om": "Kaffaltii jalqabuun hin danda'amne. Irra deebi'aa yaalaa."
+  },
+  "Could not start payment. Please try again.": {
+    "fr": "Impossible de démarrer le paiement. Réessayez.",
+    "ar": "تعذر بدء الدفع. حاول مجددًا.",
+    "am": "ክፍያ መጀመር አልተቻለም። እንደገና ይሞክሩ።",
+    "om": "Kaffaltii jalqabuun hin danda'amne. Irra deebi'aa yaalaa."
+  },
+  "Enter a valid email address.": {
+    "fr": "Saisissez une adresse e-mail valide.",
+    "ar": "أدخل بريدًا إلكترونيًا صالحًا.",
+    "am": "ትክክለኛ ኢሜይል ያስገቡ።",
+    "om": "Imeelii sirrii galchaa."
+  },
+  "Enter a valid email.": {
+    "fr": "Saisissez un e-mail valide.",
+    "ar": "أدخل بريدًا صالحًا.",
+    "am": "ትክክለኛ ኢሜይል ያስገቡ።",
+    "om": "Imeelii sirrii galchaa."
+  },
+  "Enter a valid phone number.": {
+    "fr": "Saisissez un numéro de téléphone valide.",
+    "ar": "أدخل رقم هاتف صالحًا.",
+    "am": "ትክክለኛ ስልክ ቁጥር ያስገቡ።",
+    "om": "Lakkoofsa bilbilaa sirrii galchaa."
+  },
+  "Enter your name.": {
+    "fr": "Saisissez votre nom.",
+    "ar": "أدخل اسمك.",
+    "am": "ስምዎን ያስገቡ።",
+    "om": "Maqaa keessan galchaa."
+  },
+  "Please add a little more detail.": {
+    "fr": "Ajoutez un peu plus de détails.",
+    "ar": "أضف مزيدًا من التفاصيل.",
+    "am": "እባክዎ ተጨማሪ ዝርዝር ያክሉ።",
+    "om": "Bal'ina dabalataa galchaa."
+  },
+  "Enter the email used for this booking to load your receipt": {
+    "fr": "Saisissez l’e-mail de réservation pour afficher le reçu",
+    "ar": "أدخل بريد الحجز لتحميل الإيصال",
+    "am": "ደረሰኝዎን ለማግኘት ያስያዙበትን ኢሜይል ያስገቡ",
+    "om": "Nagahee keessan ilaaluuf imeelii qabannoo galchaa"
+  },
+  "Enter your booking reference and the email address used at checkout to view your booking and payment status.": {
+    "fr": "Saisissez votre référence et l’e-mail utilisé pour consulter la réservation et le paiement.",
+    "ar": "أدخل مرجع الحجز والبريد المستخدم للاطلاع على الحجز وحالة الدفع.",
+    "am": "ማስያዣዎንና ክፍያዎን ለማየት የማስያዣ ማጣቀሻና ኢሜይልዎን ያስገቡ።",
+    "om": "Haala qabannoo fi kaffaltii ilaaluuf wabii qabannoo fi imeelii keessan galchaa."
+  },
+  "Find your room": {
+    "fr": "Trouvez votre chambre",
+    "ar": "اعثر على غرفتك",
+    "am": "ክፍልዎን ያግኙ",
+    "om": "Kutaa keessan argadhaa"
+  },
+  "Find your way to us": {
+    "fr": "Trouvez votre chemin",
+    "ar": "اعثر على طريقك إلينا",
+    "am": "ወደ እኛ መንገድ ያግኙ",
+    "om": "Karaa gara keenya argadhaa"
+  },
+  "Plan a stay": {
+    "fr": "Préparer un séjour",
+    "ar": "خطط لإقامة",
+    "am": "ቆይታ ያቅዱ",
+    "om": "Turtii karoorfadhaa"
+  },
+  "Plan your": {
+    "fr": "Préparez votre",
+    "ar": "خطط لـ",
+    "am": "ያቅዱ",
+    "om": "Karoorfadhaa"
+  },
+  "stay.": {
+    "fr": "séjour.",
+    "ar": "إقامتك.",
+    "am": "ቆይታ።",
+    "om": "turtii."
+  },
+  "Your stay starts here": {
+    "fr": "Votre séjour commence ici",
+    "ar": "إقامتك تبدأ هنا",
+    "am": "ቆይታዎ እዚህ ይጀምራል",
+    "om": "Turtiin keessan asitti jalqaba"
+  },
+  "Your stay is": {
+    "fr": "Votre séjour est",
+    "ar": "إقامتك",
+    "am": "ቆይታዎ",
+    "om": "Turtiin keessan"
+  },
+  "that feels easy.": {
+    "fr": "en toute simplicité.",
+    "ar": "بكل سهولة.",
+    "am": "ቀላል የሚሰማ።",
+    "om": "salphaa ta'e."
+  },
+  "within reach.": {
+    "fr": "à portée de main.",
+    "ar": "في متناولك.",
+    "am": "በአቅራቢያ።",
+    "om": "dhiyeenyatti."
+  },
+  "Questions? Call": {
+    "fr": "Des questions ? Appelez",
+    "ar": "أسئلة؟ اتصل",
+    "am": "ጥያቄ አለዎት? ይደውሉ",
+    "om": "Gaaffii qabduu? Bilbilaa"
+  },
+  "Select the room type you want before entering your stay details.": {
+    "fr": "Choisissez le type de chambre avant de saisir votre séjour.",
+    "ar": "اختر نوع الغرفة قبل إدخال تفاصيل الإقامة.",
+    "am": "የቆይታ ዝርዝር ከማስገባትዎ በፊት ክፍል ይምረጡ።",
+    "om": "Bal'ina turtii galchuu dura gosa kutaa filadhaa."
+  },
+  "That room type is no longer available. Choose another room.": {
+    "fr": "Ce type de chambre n’est plus disponible. Choisissez-en un autre.",
+    "ar": "هذا النوع غير متاح. اختر غرفة أخرى.",
+    "am": "ይህ የክፍል አይነት አይገኝም። ሌላ ክፍል ይምረጡ።",
+    "om": "Gosti kutaa kun hin argamu. Kutaa biraa filadhaa."
+  },
+  "Room options could not be loaded. Please refresh and try again.": {
+    "fr": "Impossible de charger les chambres. Actualisez et réessayez.",
+    "ar": "تعذر تحميل الغرف. حدّث الصفحة وحاول مجددًا.",
+    "am": "ክፍሎችን መጫን አልተቻለም። ያድሱና ይሞክሩ።",
+    "om": "Kutaalee fe'uun hin danda'amne. Haaromsaa yaalaa."
+  },
+  "There are no rooms available to display right now. Please contact the hotel for assistance.": {
+    "fr": "Aucune chambre à afficher. Contactez l’hôtel.",
+    "ar": "لا توجد غرف للعرض حاليًا. اتصل بالفندق.",
+    "am": "ለማሳየት ክፍሎች አይገኙም። ሆቴሉን ያግኙ።",
+    "om": "Yeroo ammaa kutaaleen agarsiifaman hin jiran. Hoteelicha qunnamaa."
+  },
+  "We could not load room details right now. Please try again later or contact the hotel.": {
+    "fr": "Impossible de charger les chambres. Réessayez ou contactez l’hôtel.",
+    "ar": "تعذر تحميل تفاصيل الغرف. حاول لاحقًا أو اتصل بالفندق.",
+    "am": "የክፍል ዝርዝር መጫን አልተቻለም። ቆይተው ይሞክሩ ወይም ሆቴሉን ያግኙ።",
+    "om": "Bal'ina kutaa fe'uun hin danda'amne. Booda yaalaa yookaan hoteelicha qunnamaa."
+  },
+  "We could not hold those dates. Please try again.": {
+    "fr": "Impossible de réserver ces dates. Réessayez.",
+    "ar": "تعذر حجز هذه التواريخ. حاول مجددًا.",
+    "am": "እነዚህን ቀኖች መያዝ አልተቻለም። ይሞክሩ።",
+    "om": "Guyyoota kana qabachuun hin danda'amne. Yaalaa."
+  },
+  "We could not send your message. Please try again.": {
+    "fr": "Impossible d’envoyer le message. Réessayez.",
+    "ar": "تعذر إرسال الرسالة. حاول مجددًا.",
+    "am": "መልዕክትዎን መላክ አልተቻለም። ይሞክሩ።",
+    "om": "Ergaa keessan erguun hin danda'amne. Yaalaa."
+  },
+  "We could not find that booking. Check the reference and email address.": {
+    "fr": "Réservation introuvable. Vérifiez la référence et l’e-mail.",
+    "ar": "تعذر العثور على الحجز. تحقق من المرجع والبريد.",
+    "am": "ማስያዣው አልተገኘም። ማጣቀሻውንና ኢሜይሉን ይፈትሹ።",
+    "om": "Qabannoon hin argamne. Wabii fi imeelii ilaalaa."
+  },
+  "We could not load your receipt. Enter the booking email below or use My bookings.": {
+    "fr": "Reçu indisponible. Saisissez l’e-mail ou utilisez Mes réservations.",
+    "ar": "تعذر تحميل الإيصال. أدخل بريد الحجز أو استخدم حجوزاتي.",
+    "am": "ደረሰኝ መጫን አልተቻለም። ኢሜይል ያስገቡ ወይም ቦታ ማስያዣዎቼን ይጠቀሙ።",
+    "om": "Nagahee fe'uun hin danda'amne. Imeelii galchaa yookaan Qabannoowwan koo fayyadamaa."
+  },
+  "Payment is still processing. Refresh this page in a moment.": {
+    "fr": "Paiement en cours. Actualisez dans un instant.",
+    "ar": "الدفع قيد المعالجة. حدّث الصفحة بعد قليل.",
+    "am": "ክፍያ እየተካሄደ ነው። ቆይተው ገጹን ያድሱ።",
+    "om": "Kaffaltiin hojjetamaa jira. Yeroo muraasa booda fuula haaromsaa."
+  },
+  "We could not verify this payment yet. Contact the hotel before booking again.": {
+    "fr": "Paiement non vérifié. Contactez l’hôtel avant de réserver à nouveau.",
+    "ar": "لم نتحقق من الدفع بعد. اتصل بالفندق قبل الحجز مجددًا.",
+    "am": "ክፍያው ገና አልተረጋገጠም። እንደገና ከማስያዝዎ በፊት ሆቴሉን ያግኙ።",
+    "om": "Kaffaltiin amma hin mirkanoofne. Irra deebiin qabachuu dura hoteelicha qunnamaa."
+  },
+  "Online payment is unavailable for this room. Contact the hotel to complete your booking.": {
+    "fr": "Paiement en ligne indisponible. Contactez l’hôtel pour réserver.",
+    "ar": "الدفع الإلكتروني غير متاح لهذه الغرفة. اتصل بالفندق لإكمال الحجز.",
+    "am": "ለዚህ ክፍል የመስመር ላይ ክፍያ አይገኝም። ሆቴሉን ያግኙ።",
+    "om": "Kaffaltiin toora interneetii kutaa kanaaf hin jiru. Hoteelicha qunnamaa."
+  },
+  "This checkout option is unavailable. Choose another available payment method or contact the hotel.": {
+    "fr": "Ce paiement est indisponible. Choisissez un autre mode ou contactez l’hôtel.",
+    "ar": "هذا الخيار غير متاح. اختر طريقة أخرى أو اتصل بالفندق.",
+    "am": "ይህ የክፍያ አማራጭ አይገኝም። ሌላ ይምረጡ ወይም ሆቴሉን ያግኙ።",
+    "om": "Filannoon kaffaltii kun hin jiru. Mala biraa filadhaa yookaan hoteelicha qunnamaa."
+  },
+  "Bank-issued cards use their card network. Available methods appear at checkout.": {
+    "fr": "Les cartes bancaires utilisent leur réseau. Les options apparaissent au paiement.",
+    "ar": "تستخدم البطاقات شبكة الدفع الخاصة بها. تظهر الوسائل عند الدفع.",
+    "am": "የባንክ ካርዶች የካርድ አውታረ መረባቸውን ይጠቀማሉ። አማራጮች በክፍያ ጊዜ ይታያሉ።",
+    "om": "Kaardiiwwan baankii neetwoorkii isaanii fayyadamu. Filannoowwan yeroo kaffaltii mul'atu."
+  },
+  "Card networks and issuer examples": {
+    "fr": "Réseaux de cartes et exemples de banques",
+    "ar": "شبكات البطاقات وأمثلة المُصدرين",
+    "am": "የካርድ አውታረ መረቦችና አቅራቢዎች",
+    "om": "Neetwoorkii kaardii fi fakkeenya baankii"
+  },
+  "Bank of America card issuer": {
+    "fr": "Carte émise par Bank of America",
+    "ar": "بطاقة صادرة من بنك أوف أمريكا",
+    "am": "የBank of America ካርድ አቅራቢ",
+    "om": "Kaardii Bank of America"
+  },
+  "Birr room prices are indicative. Final payment is charged in the currency and rate selected for checkout.": {
+    "fr": "Les prix en birr sont indicatifs. Le montant final suit la devise et le tarif choisis.",
+    "ar": "أسعار البر تقديرية. الدفع النهائي بالعملة والسعر المختارين.",
+    "am": "የብር ዋጋዎች ግምቶች ናቸው። የመጨረሻ ክፍያ በተመረጠው ምንዛሬና ዋጋ ይሆናል።",
+    "om": "Gatiiwwan birrii tilmaama. Kaffaltiin dhumaa maallaqaa fi gatii filatameen ta'a."
+  },
+  "Choose a payment provider. Chapa uses a configured Birr room rate when available; otherwise the server converts the USD room rate using a current, validated exchange rate when your booking is held. Any Birr estimate shown here is confirmed when the room is held.": {
+    "fr": "Choisissez un prestataire. Chapa applique le tarif en birr configuré ou convertit le tarif USD au taux vérifié lors de la réservation temporaire. L’estimation est alors confirmée.",
+    "ar": "اختر مزود الدفع. يستخدم تشابا سعر البر المحدد، أو يحول سعر الدولار بسعر صرف موثوق عند حجز الغرفة مؤقتًا. يُؤكد التقدير حينها.",
+    "am": "የክፍያ አቅራቢ ይምረጡ። ቻፓ የተዘጋጀውን የብር ዋጋ ይጠቀማል፤ ካልነበረ ቦታ በሚያዝበት ጊዜ በተረጋገጠ ምንዛሬ የዶላር ዋጋ ወደ ብር ይቀየራል።",
+    "om": "Dhiyeessaa kaffaltii filadhaa. Chapa gatii birrii qophaa'e fayyadama; yoo hin jirre yeroo qabannoo gatii doolaaraa jijjiirraa mirkanaa'een gara birriitti jijjiira. Tilmaamni yeroo sana mirkanaa'a."
+  },
+  "Indicative conversion from the public USD/ETB rate, updated": {
+    "fr": "Conversion indicative au taux USD/ETB public, mis à jour",
+    "ar": "تحويل تقديري بسعر USD/ETB العام، المحدث",
+    "am": "ከሕዝብ USD/ETB ምንዛሬ ግምታዊ ልወጣ፣ የተዘመነ",
+    "om": "Jijjiirraa USD/ETB irraa tilmaamame, haaromfame"
+  },
+  "Some listings use test inventory. Confirm availability with the hotel before completing a live reservation.": {
+    "fr": "Certaines chambres sont des tests. Confirmez la disponibilité avant une réservation réelle.",
+    "ar": "بعض القوائم تجريبية. أكد التوفر مع الفندق قبل حجز فعلي.",
+    "am": "አንዳንድ ዝርዝሮች የሙከራ ናቸው። እውነተኛ ማስያዣ ከማድረግዎ በፊት ሆቴሉን ያረጋግጡ።",
+    "om": "Tarreewwan tokko tokko yaaliidha. Qabannoo dhugaa dura hoteelicha waliin argamuu mirkaneessaa."
+  },
+  "USD estimate unavailable": {
+    "fr": "Estimation USD indisponible",
+    "ar": "تقدير الدولار غير متاح",
+    "am": "የUSD ግምት አይገኝም",
+    "om": "Tilmaamni USD hin argamu"
+  },
+  "USD rate unavailable": {
+    "fr": "Tarif USD indisponible",
+    "ar": "سعر الدولار غير متاح",
+    "am": "የUSD ዋጋ አይገኝም",
+    "om": "Gatiin USD hin argamu"
+  },
+  "Or use Google to fill in your verified email and name.": {
+    "fr": "Ou utilisez Google pour votre nom et e-mail vérifiés.",
+    "ar": "أو استخدم Google لإدخال اسمك وبريدك الموثقين.",
+    "am": "ወይም የተረጋገጠ ስምና ኢሜይል ለመሙላት Google ይጠቀሙ።",
+    "om": "Yookaan maqaa fi imeelii mirkanaa'e guutuuf Google fayyadamaa."
+  },
+  "Sign up with Google": {
+    "fr": "S’inscrire avec Google",
+    "ar": "التسجيل عبر Google",
+    "am": "በGoogle ይመዝገቡ",
+    "om": "Google waliin galmaa'aa"
+  },
+  "Google email verified:": {
+    "fr": "E-mail Google vérifié :",
+    "ar": "بريد Google موثق:",
+    "am": "የGoogle ኢሜይል ተረጋግጧል፦",
+    "om": "Imeeliin Google mirkanaa'eera:"
+  },
+  "Google sign-up is not configured yet. You can still enter your email above.": {
+    "fr": "L’inscription Google est indisponible. Saisissez votre e-mail ci-dessus.",
+    "ar": "تسجيل Google غير معدّ بعد. يمكنك إدخال بريدك أعلاه.",
+    "am": "የGoogle ምዝገባ አልተዘጋጀም። ኢሜይልዎን ከላይ ማስገባት ይችላሉ።",
+    "om": "Galmeen Google hin qophoofne. Imeelii keessan armaan olitti galchuu dandeessu."
+  },
+  "Verifying your Google account…": {
+    "fr": "Vérification de votre compte Google…",
+    "ar": "جارٍ التحقق من حساب Google…",
+    "am": "የGoogle መለያዎን በማረጋገጥ ላይ…",
+    "om": "Herrega Google keessan mirkaneessaa jira…"
+  },
+  "Skip to content": {
+    "fr": "Aller au contenu",
+    "ar": "انتقل للمحتوى",
+    "am": "ወደ ይዘት ይሂዱ",
+    "om": "Gara qabiyyeetti darbi"
+  },
+  "We look forward to welcoming you": {
+    "fr": "Au plaisir de vous accueillir",
+    "ar": "نتطلع للترحيب بك",
+    "am": "እርስዎን ለመቀበል በጉጉት እንጠብቃለን",
+    "om": "Isin simachuuf hawwiin eegganna"
+  },
+  "See your location and get a route to": {
+    "fr": "Voyez votre position et l’itinéraire vers",
+    "ar": "شاهد موقعك واحصل على طريق إلى",
+    "am": "አካባቢዎን ይመልከቱና መንገድ ያግኙ ወደ",
+    "om": "Bakka keessan ilaalaa; karaa argadhaa gara"
+  },
+  "Loading hotel details…": {
+    "fr": "Chargement de l’hôtel…",
+    "ar": "جارٍ تحميل تفاصيل الفندق…",
+    "am": "የሆቴል ዝርዝር በመጫን ላይ…",
+    "om": "Bal'ina hoteelaa fe'aa jira…"
+  },
+  "Finding the hotel on the map…": {
+    "fr": "Localisation de l’hôtel…",
+    "ar": "جارٍ تحديد الفندق على الخريطة…",
+    "am": "በካርታው ሆቴሉን በመፈለግ ላይ…",
+    "om": "Hoteelicha kaartaa irratti barbaadaa jira…"
+  },
+  "Detecting your location…": {
+    "fr": "Recherche de votre position…",
+    "ar": "جارٍ تحديد موقعك…",
+    "am": "አካባቢዎን በመፈለግ ላይ…",
+    "om": "Bakka keessan barbaadaa jira…"
+  },
+  "Calculating route…": {
+    "fr": "Calcul de l’itinéraire…",
+    "ar": "جارٍ حساب المسار…",
+    "am": "መንገድ በማስላት ላይ…",
+    "om": "Karaa shallagaa jira…"
+  },
+  "View hotel in Google Maps": {
+    "fr": "Voir l’hôtel sur Google Maps",
+    "ar": "عرض الفندق في خرائط Google",
+    "am": "ሆቴሉን በGoogle Maps ይመልከቱ",
+    "om": "Hoteelicha Google Maps irratti ilaalaa"
+  },
+  "Your location is shown on the map.": {
+    "fr": "Votre position est affichée sur la carte.",
+    "ar": "موقعك ظاهر على الخريطة.",
+    "am": "አካባቢዎ በካርታው ላይ ታይቷል።",
+    "om": "Bakki keessan kaartaa irratti mul'ateera."
+  },
+  "Your browser asks before sharing your location. If you request a route, your coordinates are sent to the public OpenStreetMap routing service to calculate it.": {
+    "fr": "Votre navigateur demande l’accès à votre position. Pour un itinéraire, vos coordonnées sont envoyées au service public OpenStreetMap.",
+    "ar": "يطلب المتصفح إذنك لمشاركة الموقع. عند طلب مسار، تُرسل إحداثياتك لخدمة OpenStreetMap لحسابه.",
+    "am": "አሳሽዎ አካባቢዎን ከማጋራቱ በፊት ይጠይቃል። መንገድ ሲጠይቁ መጋጠሚያዎችዎ ለOpenStreetMap መንገድ ማስሊያ ይላካሉ።",
+    "om": "Biraawzariin bakka keessan qooduu dura isin gaafata. Karaa yoo gaafattan lakkoofsi teessoo keessanii gara tajaajila OpenStreetMap ergama."
+  },
+  "Location unavailable.": {
+    "fr": "Position indisponible.",
+    "ar": "الموقع غير متاح.",
+    "am": "አካባቢ አይገኝም።",
+    "om": "Bakki hin argamu."
+  },
+  "Location detection timed out. Please try again.": {
+    "fr": "Localisation expirée. Réessayez.",
+    "ar": "انتهت مهلة تحديد الموقع. حاول مجددًا.",
+    "am": "የአካባቢ ፍለጋ ጊዜ አልፏል። ይሞክሩ።",
+    "om": "Yeroon bakka barbaaduu darbeera. Yaalaa."
+  },
+  "Location permission was denied. Allow location access in your browser, then try again.": {
+    "fr": "Accès à la position refusé. Autorisez-le dans le navigateur puis réessayez.",
+    "ar": "رُفض إذن الموقع. اسمح بالوصول في المتصفح وحاول مجددًا.",
+    "am": "የአካባቢ ፈቃድ ተከልክሏል። በአሳሽዎ ፈቃድ ይስጡና ይሞክሩ።",
+    "om": "Eeyyamni bakka argachuu dhorkameera. Biraawzarii keessatti eeyyamaa yaalaa."
+  },
+  "Location services are not supported by this browser.": {
+    "fr": "Ce navigateur ne prend pas en charge la localisation.",
+    "ar": "هذا المتصفح لا يدعم الموقع.",
+    "am": "ይህ አሳሽ የአካባቢ አገልግሎት አይደግፍም።",
+    "om": "Biraawzariin kun tajaajila bakka argachuu hin deeggaru."
+  },
+  "Your current location is unavailable. Check your device settings and try again.": {
+    "fr": "Position actuelle indisponible. Vérifiez les réglages et réessayez.",
+    "ar": "موقعك الحالي غير متاح. تحقق من إعدادات الجهاز وحاول مجددًا.",
+    "am": "የአሁኑ አካባቢዎ አይገኝም። የመሣሪያ ቅንብሮችን ይፈትሹና ይሞክሩ።",
+    "om": "Bakki keessan ammaa hin argamu. Qindaa'ina meeshaa ilaalaa yaalaa."
+  },
+  "No driving route could be found for your location.": {
+    "fr": "Aucun itinéraire routier trouvé.",
+    "ar": "لم يُعثر على طريق للقيادة من موقعك.",
+    "am": "ከአካባቢዎ የመኪና መንገድ አልተገኘም።",
+    "om": "Bakka keessanii karaa konkolaataa argachuun hin danda'amne."
+  },
+  "We could not detect your location.": {
+    "fr": "Impossible de détecter votre position.",
+    "ar": "تعذر تحديد موقعك.",
+    "am": "አካባቢዎን ማወቅ አልተቻለም።",
+    "om": "Bakka keessan adda baasuun hin danda'amne."
+  },
+  "We could not calculate a route. Please try again.": {
+    "fr": "Impossible de calculer l’itinéraire. Réessayez.",
+    "ar": "تعذر حساب المسار. حاول مجددًا.",
+    "am": "መንገድ ማስላት አልተቻለም። ይሞክሩ።",
+    "om": "Karaa shallaguun hin danda'amne. Yaalaa."
+  },
+  "We could not find the hotel on the map.": {
+    "fr": "Hôtel introuvable sur la carte.",
+    "ar": "تعذر العثور على الفندق على الخريطة.",
+    "am": "ሆቴሉ በካርታ አልተገኘም።",
+    "om": "Hoteelicha kaartaa irratti argachuun hin danda'amne."
+  },
+  "We could not find the hotel on the map. Please configure the hotel's coordinates.": {
+    "fr": "Hôtel introuvable. Configurez ses coordonnées.",
+    "ar": "تعذر تحديد الفندق. اضبط إحداثياته.",
+    "am": "ሆቴሉ አልተገኘም። የሆቴሉን መጋጠሚያዎች ያዘጋጁ።",
+    "om": "Hoteelichi hin argamne. Lakkoofsa teessoo hoteelichaa qindeessaa."
+  },
+  "We could not load the hotel address. Please try again later.": {
+    "fr": "Adresse indisponible. Réessayez plus tard.",
+    "ar": "تعذر تحميل عنوان الفندق. حاول لاحقًا.",
+    "am": "የሆቴሉን አድራሻ መጫን አልተቻለም። ቆይተው ይሞክሩ።",
+    "om": "Teessoo hoteelaa fe'uun hin danda'amne. Booda yaalaa."
+  },
+  "The hotel location service is unavailable. Please try again later.": {
+    "fr": "Localisation de l’hôtel indisponible. Réessayez plus tard.",
+    "ar": "خدمة موقع الفندق غير متاحة. حاول لاحقًا.",
+    "am": "የሆቴል አካባቢ አገልግሎት አይገኝም። ቆይተው ይሞክሩ።",
+    "om": "Tajaajilli bakka hoteelaa hin jiru. Booda yaalaa."
+  },
+  "The map service returned invalid hotel coordinates.": {
+    "fr": "Coordonnées de l’hôtel invalides.",
+    "ar": "إحداثيات الفندق غير صالحة.",
+    "am": "የካርታ አገልግሎቱ የተሳሳቱ መጋጠሚያዎች መልሷል።",
+    "om": "Tajaajilli kaartaa lakkoofsa teessoo sirrii hin taane deebise."
+  },
+  "The route service is temporarily unavailable.": {
+    "fr": "Service d’itinéraire temporairement indisponible.",
+    "ar": "خدمة المسار غير متاحة مؤقتًا.",
+    "am": "የመንገድ አገልግሎት ለጊዜው አይገኝም።",
+    "om": "Tajaajilli karaa yeroodhaaf hin jiru."
+  },
+  "A calm, warmly lit hotel interior": {
+    "fr": "Intérieur d’hôtel calme et chaleureux",
+    "ar": "داخل فندق هادئ بإضاءة دافئة",
+    "am": "ጸጥ ያለና ሞቅ ያለ ብርሃን ያለው የሆቴል ውስጥ",
+    "om": "Keessa hoteelaa tasgabbaa'aa fi ifa ho'aa qabu"
+  },
+  "A welcoming hotel entrance in the evening": {
+    "fr": "Entrée accueillante de l’hôtel le soir",
+    "ar": "مدخل فندق مرحب مساءً",
+    "am": "ምሽት ላይ ሞቅ ያለ የሆቴል መግቢያ",
+    "om": "Galma hoteelaa simannaa qabu galgala"
+  },
+  "Hotel front desk and welcoming reception area": {
+    "fr": "Réception accueillante de l’hôtel",
+    "ar": "استقبال الفندق المرحب",
+    "am": "የሆቴል መስተንግዶና ሞቅ ያለ መቀበያ",
+    "om": "Simannaa hoteelaa fi bakka keessummeessuu"
+  },
+  "Ayele Degu International Hotel home": {
+    "fr": "Accueil de l’hôtel Ayele Degu",
+    "ar": "الرئيسية لفندق أيلي ديغو الدولي",
+    "am": "የአየለ ደጉ ዓለም አቀፍ ሆቴል መነሻ",
+    "om": "Fuula jalqabaa Hoteela Ayele Degu"
+  },
+  "Ayele Degu International Hotel location": {
+    "fr": "Emplacement de l’hôtel Ayele Degu",
+    "ar": "موقع فندق أيلي ديغو الدولي",
+    "am": "የአየለ ደጉ ዓለም አቀፍ ሆቴል አካባቢ",
+    "om": "Bakka Hoteela Ayele Degu"
+  },
+  "Hotel services listed include a restaurant, fitness center, spa, conference hall, airport shuttle (arrange 24 hours ahead), secure parking, and 24/7 room service. Please contact the hotel to confirm details.": {
+    "fr": "Services : restaurant, salle de sport, spa, salle de conférence, navette aéroport (24 h à l’avance), parking sécurisé et service en chambre 24 h/24. Contactez l’hôtel pour confirmer.",
+    "ar": "تشمل الخدمات مطعمًا ولياقة وسبا وقاعة مؤتمرات ونقل المطار بترتيب مسبق 24 ساعة وموقفًا آمنًا وخدمة غرف على مدار الساعة. اتصل بالفندق للتأكيد.",
+    "am": "አገልግሎቶች፦ ምግብ ቤት፣ ጂም፣ ስፓ፣ ስብሰባ አዳራሽ፣ የአየር ማረፊያ ማመላለሻ (ከ24 ሰዓት በፊት)፣ ፓርኪንግና የ24/7 ክፍል አገልግሎት። ለማረጋገጥ ሆቴሉን ያግኙ።",
+    "om": "Tajaajiloonni mana nyaataa, jiimii, ispaa, galma walgahii, geejjiba buufata xiyyaaraa (sa'aatii 24 dura), iddoo konkolaataa fi tajaajila kutaa 24/7 dabalatu. Mirkaneessuuf hoteelicha qunnamaa."
+  },
+  "Loading page…": {
+    "fr": "Chargement…",
+    "ar": "جارٍ تحميل الصفحة…",
+    "am": "ገጽ በመጫን ላይ…",
+    "om": "Fuula fe'aa jira…"
+  },
+  "Choose a check-in date.": {
+    "fr": "Choisissez la date d’arrivée.",
+    "ar": "اختر تاريخ الوصول.",
+    "am": "የመግቢያ ቀን ይምረጡ።",
+    "om": "Guyyaa seensaa filadhaa."
+  },
+  "Choose a check-out date.": {
+    "fr": "Choisissez la date de départ.",
+    "ar": "اختر تاريخ المغادرة.",
+    "am": "የመውጫ ቀን ይምረጡ።",
+    "om": "Guyyaa ba'umsaa filadhaa."
+  },
+  "Check-out must be after check-in, and check-in cannot be in the past.": {
+    "fr": "Le départ doit suivre l’arrivée, et l’arrivée ne peut être passée.",
+    "ar": "يجب أن تكون المغادرة بعد الوصول، والوصول ليس في الماضي.",
+    "am": "መውጫ ከመግቢያ በኋላ መሆን አለበት፣ መግቢያም ያለፈ ቀን መሆን አይችልም።",
+    "om": "Guyyaan ba'umsaa seensa booda ta'uu qaba; guyyaan seensaa darbe ta'uu hin qabu."
+  },
+  "This room accommodates up to {count} guests per room.": {
+    "fr": "Cette chambre accueille jusqu’à {count} personnes.",
+    "ar": "تستوعب هذه الغرفة حتى {count} ضيوف.",
+    "am": "ይህ ክፍል እስከ {count} እንግዶች ይይዛል።",
+    "om": "Kutaan kun hanga keessummoota {count} keessummeessa."
+  },
+  "{currency} online payments are not configured yet. Please contact the hotel.": {
+    "fr": "Les paiements en {currency} ne sont pas configurés. Contactez l’hôtel.",
+    "ar": "الدفع الإلكتروني بعملة {currency} غير معد بعد. اتصل بالفندق.",
+    "am": "የ{currency} መስመር ላይ ክፍያ አልተዘጋጀም። ሆቴሉን ያግኙ።",
+    "om": "Kaffaltiin {currency} toora interneetii hin qophoofne. Hoteelicha qunnamaa."
+  },
+  "{price} / night": {
+    "fr": "{price} / nuit",
+    "ar": "{price} / ليلة",
+    "am": "{price} / ሌሊት",
+    "om": "{price} / halkan"
+  },
+  "{distance} km · about {minutes} min by car": {
+    "fr": "{distance} km · environ {minutes} min en voiture",
+    "ar": "{distance} كم · حوالي {minutes} دقيقة بالسيارة",
+    "am": "{distance} ኪሜ · በመኪና ወደ {minutes} ደቂቃ",
+    "om": "{distance} km · konkolaataan gara daqiiqaa {minutes}"
+  },
+  "Your current location": {
+    "fr": "Votre position actuelle",
+    "ar": "موقعك الحالي",
+    "am": "የአሁኑ አካባቢዎ",
+    "om": "Bakka keessan ammaa"
+  },
+  "Interactive map showing {hotel} and your location": {
+    "fr": "Carte interactive de {hotel} et de votre position",
+    "ar": "خريطة تفاعلية تعرض {hotel} وموقعك",
+    "am": "{hotel} እና አካባቢዎን የሚያሳይ ካርታ",
+    "om": "Kaartaa {hotel} fi bakka keessan agarsiisu"
+  },
+  "Phone: {phone}": {
+    "fr": "Téléphone : {phone}",
+    "ar": "الهاتف: {phone}",
+    "am": "ስልክ፦ {phone}",
+    "om": "Bilbila: {phone}"
+  },
+  "Email: {email}": {
+    "fr": "E-mail : {email}",
+    "ar": "البريد: {email}",
+    "am": "ኢሜይል፦ {email}",
+    "om": "Imeelii: {email}"
+  },
+  "Address: {address}": {
+    "fr": "Adresse : {address}",
+    "ar": "العنوان: {address}",
+    "am": "አድራሻ፦ {address}",
+    "om": "Teessoo: {address}"
+  },
+  "Room types currently listed:": {
+    "fr": "Types de chambres disponibles :",
+    "ar": "أنواع الغرف المتاحة:",
+    "am": "የሚገኙ የክፍል አይነቶች፦",
+    "om": "Gosoota kutaa jiran:"
+  },
+  "See the booking page for your dates.": {
+    "fr": "Consultez les dates sur la page de réservation.",
+    "ar": "راجع صفحة الحجز للتواريخ.",
+    "am": "ለቀኖችዎ የማስያዣ ገጹን ይመልከቱ።",
+    "om": "Guyyootaaf fuula qabannoo ilaalaa."
+  },
+  "Please visit the booking page to see the rooms currently offered.": {
+    "fr": "Consultez la page de réservation pour voir les chambres.",
+    "ar": "زر صفحة الحجز للاطلاع على الغرف.",
+    "am": "ያሉትን ክፍሎች ለማየት የማስያዣ ገጹን ይጎብኙ።",
+    "om": "Kutaalee jiran ilaaluuf fuula qabannoo daawwadhaa."
+  },
+  "Current room prices are shown on the booking page.": {
+    "fr": "Les tarifs actuels figurent sur la page de réservation.",
+    "ar": "الأسعار الحالية في صفحة الحجز.",
+    "am": "የአሁኑ ዋጋዎች በማስያዣ ገጽ ይገኛሉ።",
+    "om": "Gatiiwwan ammaa fuula qabannoo irratti jiru."
+  },
+  "Indicative Birr nightly prices:": {
+    "fr": "Tarifs indicatifs par nuit en birr :",
+    "ar": "الأسعار الليلية التقديرية بالبر:",
+    "am": "ግምታዊ የሌሊት ዋጋዎች በብር፦",
+    "om": "Gatii halkanii birriin tilmaamame:"
+  },
+  "Prices are indicative conversions and may vary at checkout.": {
+    "fr": "Tarifs indicatifs pouvant varier au paiement.",
+    "ar": "الأسعار تقديرية وقد تتغير عند الدفع.",
+    "am": "ዋጋዎቹ ግምቶች ናቸው፣ በክፍያ ጊዜ ሊለያዩ ይችላሉ።",
+    "om": "Gatiiwwan tilmaama; yeroo kaffaltii jijjiiramuu danda'u."
+  },
+  "Complimentary secure guest parking is listed among the hotel services.": {
+    "fr": "Le parking sécurisé gratuit est proposé aux clients.",
+    "ar": "تتوفر مواقف آمنة مجانية للضيوف.",
+    "am": "ለእንግዶች ነፃ ፓርኪንግ ይገኛል።",
+    "om": "Iddoon konkolaataa nageenya qabu bilisaa keessummootaaf jira."
+  },
+  "I can help with room types, prices, parking, and hotel services. For other questions, contact the hotel directly.": {
+    "fr": "Je peux vous aider avec les chambres, tarifs, parking et services. Pour le reste, contactez l’hôtel.",
+    "ar": "أساعدك في الغرف والأسعار والمواقف والخدمات. للأسئلة الأخرى، اتصل بالفندق.",
+    "am": "ስለ ክፍሎች፣ ዋጋዎች፣ ፓርኪንግና አገልግሎቶች ልረዳዎ እችላለሁ። ለሌሎች ጥያቄዎች ሆቴሉን ያግኙ።",
+    "om": "Waa'ee kutaalee, gatii, iddoo konkolaataa fi tajaajila hoteelaa isin gargaaruu nan danda'a. Gaaffii biraaf hoteelicha qunnamaa."
+  },
+  "Suite Room": {
+    "fr": "Suite",
+    "ar": "جناح",
+    "am": "ስዊት ክፍል",
+    "om": "Kutaa suuyitii"
+  },
+  "Choose a date": {
+    "fr": "Choisir une date",
+    "ar": "اختر تاريخًا",
+    "am": "ቀን ይምረጡ",
+    "om": "Guyyaa filadhaa"
+  },
+  "Select your stay date": {
+    "fr": "Choisissez la date du séjour",
+    "ar": "اختر تاريخ إقامتك",
+    "am": "የቆይታ ቀን ይምረጡ",
+    "om": "Guyyaa turtii filadhaa"
+  },
+  "Previous month": {
+    "fr": "Mois précédent",
+    "ar": "الشهر السابق",
+    "am": "ያለፈው ወር",
+    "om": "Ji'a darbe"
+  },
+  "Next month": {
+    "fr": "Mois suivant",
+    "ar": "الشهر التالي",
+    "am": "የሚቀጥለው ወር",
+    "om": "Ji'a itti aanu"
+  },
+  "Today": {
+    "fr": "Aujourd’hui",
+    "ar": "اليوم",
+    "am": "ዛሬ",
+    "om": "Har'a"
+  },
+  "to": {
+    "fr": "au",
+    "ar": "إلى",
+    "am": "እስከ",
+    "om": "hanga"
+  },
+  "nights ·": {
+    "fr": "nuits ·",
+    "ar": "ليالٍ ·",
+    "am": "ሌሊቶች ·",
+    "om": "halkanoota ·"
+  },
+  "Birr": {
+    "fr": "Birr",
+    "ar": "بر",
+    "am": "ብር",
+    "om": "Birrii"
+  },
+  "Booking not found or its payment hold expired.": {
+    "fr": "Réservation introuvable ou délai de paiement expiré.",
+    "ar": "الحجز غير موجود أو انتهت مهلة الدفع.",
+    "am": "ማስያዣ አልተገኘም ወይም የክፍያ ጊዜ አልፏል።",
+    "om": "Qabannoon hin argamne yookaan yeroon kaffaltii darbeera."
+  },
+  "18 m², single bed, city view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.": {
+    "fr": "18 m², lit simple, vue sur la ville ; Wi-Fi, climatisation, télévision, réfrigérateur, coffre-fort, cafetière, bureau, service en chambre, peignoir et chaussons. Petit-déjeuner, eau en bouteille, ménage quotidien et salle de sport sont proposés sur le site de l’hôtel. Lit supplémentaire : $20.",
+    "ar": "18 م²، سرير مفرد وإطلالة على المدينة؛ واي فاي وتكييف وتلفاز وثلاجة وخزنة وماكينة قهوة ومكتب وخدمة غرف ورداء ونعال. يُدرج موقع الفندق إفطارًا ومياه معبأة وتنظيفًا يوميًا وصالة رياضية. سرير إضافي: $20.",
+    "am": "18 ሜ²፣ ነጠላ አልጋ፣ የከተማ እይታ፤ Wi-Fi፣ አየር ማቀዝቀዣ፣ ቴሌቪዥን፣ ማቀዝቀዣ፣ ካዝና፣ ቡና ማዘጋጃ፣ ጠረጴዛ፣ የክፍል አገልግሎት፣ የመታጠቢያ ልብስና ጫማ። ቁርስ፣ ውሃ፣ ዕለታዊ ጽዳትና ጂም በሆቴሉ ድረ ገጽ ተዘርዝረዋል። ተጨማሪ አልጋ፦ $20.",
+    "om": "18 m², siree tokko, mul'ata magaalaa; Wi-Fi, qabbaneessaa qilleensaa, TV, firijii, saanduqa nageenyaa, meeshaa bunaa, minjaala hojii, tajaajila kutaa, uffata qaamaa fi kophee manaa qaba. Ciree, bishaan qaruuraa, qulqullina guyyaa guyyaa fi jiimiin marsariitii hoteelaa irratti tarreeffamaniiru. Siree dabalataa: $20."
+  },
+  "24 m², two twin beds, city view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.": {
+    "fr": "24 m², deux lits, vue sur la ville ; Wi-Fi, climatisation, télévision, réfrigérateur, coffre-fort, cafetière, bureau, service en chambre, peignoir et chaussons. Petit-déjeuner, eau en bouteille, ménage quotidien et salle de sport sont proposés sur le site de l’hôtel. Lit supplémentaire : $20.",
+    "ar": "24 م²، سريران وإطلالة على المدينة؛ واي فاي وتكييف وتلفاز وثلاجة وخزنة وماكينة قهوة ومكتب وخدمة غرف ورداء ونعال. يُدرج موقع الفندق إفطارًا ومياه معبأة وتنظيفًا يوميًا وصالة رياضية. سرير إضافي: $20.",
+    "am": "24 ሜ²፣ ሁለት አልጋዎች፣ የከተማ እይታ፤ Wi-Fi፣ አየር ማቀዝቀዣ፣ ቴሌቪዥን፣ ማቀዝቀዣ፣ ካዝና፣ ቡና ማዘጋጃ፣ ጠረጴዛ፣ የክፍል አገልግሎት፣ የመታጠቢያ ልብስና ጫማ። ቁርስ፣ ውሃ፣ ዕለታዊ ጽዳትና ጂም በሆቴሉ ድረ ገጽ ተዘርዝረዋል። ተጨማሪ አልጋ፦ $20.",
+    "om": "24 m², siree lama, mul'ata magaalaa; Wi-Fi, qabbaneessaa qilleensaa, TV, firijii, saanduqa nageenyaa, meeshaa bunaa, minjaala hojii, tajaajila kutaa, uffata qaamaa fi kophee manaa qaba. Ciree, bishaan qaruuraa, qulqullina guyyaa guyyaa fi jiimiin marsariitii hoteelaa irratti tarreeffamaniiru. Siree dabalataa: $20."
+  },
+  "30 m², king bed, mountain view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.": {
+    "fr": "30 m², grand lit, vue sur la montagne ; Wi-Fi, climatisation, télévision, réfrigérateur, coffre-fort, cafetière, bureau, service en chambre, peignoir et chaussons. Petit-déjeuner, eau en bouteille, ménage quotidien et salle de sport sont proposés sur le site de l’hôtel. Lit supplémentaire : $20.",
+    "ar": "30 م²، سرير كينغ وإطلالة جبلية؛ واي فاي وتكييف وتلفاز وثلاجة وخزنة وماكينة قهوة ومكتب وخدمة غرف ورداء ونعال. يُدرج موقع الفندق إفطارًا ومياه معبأة وتنظيفًا يوميًا وصالة رياضية. سرير إضافي: $20.",
+    "am": "30 ሜ²፣ ትልቅ አልጋ፣ የተራራ እይታ፤ Wi-Fi፣ አየር ማቀዝቀዣ፣ ቴሌቪዥን፣ ማቀዝቀዣ፣ ካዝና፣ ቡና ማዘጋጃ፣ ጠረጴዛ፣ የክፍል አገልግሎት፣ የመታጠቢያ ልብስና ጫማ። ቁርስ፣ ውሃ፣ ዕለታዊ ጽዳትና ጂም በሆቴሉ ድረ ገጽ ተዘርዝረዋል። ተጨማሪ አልጋ፦ $20.",
+    "om": "30 m², siree guddaa, mul'ata gaaraa; Wi-Fi, qabbaneessaa qilleensaa, TV, firijii, saanduqa nageenyaa, meeshaa bunaa, minjaala hojii, tajaajila kutaa, uffata qaamaa fi kophee manaa qaba. Ciree, bishaan qaruuraa, qulqullina guyyaa guyyaa fi jiimiin marsariitii hoteelaa irratti tarreeffamaniiru. Siree dabalataa: $20."
+  },
+  "King bed with mountain view; includes Wi-Fi, air conditioning, flat-screen TV, refrigerator, safe, coffee maker, work desk, room service, bathrobe and slippers, plus a Jacuzzi. Breakfast, bottled water, daily housekeeping and gym access are listed on the hotel site. Extra bed: $20.": {
+    "fr": "Grand lit avec vue montagne ; Wi-Fi, climatisation, télévision, réfrigérateur, coffre-fort, cafetière, bureau, service en chambre, peignoir, chaussons et jacuzzi. Petit-déjeuner, eau en bouteille, ménage quotidien et salle de sport sont proposés sur le site de l’hôtel. Lit supplémentaire : $20.",
+    "ar": "سرير كينغ مع إطلالة جبلية؛ واي فاي وتكييف وتلفاز وثلاجة وخزنة وماكينة قهوة ومكتب وخدمة غرف ورداء ونعال وجاكوزي. يُدرج موقع الفندق إفطارًا ومياه معبأة وتنظيفًا يوميًا وصالة رياضية. سرير إضافي: $20.",
+    "am": "ትልቅ አልጋ ከተራራ እይታ ጋር፤ Wi-Fi፣ አየር ማቀዝቀዣ፣ ቴሌቪዥን፣ ማቀዝቀዣ፣ ካዝና፣ ቡና ማዘጋጃ፣ ጠረጴዛ፣ የክፍል አገልግሎት፣ የመታጠቢያ ልብስ፣ ጫማና ጃኩዚ። ቁርስ፣ ውሃ፣ ዕለታዊ ጽዳትና ጂም በሆቴሉ ድረ ገጽ ተዘርዝረዋል። ተጨማሪ አልጋ፦ $20.",
+    "om": "Siree guddaa mul'ata gaaraa qabu; Wi-Fi, qabbaneessaa qilleensaa, TV, firijii, saanduqa nageenyaa, meeshaa bunaa, minjaala hojii, tajaajila kutaa, uffata qaamaa, kophee manaa fi jaakuzii qaba. Ciree, bishaan qaruuraa, qulqullina guyyaa guyyaa fi jiimiin marsariitii hoteelaa irratti tarreeffamaniiru. Siree dabalataa: $20."
+  }
+}

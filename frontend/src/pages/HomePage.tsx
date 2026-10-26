@@ -1,3 +1,4 @@
+import { translateText, useLanguage } from "../i18n/language";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowDown, ArrowUpRight, MapPin, Sparkles } from "lucide-react";
@@ -33,6 +34,7 @@ const hotelServices = [
 ];
 
 export function HomePage() {
+  useLanguage();
   const location = useLocation();
   const roomsQuery = useQuery({
     queryKey: ["rooms"],
@@ -79,30 +81,30 @@ export function HomePage() {
 
   return (
     <>
-      <a className="skip-link" href="#main">Skip to content</a>
+      <a className="skip-link" href="#main">{translateText("Skip to content")}</a>
       <SiteHeader overlay />
       <main id="main">
         <section className="hero" aria-labelledby="hero-title">
-          <div className="hero-photo" role="img" aria-label="A calm, warmly lit hotel interior" />
+          <div className="hero-photo" role="img" aria-label={translateText("A calm, warmly lit hotel interior")} />
           <div className="hero-shade" />
           <div className="hero-content">
-            <p className="eyebrow hero-eyebrow"><span /> A warm welcome awaits</p>
-            <h1 id="hero-title">Make room<br />for <em>something</em><br />beautiful.</h1>
-            <p className="hero-copy">A thoughtful place to pause, connect, and feel at home—wherever your journey takes you.</p>
-            <a className="button button-light" href="#stay">Discover your stay <ArrowDown aria-hidden="true" /></a>
-            <a className="hero-book-link" href="/booking">Check availability <ArrowUpRight aria-hidden="true" /></a>
+            <p className="eyebrow hero-eyebrow"><span />{translateText(" A warm welcome awaits")}</p>
+            <h1 id="hero-title">{translateText("Make room")}<br />{translateText("for ")}<em>{translateText("something")}</em><br />{translateText("beautiful.")}</h1>
+            <p className="hero-copy">{translateText("A thoughtful place to pause, connect, and feel at home—wherever your journey takes you.")}</p>
+            <a className="button button-light" href="#stay">{translateText("Discover your stay ")}<ArrowDown aria-hidden="true" /></a>
+            <a className="hero-book-link" href="/booking">{translateText("Check availability ")}<ArrowUpRight aria-hidden="true" /></a>
           </div>
-          <div className="hero-note"><span>01</span> {config?.name ?? "Ayele Degu International Hotel"}</div>
+          <div className="hero-note"><span>{translateText("01")}</span> {translateText(config?.name ?? "Ayele Degu International Hotel")}</div>
         </section>
 
         <section className="intro section-wrap" id="about" aria-labelledby="intro-title">
           <div className="intro-label">
-            <span className="eyebrow">A place to belong</span>
+            <span className="eyebrow">{translateText("A place to belong")}</span>
             <Sparkles className="ornament" aria-hidden="true" />
           </div>
           <div className="intro-copy">
-            <h2 id="intro-title">Travel brings us together.<br /><em>Hospitality makes it feel like home.</em></h2>
-            <p>Whether you’re here for a moment or a little longer, we believe the best stays are made of thoughtful details, genuine care, and space to make the experience your own.</p>
+            <h2 id="intro-title">{translateText("Travel brings us together.")}<br /><em>{translateText("Hospitality makes it feel like home.")}</em></h2>
+            <p>{translateText("Whether you’re here for a moment or a little longer, we believe the best stays are made of thoughtful details, genuine care, and space to make the experience your own.")}</p>
           </div>
         </section>
 
@@ -110,59 +112,53 @@ export function HomePage() {
           <div className="section-wrap">
             <div className="section-heading">
               <div>
-                <p className="eyebrow">Find your kind of stay</p>
-                <h2 id="stay-title">Settle in <em>beautifully.</em></h2>
+                <p className="eyebrow">{translateText("Find your kind of stay")}</p>
+                <h2 id="stay-title">{translateText("Settle in ")}<em>{translateText("beautifully.")}</em></h2>
               </div>
-              <p className="heading-aside">Comfort for the everyday.<br />Space for the exceptional.</p>
+              <p className="heading-aside">{translateText("Comfort for the everyday.")}<br />{translateText("Space for the exceptional.")}</p>
             </div>
             <div className="stay-grid">
-              {roomsQuery.data?.map((room, index) => (
+              {translateText(roomsQuery.data?.map((room, index) => (
                 <article className="stay-card" key={room.id}>
-                  {room.imageUrl && <img className="stay-image" src={getRoomImageUrl(room.imageUrl)} alt={room.name} loading="lazy" decoding="async" />}
+                  {translateText(room.imageUrl && <img className="stay-image" src={getRoomImageUrl(room.imageUrl)} alt={translateText(room.name)} loading="lazy" decoding="async" />)}
                   <div className="stay-card-body">
-                    <span className="card-number">{String(index + 1).padStart(2, "0")} / STAY</span>
-                    <h3>{room.name}</h3>
+                    <span className="card-number">{translateText(String(index + 1).padStart(2, "0"))}{translateText(" / STAY")}</span>
+                    <h3>{translateText(room.name)}</h3>
                     <p className="room-rate">
-                      {room.priceUSD > 0 && exchangeRateQuery.data
+                      {translateText(room.priceUSD > 0 && exchangeRateQuery.data
                         ? formatEtb(room.priceUSD * exchangeRateQuery.data.rate)
                         : room.priceUSD > 0 && exchangeRateQuery.isLoading
                           ? "Loading Birr price…"
                         : room.priceUSD <= 0 && room.priceETB > 0
                           ? formatEtb(room.priceETB)
-                          : "Birr price unavailable"}
-                      <span> / night</span>
+                          : "Birr price unavailable")}
+                      <span>{translateText(" / night")}</span>
                     </p>
-                    {room.priceUSD > 0 && exchangeRateQuery.data && (
-                      <span className="price-rate-note">
-                        Indicative exchange rate · updated {formatRateTimestamp(exchangeRateQuery.data.updatedAt)} UTC
-                      </span>
-                    )}
-                    {room.priceUSD > 0 && exchangeRateQuery.isError && (
-                      <span className="price-rate-error" role="status">Birr estimate unavailable right now.</span>
-                    )}
-                    {room.testOnly && <span className="test-data-badge">Local test inventory</span>}
-                    <p>{convertUsdPricesToEtb(room.description, exchangeRateQuery.data?.rate)}</p>
-                    <a className="text-link" href={`/booking?roomId=${encodeURIComponent(room.id)}`}>Book this room <ArrowUpRight aria-hidden="true" /></a>
+                    {translateText(room.priceUSD > 0 && exchangeRateQuery.data && (
+                      <span className="price-rate-note">{translateText("Indicative exchange rate · updated ")}{translateText(formatRateTimestamp(exchangeRateQuery.data.updatedAt))}{translateText(" UTC")}</span>
+                    ))}
+                    {translateText(room.priceUSD > 0 && exchangeRateQuery.isError && (
+                      <span className="price-rate-error" role="status">{translateText("Birr estimate unavailable right now.")}</span>
+                    ))}
+                    {translateText(room.testOnly && <span className="test-data-badge">{translateText("Local test inventory")}</span>)}
+                    <p>{translateText(convertUsdPricesToEtb(room.description, exchangeRateQuery.data?.rate))}</p>
+                    <a className="text-link" href={`/booking?roomId=${encodeURIComponent(room.id)}`}>{translateText("Book this room ")}<ArrowUpRight aria-hidden="true" /></a>
                   </div>
                 </article>
-              ))}
-              {roomsQuery.isLoading && <p role="status">Loading room options…</p>}
-              {roomsQuery.isError && <p className="form-message">Room details could not be loaded. Please try again later.</p>}
-              {roomsQuery.data?.length === 0 && <p>No room options are available right now. Please contact the hotel.</p>}
+              )))}
+              {translateText(roomsQuery.isLoading && <p role="status">{translateText("Loading room options…")}</p>)}
+              {translateText(roomsQuery.isError && <p className="form-message">{translateText("Room details could not be loaded. Please try again later.")}</p>)}
+              {translateText(roomsQuery.data?.length === 0 && <p>{translateText("No room options are available right now. Please contact the hotel.")}</p>)}
             </div>
-            {exchangeRateQuery.data && (
-              <p className="price-rate-disclaimer">
-                Birr prices are indicative conversions from the public USD/ETB rate, updated {formatRateTimestamp(exchangeRateQuery.data.updatedAt)} UTC. The final charge uses the payment currency and room rate confirmed at checkout.
-              </p>
-            )}
-            {exchangeRateQuery.isError && (
-              <p className="price-rate-disclaimer price-rate-error" role="status">
-                The current Birr estimate could not be loaded. Please try again later or contact the hotel for pricing.
-              </p>
-            )}
+            {translateText(exchangeRateQuery.data && (
+              <p className="price-rate-disclaimer">{translateText("Birr prices are indicative conversions from the public USD/ETB rate, updated ")}{translateText(formatRateTimestamp(exchangeRateQuery.data.updatedAt))}{translateText(" UTC. The final charge uses the payment currency and room rate confirmed at checkout.")}</p>
+            ))}
+            {translateText(exchangeRateQuery.isError && (
+              <p className="price-rate-disclaimer price-rate-error" role="status">{translateText("The current Birr estimate could not be loaded. Please try again later or contact the hotel for pricing.")}</p>
+            ))}
             <div className="stay-book-row">
-              <p>Ready when you are.</p>
-              <a className="button button-dark" href="/booking">Check dates and rooms <ArrowUpRight aria-hidden="true" /></a>
+              <p>{translateText("Ready when you are.")}</p>
+              <a className="button button-dark" href="/booking">{translateText("Check dates and rooms ")}<ArrowUpRight aria-hidden="true" /></a>
             </div>
           </div>
         </section>
@@ -170,69 +166,66 @@ export function HomePage() {
         <section className="services-section section-wrap" id="services" aria-labelledby="services-title">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Thoughtful facilities</p>
-              <h2 id="services-title">Here to make your stay <em>easier.</em></h2>
+              <p className="eyebrow">{translateText("Thoughtful facilities")}</p>
+              <h2 id="services-title">{translateText("Here to make your stay ")}<em>{translateText("easier.")}</em></h2>
             </div>
-            <p className="heading-aside">Dining, wellness, meetings<br />and help along the way.</p>
+            <p className="heading-aside">{translateText("Dining, wellness, meetings")}<br />{translateText("and help along the way.")}</p>
           </div>
           <div className="services-grid">
-            {hotelServices.map((service) => (
+            {translateText(hotelServices.map((service) => (
               <article className="service-card" key={service.title}>
-                <h3>{service.title}</h3>
-                <p>{service.description}</p>
+                <h3>{translateText(service.title)}</h3>
+                <p>{translateText(service.description)}</p>
               </article>
-            ))}
+            )))}
           </div>
-          <p className="services-note">
-            Breakfast and extra beds are listed as available features; confirm inclusions and charges when booking.
-            Extra bed: {exchangeRateQuery.data ? formatEtb(20 * exchangeRateQuery.data.rate) : "price available on request"}.
-          </p>
-          <p className="services-location">Located in Dilla Town, in Ethiopia’s Gedeo Zone.</p>
+          <p className="services-note">{translateText("Breakfast and extra beds are listed as available features; confirm inclusions and charges when booking. Extra bed: ")}{translateText(exchangeRateQuery.data ? formatEtb(20 * exchangeRateQuery.data.rate) : "price available on request")}{translateText(".")}</p>
+          <p className="services-location">{translateText("Located in Dilla Town, in Ethiopia’s Gedeo Zone.")}</p>
         </section>
 
         <section className="experience-section" id="experience" aria-labelledby="experience-title">
-          <img className="experience-image" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=85" alt="A welcoming hotel entrance in the evening" loading="lazy" />
+          <img className="experience-image" src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?auto=format&fit=crop&w=1200&q=85" alt={translateText("A welcoming hotel entrance in the evening")} loading="lazy" />
           <div className="experience-copy">
-            <p className="eyebrow">The feeling stays with you</p>
-            <h2 id="experience-title">Good stays are<br /><em>made of moments.</em></h2>
-            <p>It’s the ease of arriving. The comfort of settling in. The feeling that someone thought of the little things. We’re here to make every part of your visit feel a little more special.</p>
-            <a className="button button-dark" href="/booking">Let’s make a plan <ArrowUpRight aria-hidden="true" /></a>
+            <p className="eyebrow">{translateText("The feeling stays with you")}</p>
+            <h2 id="experience-title">{translateText("Good stays are")}<br /><em>{translateText("made of moments.")}</em></h2>
+            <p>{translateText("It’s the ease of arriving. The comfort of settling in. The feeling that someone thought of the little things. We’re here to make every part of your visit feel a little more special.")}</p>
+            <a className="button button-dark" href="/booking">{translateText("Let’s make a plan ")}<ArrowUpRight aria-hidden="true" /></a>
           </div>
         </section>
 
         <section className="contact-section section-wrap" id="contact" aria-labelledby="contact-title">
           <div>
-            <p className="eyebrow">Start with a hello</p>
-            <h2 id="contact-title">Your next stay<br />starts <em>right here.</em></h2>
+            <p className="eyebrow">{translateText("Start with a hello")}</p>
+            <h2 id="contact-title">{translateText("Your next stay")}<br />{translateText("starts ")}<em>{translateText("right here.")}</em></h2>
             <div className="hotel-contact-details">
-              {config?.email && <a href={`mailto:${config.email}`}>{config.email}</a>}
-              {config?.phone && <a href={`tel:${config.phone}`}>{config.phone}</a>}
-              {config?.address && <p><MapPin aria-hidden="true" />{config.address}</p>}
-              {config?.directionsUrl && <a className="text-link" href={config.directionsUrl} target="_blank" rel="noreferrer">Get directions <ArrowUpRight aria-hidden="true" /></a>}
-              {!config?.address && <p className="contact-note">Hotel address and map directions will appear here once configured.</p>}
+              {translateText(config?.email && <a href={`mailto:${config.email}`}>{translateText(config.email)}</a>)}
+              {translateText(config?.phone && <a href={`tel:${config.phone}`}>{translateText(config.phone)}</a>)}
+              {translateText(config?.address && <p><MapPin aria-hidden="true" />{translateText(config.address)}</p>)}
+              {translateText(config?.directionsUrl && <a className="text-link" href={config.directionsUrl} target="_blank" rel="noreferrer">{translateText("Get directions ")}<ArrowUpRight aria-hidden="true" /></a>)}
+              {translateText(!config?.address && <p className="contact-note">{translateText("Hotel address and map directions will appear here once configured.")}</p>)}
             </div>
           </div>
           <form className="contact-form" onSubmit={submitContact}>
-            <p>Have a question or planning a visit? Send our team a message.</p>
-            <label>Name<input autoComplete="name" {...contactForm.register("name")} /></label>
-            <label>Email<input type="email" autoComplete="email" {...contactForm.register("email")} /></label>
-            <label>How can we help?<textarea rows={4} {...contactForm.register("message")} /></label>
-            {contactForm.formState.errors.root && <p className={contactForm.formState.errors.root.type === "success" ? "form-message success-message" : "form-message"}>{contactForm.formState.errors.root.message}</p>}
+            <p>{translateText("Have a question or planning a visit? Send our team a message.")}</p>
+            <label>{translateText("Name")}<input autoComplete="name" {...contactForm.register("name")} /></label>
+            <label>{translateText("Email")}<input type="email" autoComplete="email" {...contactForm.register("email")} /></label>
+            <label>{translateText("How can we help?")}<textarea rows={4} {...contactForm.register("message")} /></label>
+            {translateText(contactForm.formState.errors.root && <p className={contactForm.formState.errors.root.type === "success" ? "form-message success-message" : "form-message"}>{translateText(contactForm.formState.errors.root.message)}</p>)}
             <button className="button button-dark" type="submit" disabled={contactForm.formState.isSubmitting}>
-              {contactForm.formState.isSubmitting ? "Sending…" : "Send enquiry"} <ArrowUpRight aria-hidden="true" />
+              {translateText(contactForm.formState.isSubmitting ? "Sending…" : "Send enquiry")} <ArrowUpRight aria-hidden="true" />
             </button>
-            <span className="form-hint">Your message is emailed directly to the hotel team.</span>
+            <span className="form-hint">{translateText("Your message is emailed directly to the hotel team.")}</span>
           </form>
         </section>
       </main>
 
       <footer className="site-footer">
         <a className="brand footer-brand" href="/">
-          <span className="brand-mark" aria-hidden="true">A</span>
-          <span className="brand-name">{config?.name ?? "Ayele Degu"} <span>International Hotel</span></span>
+          <span className="brand-mark" aria-hidden="true">{translateText("A")}</span>
+          <span className="brand-name">{translateText(config?.name ?? "Ayele Degu")} <span>{translateText("International Hotel")}</span></span>
         </a>
-        <p>Thoughtful stays. Genuine welcome.</p>
-        <span className="copyright">© {new Date().getFullYear()} {config?.name ?? "Ayele Degu International Hotel"}</span>
+        <p>{translateText("Thoughtful stays. Genuine welcome.")}</p>
+        <span className="copyright">{translateText("© ")}{translateText(new Date().getFullYear())} {translateText(config?.name ?? "Ayele Degu International Hotel")}</span>
       </footer>
     </>
   );

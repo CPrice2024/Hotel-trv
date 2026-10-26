@@ -1,3 +1,4 @@
+import { formatStayDate, getLocale, translateText, useLanguage } from "../../i18n/language";
 
 
 import { Download } from "lucide-react";
@@ -9,7 +10,7 @@ interface BookingReceiptProps {
 }
 
 function formatMoney(amount: number, currency: GuestBooking["currency"]) {
-  return new Intl.NumberFormat("en", {
+  return new Intl.NumberFormat(getLocale(), {
     style: "currency",
     currency,
     maximumFractionDigits: currency === "USD" ? 2 : 0,
@@ -17,7 +18,7 @@ function formatMoney(amount: number, currency: GuestBooking["currency"]) {
 }
 
 function formatExchangeRate(rate: number) {
-  return new Intl.NumberFormat("en", {
+  return new Intl.NumberFormat(getLocale(), {
     minimumFractionDigits: 2,
     maximumFractionDigits: 4,
   }).format(rate);
@@ -27,54 +28,55 @@ export function BookingReceipt({
   booking,
   hotelName = "Ayele Degu International Hotel",
 }: BookingReceiptProps) {
+  useLanguage();
   return (
     <div className="receipt-download-area">
       <article className="booking-receipt">
         <header className="receipt-header">
-          <span className="brand-mark" aria-hidden="true">A</span>
+          <span className="brand-mark" aria-hidden="true">{translateText("A")}</span>
           <div>
-            <span className="eyebrow">BOOKING SLIP</span>
-            <h2>{hotelName}</h2>
+            <span className="eyebrow">{translateText("BOOKING SLIP")}</span>
+            <h2>{translateText(hotelName)}</h2>
           </div>
-          <span className="receipt-paid">PAID</span>
+          <span className="receipt-paid">{translateText("PAID")}</span>
         </header>
 
         <div className="receipt-reference">
-          <span>Booking reference</span>
+          <span>{translateText("Booking reference")}</span>
           <strong>{booking.id}</strong>
         </div>
 
-        <section className="receipt-details" aria-label="Booking receipt details">
+        <section className="receipt-details" aria-label={translateText("Booking receipt details")}>
           <div>
-            <h3>Guest</h3>
+            <h3>{translateText("Guest")}</h3>
             <p>{booking.guestName}</p>
             <p>{booking.guestEmail}</p>
             <p>{booking.guestPhone}</p>
           </div>
           <div>
-            <h3>Stay</h3>
-            <p>{booking.roomName}</p>
-            <p>{booking.quantity} {booking.quantity === 1 ? "room" : "rooms"} · {booking.guests} {booking.guests === 1 ? "guest" : "guests"}</p>
-            <p>{booking.checkIn} – {booking.checkOut}</p>
-            <p>{booking.nights} {booking.nights === 1 ? "night" : "nights"}</p>
+            <h3>{translateText("Stay")}</h3>
+            <p>{translateText(booking.roomName)}</p>
+            <p>{translateText(booking.quantity)} {translateText(booking.quantity === 1 ? "room" : "rooms")}{translateText(" · ")}{translateText(booking.guests)} {translateText(booking.guests === 1 ? "guest" : "guests")}</p>
+            <p>{formatStayDate(booking.checkIn)}{translateText(" – ")}{formatStayDate(booking.checkOut)}</p>
+            <p>{translateText(booking.nights)} {translateText(booking.nights === 1 ? "night" : "nights")}</p>
           </div>
         </section>
 
         <section className="receipt-payment">
-          <div><span>Payment method</span><strong>{booking.paymentGateway === "chapa" ? "Chapa" : "Stripe"}</strong></div>
-          {booking.currency === "ETB" && booking.usdToEtbRate && (
+          <div><span>{translateText("Payment method")}</span><strong>{translateText(booking.paymentGateway === "chapa" ? "Chapa" : "Stripe")}</strong></div>
+          {translateText(booking.currency === "ETB" && booking.usdToEtbRate && (
             <div>
-              <span>USD/ETB rate used</span>
-              <strong>1 USD = ETB {formatExchangeRate(booking.usdToEtbRate)}</strong>
+              <span>{translateText("USD/ETB rate used")}</span>
+              <strong>{translateText("1 USD = ETB ")}{translateText(formatExchangeRate(booking.usdToEtbRate))}</strong>
             </div>
-          )}
-          <div><span>Payment reference</span><strong>{booking.paymentReference || "Verified"}</strong></div>
-          <div className="receipt-total"><span>Total paid</span><strong>{formatMoney(booking.total, booking.currency)}</strong></div>
+          ))}
+          <div><span>{translateText("Payment reference")}</span><strong>{translateText(booking.paymentReference || "Verified")}</strong></div>
+          <div className="receipt-total"><span>{translateText("Total paid")}</span><strong>{translateText(formatMoney(booking.total, booking.currency))}</strong></div>
         </section>
 
         <footer className="receipt-footer">
-          <span>Booking status: {booking.status}</span>
-          <span>Thank you for choosing {hotelName}.</span>
+          <span>{translateText("Booking status: ")}{translateText(booking.status)}</span>
+          <span>{translateText("Thank you for choosing ")}{translateText(hotelName)}{translateText(".")}</span>
         </footer>
       </article>
 
@@ -84,9 +86,7 @@ export function BookingReceipt({
           type="button"
           onClick={() => window.print()}
         >
-          <Download aria-hidden="true" />
-          Download booking slip
-        </button>
+          <Download aria-hidden="true" />{translateText("Download booking slip")}</button>
       </div>
     </div>
   );
