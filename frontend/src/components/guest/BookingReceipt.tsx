@@ -2,6 +2,8 @@ import { formatStayDate, getLocale, translateText, useLanguage } from "../../i18
 
 
 import { Download } from "lucide-react";
+import { useRef, useState } from "react";
+import { formatBookingReference } from "../../lib/bookingReference";
 import type { GuestBooking } from "../../api";
 
 interface BookingReceiptProps {
@@ -29,9 +31,36 @@ export function BookingReceipt({
   hotelName = "Ayele Degu International Hotel",
 }: BookingReceiptProps) {
   useLanguage();
+  const receiptRef = useRef<HTMLElement>(null);
+  const [downloading, setDownloading] = useState(false);
+  const [downloadError, setDownloadError] = useState("");
+  const downloadPdf = async () => {
+    if (!receiptRef.current || downloading) return;
+    setDownloading(true);
+    setDownloadError("");
+    try {
+      await document.fonts.ready;
+      const [{ toCanvas }, { jsPDF }] = await Promise.all([
+        import("html-to-image"), import("jspdf"),
+      ]);
+      const canvas = await toCanvas(receiptRef.current, {
+        pixelRatio: 2,
+        backgroundColor: "#fffefa",
+      });
+      const pdf = new jsPDF({ unit: "mm", format: "a4" });
+      const scale = Math.min(190 / canvas.width, 277 / canvas.height);
+      pdf.addImage(canvas, "PNG", 10, 10, canvas.width * scale, canvas.height * scale);
+      pdf.save(`booking-slip-${formatBookingReference(booking.id)}.pdf`);
+    } catch (error) {
+      console.error("Could not download booking slip.", error);
+      setDownloadError("Could not download booking slip. Please try again.");
+    } finally {
+      setDownloading(false);
+    }
+  };
   return (
     <div className="receipt-download-area">
-      <article className="booking-receipt">
+      <article className="booking-receipt" ref={receiptRef}>
         <header className="receipt-header">
           <span className="brand-mark" aria-hidden="true">{translateText("A")}</span>
           <div>
@@ -43,7 +72,7 @@ export function BookingReceipt({
 
         <div className="receipt-reference">
           <span>{translateText("Booking reference")}</span>
-          <strong>{booking.id}</strong>
+          <strong>{formatBookingReference(booking.id)}</strong>
         </div>
 
         <section className="receipt-details" aria-label={translateText("Booking receipt details")}>
@@ -84,10 +113,13 @@ export function BookingReceipt({
         <button
           className="button button-dark"
           type="button"
-          onClick={() => window.print()}
+          onClick={() => void downloadPdf()}
+          disabled={downloading}
+          aria-busy={downloading}
         >
           <Download aria-hidden="true" />{translateText("Download booking slip")}</button>
       </div>
+      {downloadError && <p className="form-message" role="alert">{translateText(downloadError)}</p>}
     </div>
   );
 }

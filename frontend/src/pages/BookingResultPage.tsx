@@ -1,3 +1,4 @@
+import { formatBookingReference } from "../lib/bookingReference";
 import { translateText, useLanguage } from "../i18n/language";
 import { useEffect, useState, type FormEvent } from "react";
 import { CheckCircle2, CircleAlert } from "lucide-react";
@@ -129,7 +130,7 @@ export function BookingResultPage() {
           <p className="eyebrow">{translateText("Booking update")}</p>
           <h1>{translateText(failed ? "Payment needs attention." : confirmed ? "You’re all set." : "One moment…")}</h1>
           <p role="status">{translateText(message)}</p>
-          {translateText(bookingId && <p className="contact-note">{translateText("Booking reference: ")}{translateText(bookingId)}</p>)}
+          {translateText(bookingId && <p className="contact-note">{translateText("Booking reference: ")}{formatBookingReference(bookingId)}</p>)}
           {translateText(confirmed && !receipt && (
             <form className="receipt-email-form" onSubmit={submitReceiptEmail}>
               <label htmlFor="receipt-email">{translateText("Enter the email used for this booking to load your receipt")}</label>

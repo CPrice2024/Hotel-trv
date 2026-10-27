@@ -1,3 +1,4 @@
+import { formatBookingReference } from "../../lib/bookingReference";
 import { formatStayDate, translateText, useLanguage } from "../../i18n/language";
 import { useState, type FormEvent } from "react";
 import { Search } from "lucide-react";
@@ -122,7 +123,7 @@ export function MyBookingsPage() {
               <div>
                 {translateText(savedBookingIds.map((id) => (
                   <button type="button" key={id} onClick={() => selectSavedBooking(id)}>
-                    {translateText(id)}
+                    {formatBookingReference(id)}
                   </button>
                 )))}
               </div>
@@ -134,7 +135,7 @@ export function MyBookingsPage() {
               <div className={`booking-status-pill booking-status-${booking.paymentStatus}`}>{translateText("Payment ")}{translateText(booking.paymentStatus)}
               </div>
               <h2>{translateText(booking.roomName)}</h2>
-              <p className="my-booking-reference">{translateText("Booking reference: ")}{booking.id}</p>
+              <p className="my-booking-reference">{translateText("Booking reference: ")}{formatBookingReference(booking.id)}</p>
               <div className="my-booking-details">
                 <p><span>{translateText("Guest")}</span><strong>{booking.guestName}</strong></p>
                 <p><span>{translateText("Stay dates")}</span><strong>{formatStayDate(booking.checkIn)}{translateText(" – ")}{formatStayDate(booking.checkOut)}</strong></p>

@@ -28,7 +28,7 @@ import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
 import { renderBookingEmail } from "./lib/bookingEmail.js";
 import { createAdminRouter } from "./admin.js";
-import { createChapaReference, readChapaReference } from "./lib/bookingReference.js";
+import { createChapaReference, readChapaReference, formatBookingReference, shortBookingReferenceSuffix } from "./lib/bookingReference.js";
 import { Booking, InventoryNight, Room, User } from "./db/models.js";
 import type { BookingRecord } from "./db/models.js";
 
@@ -439,7 +439,7 @@ async function sendBookingConfirmation(bookingId: string): Promise<void> {
       (booking.currency === "USD" ? 100 : 1),
   );
   const details = [
-    `Booking reference: ${booking._id.toString()}`,
+    `Booking reference: ${formatBookingReference(booking._id.toString())}`,
     `Booking status: Confirmed`,
     `Payment status: Paid via ${booking.paymentGateway === "chapa" ? "Chapa" : "Stripe"}`,
     ...(booking.paymentReference ? [`Payment reference: ${booking.paymentReference}`] : []),
@@ -470,7 +470,7 @@ async function sendBookingConfirmation(bookingId: string): Promise<void> {
       to: booking.guestEmail,
       html: renderBookingEmail({
         hotelName, hotelAddress, hotelPhone: contactPhone, hotelEmail: contactEmail,
-        websiteUrl: frontendUrl, reference: booking._id.toString(),
+        websiteUrl: frontendUrl, reference: formatBookingReference(booking._id.toString()),
         guestName: booking.guestName, guestEmail: booking.guestEmail, guestPhone: booking.guestPhone,
         roomName: booking.roomName, checkIn: booking.checkIn, checkOut: booking.checkOut,
         nights: booking.nights, quantity: booking.quantity, guests: booking.guests,
@@ -1098,17 +1098,27 @@ app.post(
       })
       .safeParse(request.body);
 
-    if (!input.success || !isValidObjectId(input.data.bookingId)) {
+    if (!input.success) {
       response.status(404).json({ error: "Booking not found. Check the reference and email address." });
       return;
     }
 
-    const booking = await Booking.findOne({
-      _id: input.data.bookingId,
+    const reference = input.data.bookingId.trim();
+    const suffix = shortBookingReferenceSuffix(reference);
+    if (!isValidObjectId(reference) && !suffix) {
+      response.status(404).json({ error: "Booking not found. Check the reference and email address." });
+      return;
+    }
+    // Scope short references to the supplied email and reject ambiguous matches.
+    const matches = await Booking.find({
+      ...(suffix
+        ? { $expr: { $eq: [{ $substrBytes: [{ $toString: "$_id" }, 14, 10] }, suffix] } }
+        : { _id: reference }),
       guestEmail: input.data.guestEmail.trim().toLowerCase(),
     }).select(
       "_id roomName guestName guestEmail guestPhone checkIn checkOut nights quantity guests currency totalMinor usdToEtbRate paymentGateway paymentStatus paymentReference status",
-    );
+    ).limit(2);
+    const booking = matches.length === 1 ? matches[0] : null;
 
     if (!booking) {
       response.status(404).json({ error: "Booking not found. Check the reference and email address." });
