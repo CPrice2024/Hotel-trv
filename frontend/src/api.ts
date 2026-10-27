@@ -6,6 +6,13 @@ export const api = axios.create({
   headers: { "Content-Type": "application/json" },
 });
 
+api.interceptors.response.use(response => response, error => {
+  if (axios.isAxiosError(error) && error.response?.status === 401 && error.config?.url?.startsWith("/staff/") && error.config.url !== "/staff/login") {
+    window.dispatchEvent(new Event("staff-session-ended"));
+  }
+  return Promise.reject(error);
+});
+
 export function getErrorMessage(error: unknown, fallback: string): string {
   if (axios.isAxiosError<{ error?: string }>(error)) {
     return error.response?.data?.error ?? fallback;

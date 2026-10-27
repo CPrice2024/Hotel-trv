@@ -28,10 +28,12 @@ import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
 import { renderBookingEmail } from "./lib/bookingEmail.js";
 import { createAdminRouter } from "./admin.js";
+import { createSecurityRouter } from "./security.js";
+import { createStaffAuthentication, sessionMetadata, trackStaffActivity } from "./lib/staffSecurity.js";
 import { createExtensionRouter } from "./extensions.js";
 import { paymentRequestToken } from "./lib/stayExtension.js";
 import { createChapaReference, readChapaReference, formatBookingReference, shortBookingReferenceSuffix } from "./lib/bookingReference.js";
-import { Booking, InventoryNight, Room, User } from "./db/models.js";
+import { Booking, InventoryNight, Room, User, StaffSession } from "./db/models.js";
 import type { BookingRecord } from "./db/models.js";
 
 const port = Number(process.env.PORT ?? 4000);
@@ -198,6 +200,7 @@ app.use((request, response, next) => {
   parseBody(request, response, next);
 });
 app.use(cookieParser());
+app.use(trackStaffActivity);
 
 const loginLimiter = rateLimit({
   windowMs: 15 * 60 * 1000,
@@ -222,53 +225,7 @@ const guestBookingLookupLimiter = rateLimit({
   message: { error: "Too many booking lookups. Please wait and try again." },
 });
 
-type StaffClaims = {
-  id: string;
-  role: "admin" | "staff";
-};
-
-function requireStaff(roles: StaffClaims["role"][] = ["admin", "staff"]): RequestHandler {
-  return async (_request, response, next) => {
-    try {
-      if (!jwtSecret) {
-        response.status(500).json({ error: "Authentication is not configured." });
-        return;
-      }
-      const token = _request.cookies?.[cookieName] as string | undefined;
-      if (!token) {
-        response.status(401).json({ error: "Please sign in to continue." });
-        return;
-      }
-      const decoded = jwt.verify(token, jwtSecret, {
-        issuer: "ayele-hotel",
-        audience: "ayele-hotel-staff",
-      });
-      if (typeof decoded === "string" || !decoded.sub) {
-        response.status(401).json({ error: "Your session is invalid. Please sign in again." });
-        return;
-      }
-      const staff = await User.findOne({
-        _id: decoded.sub,
-        active: true,
-      }).select("_id role");
-      if (!staff || !roles.includes(staff.role as StaffClaims["role"])) {
-        response.status(403).json({ error: "You do not have permission for this action." });
-        return;
-      }
-      response.locals.staff = {
-        id: staff._id.toString(),
-        role: staff.role,
-      } satisfies StaffClaims;
-      next();
-    } catch (error) {
-      if (error instanceof jwt.JsonWebTokenError) {
-        response.status(401).json({ error: "Your session has expired. Please sign in again." });
-        return;
-      }
-      next(error);
-    }
-  };
-}
+const requireStaff = createStaffAuthentication(jwtSecret, cookieName);
 
 const asyncRoute =
   (handler: (request: Request, response: Response) => Promise<void>): RequestHandler =>
@@ -697,7 +654,13 @@ app.post(
       response.status(500).json({ error: "Authentication is not configured." });
       return;
     }
+    const metadata = sessionMetadata(request);
+    const expiresAt = new Date(Date.now() + 8 * 60 * 60 * 1000);
+    const deviceSession = await StaffSession.create({ user: user._id, ...metadata, lastSeenAt: new Date(), expiresAt, purgeAt: new Date(expiresAt.getTime() + 30 * 86400000) });
+    response.locals.staff = { id: user._id.toString(), name: user.name, email: user.email, role: user.role };
+    response.locals.staffSession = { id: deviceSession._id.toString(), ...metadata };
     const token = jwt.sign({ role: user.role }, jwtSecret, {
+      jwtid: deviceSession._id.toString(),
       subject: user._id.toString(),
       expiresIn: "8h",
       issuer: "ayele-hotel",
@@ -714,15 +677,11 @@ app.post(
   }),
 );
 
-app.post("/api/staff/logout", (_request, response) => {
-  response.clearCookie(cookieName, {
-    httpOnly: true,
-    secure: isProduction,
-    sameSite: "strict",
-    path: "/",
-  });
+app.post("/api/staff/logout", requireStaff(), asyncRoute(async (_request, response) => {
+  await StaffSession.updateOne({ _id: response.locals.staffSession.id }, { $set: { revokedAt: new Date() } });
+  response.clearCookie(cookieName, { httpOnly: true, secure: isProduction, sameSite: "strict", path: "/" });
   response.status(204).end();
-});
+}));
 
 app.get(
   "/api/staff/me",
@@ -741,6 +700,8 @@ app.use("/api/staff", (_request, response, next) => {
   response.set("Cache-Control", "private, no-store");
   next();
 }, createAdminRouter(requireStaff));
+
+app.use("/api/staff/security", createSecurityRouter(requireStaff(["admin"])));
 
 app.use("/api", createExtensionRouter({
   admin: requireStaff(["admin"]), guestLimiter: guestBookingLookupLimiter,

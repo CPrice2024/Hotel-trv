@@ -152,3 +152,36 @@ export const InventoryNight =
 export const User: Model<UserRecord> =
   (mongoose.models.User as Model<UserRecord> | undefined) ??
   model<UserRecord>("User", userSchema);
+
+export interface StaffSessionRecord {
+  user: Types.ObjectId; browser: string; os: string; device: string; ip: string;
+  lastSeenAt: Date; lastActivity: string; expiresAt: Date; revokedAt: Date | null;
+  purgeAt: Date; createdAt: Date; updatedAt: Date;
+}
+interface ActivityLogRecord {
+  actor: Types.ObjectId; actorName: string; actorEmail: string; session: Types.ObjectId;
+  action: string; targetId: string; browser: string; os: string; device: string; ip: string; createdAt: Date;
+}
+const staffSessionSchema = new Schema<StaffSessionRecord>({
+  user: { type: Schema.Types.ObjectId, ref: "User", required: true, index: true },
+  browser: { type: String, required: true }, os: { type: String, required: true },
+  device: { type: String, required: true }, ip: { type: String, default: "Unknown" },
+  lastSeenAt: { type: Date, required: true }, lastActivity: { type: String, default: "Signed in" },
+  expiresAt: { type: Date, required: true }, revokedAt: { type: Date, default: null },
+  purgeAt: { type: Date, required: true },
+}, { timestamps: true });
+staffSessionSchema.index({ purgeAt: 1 }, { expireAfterSeconds: 0 });
+staffSessionSchema.index({ createdAt: -1 });
+export const StaffSession: Model<StaffSessionRecord> = (mongoose.models.StaffSession as Model<StaffSessionRecord> | undefined) ?? model<StaffSessionRecord>("StaffSession", staffSessionSchema);
+
+const activityLogSchema = new Schema<ActivityLogRecord>({
+  actor: { type: Schema.Types.ObjectId, ref: "User", required: true },
+  actorName: { type: String, required: true }, actorEmail: { type: String, required: true },
+  session: { type: Schema.Types.ObjectId, ref: "StaffSession", required: true },
+  action: { type: String, required: true }, targetId: { type: String, default: "" },
+  browser: String, os: String, device: String, ip: String,
+  createdAt: { type: Date, default: Date.now },
+});
+activityLogSchema.index({ createdAt: 1 }, { expireAfterSeconds: 90 * 86400 });
+activityLogSchema.index({ actor: 1, createdAt: -1 });
+export const ActivityLog: Model<ActivityLogRecord> = (mongoose.models.ActivityLog as Model<ActivityLogRecord> | undefined) ?? model<ActivityLogRecord>("ActivityLog", activityLogSchema);
