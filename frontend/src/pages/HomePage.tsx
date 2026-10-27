@@ -2,9 +2,8 @@ import { translateText, useLanguage } from "../i18n/language";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useQuery } from "@tanstack/react-query";
 import { ArrowDown, ArrowUpRight, MapPin, Sparkles } from "lucide-react";
-import { useEffect } from "react";
 import { useForm } from "react-hook-form";
-import { useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { z } from "zod";
 import { api, getErrorMessage, type HotelConfig, type Room } from "../api";
 import {
@@ -35,7 +34,6 @@ const hotelServices = [
 
 export function HomePage() {
   useLanguage();
-  const location = useLocation();
   const roomsQuery = useQuery({
     queryKey: ["rooms"],
     queryFn: async () => (await api.get<{ rooms: Room[] }>("/rooms")).data.rooms,
@@ -49,20 +47,6 @@ export function HomePage() {
   const contactForm = useForm<ContactFields>({
     resolver: zodResolver(contactSchema),
   });
-
-  useEffect(() => {
-    const targetId = location.hash.slice(1);
-    if (!targetId) return;
-
-    const frame = window.requestAnimationFrame(() => {
-      document.getElementById(targetId)?.scrollIntoView({
-        behavior: "smooth",
-        block: "start",
-      });
-    });
-
-    return () => window.cancelAnimationFrame(frame);
-  }, [location.hash]);
 
   const submitContact = contactForm.handleSubmit(async (fields) => {
     try {
@@ -92,12 +76,12 @@ export function HomePage() {
             <h1 id="hero-title">{translateText("Make room")}<br />{translateText("for ")}<em>{translateText("something")}</em><br />{translateText("beautiful.")}</h1>
             <p className="hero-copy">{translateText("A thoughtful place to pause, connect, and feel at home—wherever your journey takes you.")}</p>
             <a className="button button-light" href="#stay">{translateText("Discover your stay ")}<ArrowDown aria-hidden="true" /></a>
-            <a className="hero-book-link" href="/booking">{translateText("Check availability ")}<ArrowUpRight aria-hidden="true" /></a>
+            <Link className="hero-book-link" to="/booking">{translateText("Check availability ")}<ArrowUpRight aria-hidden="true" /></Link>
           </div>
           <div className="hero-note"><span>{translateText("01")}</span> {translateText(config?.name ?? "Ayele Degu International Hotel")}</div>
         </section>
 
-        <section className="intro section-wrap" id="about" aria-labelledby="intro-title">
+        <section className="intro section-wrap" id="about" aria-labelledby="intro-title" data-reveal>
           <div className="intro-label">
             <span className="eyebrow">{translateText("A place to belong")}</span>
             <Sparkles className="ornament" aria-hidden="true" />
@@ -110,7 +94,7 @@ export function HomePage() {
 
         <section className="stay-section" id="stay" aria-labelledby="stay-title">
           <div className="section-wrap">
-            <div className="section-heading">
+            <div className="section-heading" data-reveal>
               <div>
                 <p className="eyebrow">{translateText("Find your kind of stay")}</p>
                 <h2 id="stay-title">{translateText("Settle in ")}<em>{translateText("beautifully.")}</em></h2>
@@ -120,7 +104,10 @@ export function HomePage() {
             <div className="stay-grid">
               {translateText(roomsQuery.data?.map((room, index) => (
                 <article className="stay-card" key={room.id}>
-                  {translateText(room.imageUrl && <img className="stay-image" src={getRoomImageUrl(room.imageUrl)} alt={translateText(room.name)} loading="lazy" decoding="async" />)}
+                  {room.imageUrl && <div className="stay-image-wrap">
+                    <img className="stay-image" src={getRoomImageUrl(room.imageUrl)} alt={translateText(room.name)} loading="lazy" decoding="async" />
+                    <span className="stay-image-shade" aria-hidden="true" />
+                  </div>}
                   <div className="stay-card-body">
                     <span className="card-number">{translateText(String(index + 1).padStart(2, "0"))}{translateText(" / STAY")}</span>
                     <h3>{translateText(room.name)}</h3>
@@ -142,7 +129,7 @@ export function HomePage() {
                     ))}
                     {translateText(room.testOnly && <span className="test-data-badge">{translateText("Local test inventory")}</span>)}
                     <p>{translateText(convertUsdPricesToEtb(room.description, exchangeRateQuery.data?.rate))}</p>
-                    <a className="text-link" href={`/booking?roomId=${encodeURIComponent(room.id)}`}>{translateText("Book this room ")}<ArrowUpRight aria-hidden="true" /></a>
+                    <Link className="text-link" to={`/booking?roomId=${encodeURIComponent(room.id)}`}>{translateText("Book this room ")}<ArrowUpRight aria-hidden="true" /></Link>
                   </div>
                 </article>
               )))}
@@ -158,13 +145,13 @@ export function HomePage() {
             ))}
             <div className="stay-book-row">
               <p>{translateText("Ready when you are.")}</p>
-              <a className="button button-dark" href="/booking">{translateText("Check dates and rooms ")}<ArrowUpRight aria-hidden="true" /></a>
+              <Link className="button button-dark" to="/booking">{translateText("Check dates and rooms ")}<ArrowUpRight aria-hidden="true" /></Link>
             </div>
           </div>
         </section>
 
         <section className="services-section section-wrap" id="services" aria-labelledby="services-title">
-          <div className="section-heading">
+          <div className="section-heading" data-reveal>
             <div>
               <p className="eyebrow">{translateText("Thoughtful facilities")}</p>
               <h2 id="services-title">{translateText("Here to make your stay ")}<em>{translateText("easier.")}</em></h2>
@@ -173,7 +160,7 @@ export function HomePage() {
           </div>
           <div className="services-grid">
             {translateText(hotelServices.map((service) => (
-              <article className="service-card" key={service.title}>
+              <article className="service-card" key={service.title} data-reveal>
                 <h3>{translateText(service.title)}</h3>
                 <p>{translateText(service.description)}</p>
               </article>
@@ -193,7 +180,7 @@ export function HomePage() {
           </div>
         </section>
 
-        <section className="contact-section section-wrap" id="contact" aria-labelledby="contact-title">
+        <section className="contact-section section-wrap" id="contact" aria-labelledby="contact-title" data-reveal>
           <div>
             <p className="eyebrow">{translateText("Start with a hello")}</p>
             <h2 id="contact-title">{translateText("Your next stay")}<br />{translateText("starts ")}<em>{translateText("right here.")}</em></h2>

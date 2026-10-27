@@ -60,6 +60,7 @@ export function RoomsPage() {
             <div className="room-list">
               {translateText(rooms.map((room, index) => (
                 <article className="room-list-card" key={room.id}>
+                  <div className="room-list-photo">
                   {translateText(room.imageUrl ? (
                     <img
                       className="room-list-image"
@@ -73,6 +74,8 @@ export function RoomsPage() {
                       <BedDouble />
                     </div>
                   ))}
+                    <span className="stay-image-shade" aria-hidden="true" />
+                  </div>
                   <div className="room-list-content">
                     <span className="card-number">{translateText(String(index + 1).padStart(2, "0"))}{translateText(" / ROOM")}</span>
                     <h3>{translateText(room.name)}</h3>
