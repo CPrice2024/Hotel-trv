@@ -44,6 +44,9 @@ export interface StaffUser {
 }
 
 export interface BookingRecord {
+  parentBooking?: string | null;
+  extensions?: BookingRecord[];
+  paymentRequestEmailSent?: boolean;
   id: string;
   guestName: string;
   guestEmail: string;
@@ -67,6 +70,8 @@ export interface BookingRecord {
 }
 
 export interface GuestBooking {
+  parentBooking?: string | null;
+  extensions?: { id: string; checkIn: string; checkOut: string; total: number; status: string; paymentStatus: string }[];
   id: string;
   roomName: string;
   guestName: string;

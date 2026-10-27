@@ -14,6 +14,9 @@ interface RoomRecord {
 }
 
 export interface BookingRecord {
+  parentBooking: Types.ObjectId | null;
+  extensionVersion: number;
+  paymentRequestEmailSent: boolean;
   room: Types.ObjectId;
   roomName: string;
   guestName: string;
@@ -69,6 +72,9 @@ const roomSchema = new Schema<RoomRecord>(
 
 const bookingSchema = new Schema<BookingRecord>(
   {
+    parentBooking: { type: Schema.Types.ObjectId, ref: "Booking", default: null },
+    extensionVersion: { type: Number, default: 0 },
+    paymentRequestEmailSent: { type: Boolean, default: false },
     room: { type: Schema.Types.ObjectId, ref: "Room", required: true },
     roomName: { type: String, required: true },
     guestName: { type: String, required: true, trim: true },
@@ -103,6 +109,7 @@ const bookingSchema = new Schema<BookingRecord>(
 );
 
 bookingSchema.index({ room: 1, checkIn: 1, checkOut: 1, status: 1 });
+bookingSchema.index({ parentBooking: 1, status: 1, checkOut: -1 });
 bookingSchema.index({ holdExpiresAt: 1, status: 1 });
 
 const inventoryNightSchema = new Schema<InventoryNightRecord>(

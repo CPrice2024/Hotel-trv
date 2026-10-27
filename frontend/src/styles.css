@@ -2179,3 +2179,7 @@ td small {
 @media (max-width: 480px) {
   .currency-options { grid-template-columns: 1fr; }
 }
+.extension-payment-details { margin: 24px 0; text-align: left; }
+.extension-payment-details > div { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.extension-payment-details dt { color: var(--muted); font-size: 13px; }
+.extension-payment-details dd { margin: 4px 0 0; font-weight: 600; overflow-wrap: anywhere; }

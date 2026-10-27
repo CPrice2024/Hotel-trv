@@ -52,7 +52,8 @@ export function createAdminRouter(authorize: (roles?: ("admin" | "staff")[]) => 
     if (!idInput.safeParse(req.params.id).success) { res.status(400).json({ error: "Invalid booking identifier." }); return; }
     const booking = await Booking.findById(req.params.id).lean();
     if (!booking) { res.status(404).json({ error: "Booking not found." }); return; }
-    res.json({ booking: { ...booking, id: booking._id.toString() } });
+      const extensions = await Booking.find({ parentBooking: booking.parentBooking ?? booking._id }).sort({ checkIn: 1 }).lean();
+      res.json({ booking: { ...booking, id: booking._id.toString(), extensions: extensions.map(e => ({ ...e, id: e._id.toString() })) } });
   }));
 
   router.put("/rooms/:id", authorize(["admin"]), wrap(async (req, res) => {

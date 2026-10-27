@@ -73,6 +73,7 @@ export function BookingReceipt({
         <div className="receipt-reference">
           <span>{translateText("Booking reference")}</span>
           <strong>{formatBookingReference(booking.id)}</strong>
+          {booking.parentBooking && <span>Stay extension for booking {formatBookingReference(booking.parentBooking)}</span>}
         </div>
 
         <section className="receipt-details" aria-label={translateText("Booking receipt details")}>

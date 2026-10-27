@@ -28,6 +28,8 @@ import { connectDatabase, disconnectDatabase } from "./db/connection.js";
 import { calculateBookingPrice } from "./db/bookingPricing.js";
 import { renderBookingEmail } from "./lib/bookingEmail.js";
 import { createAdminRouter } from "./admin.js";
+import { createExtensionRouter } from "./extensions.js";
+import { paymentRequestToken } from "./lib/stayExtension.js";
 import { createChapaReference, readChapaReference, formatBookingReference, shortBookingReferenceSuffix } from "./lib/bookingReference.js";
 import { Booking, InventoryNight, Room, User } from "./db/models.js";
 import type { BookingRecord } from "./db/models.js";
@@ -471,6 +473,7 @@ async function sendBookingConfirmation(bookingId: string): Promise<void> {
       html: renderBookingEmail({
         hotelName, hotelAddress, hotelPhone: contactPhone, hotelEmail: contactEmail,
         websiteUrl: frontendUrl, reference: formatBookingReference(booking._id.toString()),
+        parentReference: booking.parentBooking ? formatBookingReference(booking.parentBooking.toString()) : undefined,
         guestName: booking.guestName, guestEmail: booking.guestEmail, guestPhone: booking.guestPhone,
         roomName: booking.roomName, checkIn: booking.checkIn, checkOut: booking.checkOut,
         nights: booking.nights, quantity: booking.quantity, guests: booking.guests,
@@ -738,6 +741,12 @@ app.use("/api/staff", (_request, response, next) => {
   response.set("Cache-Control", "private, no-store");
   next();
 }, createAdminRouter(requireStaff));
+
+app.use("/api", createExtensionRouter({
+  admin: requireStaff(["admin"]), guestLimiter: guestBookingLookupLimiter,
+  secret: jwtSecret, hotelName, frontendUrl, emailConfigured: emailDeliveryConfigured,
+  liveRate: getLiveUsdToEtbRate, sendEmail,
+}));
 
 app.get(
   "/api/staff/dashboard",
@@ -1116,7 +1125,7 @@ app.post(
         : { _id: reference }),
       guestEmail: input.data.guestEmail.trim().toLowerCase(),
     }).select(
-      "_id roomName guestName guestEmail guestPhone checkIn checkOut nights quantity guests currency totalMinor usdToEtbRate paymentGateway paymentStatus paymentReference status",
+      "_id parentBooking roomName guestName guestEmail guestPhone checkIn checkOut nights quantity guests currency totalMinor usdToEtbRate paymentGateway paymentStatus paymentReference status",
     ).limit(2);
     const booking = matches.length === 1 ? matches[0] : null;
 
@@ -1125,9 +1134,12 @@ app.post(
       return;
     }
 
+    const extensions = booking.parentBooking ? [] : await Booking.find({ parentBooking: booking._id }).sort({ checkIn: 1 }).select("_id checkIn checkOut totalMinor status paymentStatus").lean();
     response.json({
       booking: {
         id: booking._id.toString(),
+        parentBooking: booking.parentBooking?.toString() ?? null,
+        extensions: extensions.map(e => ({ id: e._id.toString(), checkIn: e.checkIn.toISOString().slice(0, 10), checkOut: e.checkOut.toISOString().slice(0, 10), total: booking.currency === "USD" ? e.totalMinor / 100 : e.totalMinor, status: e.status, paymentStatus: e.paymentStatus })),
         roomName: booking.roomName,
         guestName: booking.guestName,
         guestEmail: booking.guestEmail,
@@ -1227,7 +1239,9 @@ app.post(
         ],
         metadata: { bookingId: booking._id.toString() },
         success_url: `${getFrontendUrl("/booking/result")}?status=success&booking=${booking._id}&session_id={CHECKOUT_SESSION_ID}`,
-        cancel_url: `${getFrontendUrl("/booking")}?payment=cancelled&booking=${booking._id}`,
+        cancel_url: booking.parentBooking
+          ? `${getFrontendUrl("/booking/payment-request")}#${paymentRequestToken(booking._id.toString(), jwtSecret!)}`
+          : `${getFrontendUrl("/booking")}?payment=cancelled&booking=${booking._id}`,
       });
       if (!checkout.url) {
         response.status(502).json({ error: "Stripe did not return a checkout page. Please try again." });

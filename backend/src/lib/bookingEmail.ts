@@ -1,4 +1,5 @@
 export interface BookingEmailData {
+  parentReference?: string;
   hotelName: string;
   hotelAddress: string;
   hotelPhone: string;
@@ -45,6 +46,7 @@ export function renderBookingEmail(data: BookingEmailData): string {
 <tr><td style="padding:30px 28px 20px">
 <span style="display:inline-block;background:#eaf3e6;color:#315b37;font-size:11px;letter-spacing:1px;padding:8px 12px;border-radius:3px">CONFIRMED &amp; PAID</span>
 <h1 style="font-family:Georgia,'Times New Roman',serif;font-size:30px;font-weight:normal;line-height:1.25;margin:20px 0 14px;color:#17352e">Your stay awaits.</h1>
+${data.parentReference ? `<p>Confirmed stay extension for booking <strong>${e(data.parentReference)}</strong>. The dates and amount below cover only the extra nights.</p>` : ""}
 <p style="font-size:14px;line-height:1.8;margin:0 0 20px">Dear ${e(data.guestName)},<br>Thank you for choosing ${e(data.hotelName)}. Your payment has been confirmed. Please keep this reservation slip for your arrival.</p>
 <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f5f1e6;border-left:3px solid #c7a46a"><tr><td style="padding:16px"><span style="font-size:10px;letter-spacing:1.5px;color:#756548">BOOKING REFERENCE</span><p style="font-family:monospace;font-size:14px;color:#17352e;margin:8px 0 0;word-break:break-all">${e(data.reference)}</p></td></tr></table>
 ${title("Stay details")}

@@ -36,6 +36,7 @@ const MyBookingsPage = lazy(() =>
     default: module.MyBookingsPage,
   })),
 );
+const PaymentRequestPage = lazy(() => import("../pages/guest/PaymentRequestPage").then(module => ({ default: module.PaymentRequestPage })));
 
 export function AppRouter() {
   return (
@@ -105,6 +106,7 @@ function NavigationPages() {
           <Route path="/map" element={<MapPage />} />
           <Route path="/booking" element={<BookingPage />} />
           <Route path="/booking/result" element={<BookingResultPage />} />
+          <Route path="/booking/payment-request" element={<PaymentRequestPage />} />
           <Route path="/my-bookings" element={<MyBookingsPage />} />
           <Route path="/admin/*" element={<AdminPage />} />
           <Route path="*" element={<HomePage />} />

@@ -136,6 +136,10 @@ export function MyBookingsPage() {
               </div>
               <h2>{translateText(booking.roomName)}</h2>
               <p className="my-booking-reference">{translateText("Booking reference: ")}{formatBookingReference(booking.id)}</p>
+              {booking.extensions && booking.extensions.length > 0 && <section className="guest-extension-summary">
+                <h3>Stay extensions</h3>
+                {booking.extensions.map(extension => <p key={extension.id}><strong>{formatBookingReference(extension.id)}</strong>: {formatStayDate(extension.checkIn)} to {formatStayDate(extension.checkOut)} — {extension.status === "confirmed" && extension.paymentStatus === "paid" ? "Confirmed and paid" : extension.status === "pending" ? "Awaiting extension payment; use the payment link emailed by the hotel" : extension.status}</p>)}
+              </section>}
               <div className="my-booking-details">
                 <p><span>{translateText("Guest")}</span><strong>{booking.guestName}</strong></p>
                 <p><span>{translateText("Stay dates")}</span><strong>{formatStayDate(booking.checkIn)}{translateText(" – ")}{formatStayDate(booking.checkOut)}</strong></p>
