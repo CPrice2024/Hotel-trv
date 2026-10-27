@@ -1,4 +1,22 @@
 {
+  "Check your email for your booking details": {
+    "fr": "Consultez vos e-mails pour les détails de votre réservation",
+    "ar": "تحقق من بريدك الإلكتروني للاطلاع على تفاصيل الحجز",
+    "am": "የቦታ ማስያዣዎን ዝርዝር ለማየት ኢሜይልዎን ይፈትሹ",
+    "om": "Bal'ina qabannoo keessaniif imeelii keessan ilaalaa"
+  },
+  "Look for your booking confirmation and payment receipt in the email address used for this booking.": {
+    "fr": "Retrouvez la confirmation de réservation et le reçu de paiement dans la boîte e-mail utilisée pour cette réservation.",
+    "ar": "ابحث عن تأكيد الحجز وإيصال الدفع في البريد الإلكتروني المستخدم لهذا الحجز.",
+    "am": "ለዚህ ቦታ ማስያዣ በተጠቀሙበት ኢሜይል የማስያዣ ማረጋገጫዎንና የክፍያ ደረሰኝዎን ይፈልጉ።",
+    "om": "Mirkaneessa qabannoo fi nagahee kaffaltii teessoo imeelii qabannoo kanaaf fayyadamtan keessatti ilaalaa."
+  },
+  "Delivery may take a few minutes. If you do not see the email, check your spam or junk folder, or contact the hotel for help.": {
+    "fr": "La réception peut prendre quelques minutes. Si vous ne trouvez pas l'e-mail, vérifiez vos courriers indésirables ou contactez l'hôtel.",
+    "ar": "قد يستغرق وصول الرسالة بضع دقائق. إذا لم تجدها، فتحقق من مجلد الرسائل غير المرغوب فيها أو اتصل بالفندق للمساعدة.",
+    "am": "ኢሜይሉ ለመድረስ ጥቂት ደቂቃዎችን ሊወስድ ይችላል። ካላዩት የአይፈለጌ መልዕክት ማህደርዎን ይፈትሹ ወይም ለእርዳታ ሆቴሉን ያነጋግሩ።",
+    "om": "Imeeliin daqiiqaa muraasa keessatti ga'uu danda'a. Yoo hin argine, galmee spam yookaan junk ilaalaa, yookaan gargaarsaaf hoteelicha qunnamaa."
+  },
   "Rooms": {
     "fr": "Chambres",
     "ar": "الغرف",

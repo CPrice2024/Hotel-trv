@@ -5,6 +5,7 @@ import { api, getErrorMessage } from "../../api";
 import { formatBookingReference } from "../../lib/bookingReference";
 import { rememberActiveBooking } from "../../lib/guestBookings";
 import { SiteHeader } from "../SiteHeader";
+import { PaymentEmailNotice } from "../../components/guest/PaymentEmailNotice";
 
 interface PaymentRequest { id: string; parentBooking: string; roomName: string; guestName: string; guestEmail: string; checkIn: string; checkOut: string; nights: number; quantity: number; currency: "ETB" | "USD"; totalMinor: number; status: string; paymentStatus: string; holdExpiresAt: string }
 const date = (value: string) => new Date(value).toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric", timeZone: "UTC" });
@@ -28,6 +29,7 @@ export function PaymentRequestPage() {
   };
   return <><SiteHeader /><main className="app-page result-page"><section className="result-card">
     <p className="eyebrow">Stay extension</p><h1>Your additional nights</h1>
+    {b?.paymentStatus === "paid" && b.status === "confirmed" && <PaymentEmailNotice email={b.guestEmail} />}
     {!token && <p role="alert">Open the payment link from your hotel email. Contact the hotel if you need a new request.</p>}
     {request.isFetching && !b && token && <p role="status">Loading your payment request...</p>}
     {request.error && <p className="form-message" role="alert">{getErrorMessage(request.error, "Could not load this payment request.")}</p>}

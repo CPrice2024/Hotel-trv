@@ -5,6 +5,7 @@ import { CheckCircle2, CircleAlert } from "lucide-react";
 import { Link, useSearchParams } from "react-router-dom";
 import { api, getErrorMessage, type GuestBooking, type HotelConfig } from "../api";
 import { BookingReceipt } from "../components/guest/BookingReceipt";
+import { PaymentEmailNotice } from "../components/guest/PaymentEmailNotice";
 import { clearActiveBooking, getActiveBookingEmail } from "../lib/guestBookings";
 import { SiteHeader } from "./SiteHeader";
 
@@ -130,6 +131,7 @@ export function BookingResultPage() {
           <p className="eyebrow">{translateText("Booking update")}</p>
           <h1>{translateText(failed ? "Payment needs attention." : confirmed ? "You’re all set." : "One moment…")}</h1>
           <p role="status">{translateText(message)}</p>
+          {confirmed && !failed && <PaymentEmailNotice email={receipt?.guestEmail} />}
           {translateText(bookingId && <p className="contact-note">{translateText("Booking reference: ")}{formatBookingReference(bookingId)}</p>)}
           {translateText(confirmed && !receipt && (
             <form className="receipt-email-form" onSubmit={submitReceiptEmail}>

@@ -2183,3 +2183,22 @@ td small {
 .extension-payment-details > div { padding: 12px 0; border-bottom: 1px solid var(--line); }
 .extension-payment-details dt { color: var(--muted); font-size: 13px; }
 .extension-payment-details dd { margin: 4px 0 0; font-weight: 600; overflow-wrap: anywhere; }
+.payment-email-notice {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: 24px 0;
+  padding: clamp(16px, 3vw, 24px);
+  border: 1px solid #c8dbce;
+  border-inline-start: 4px solid #245c3a;
+  border-radius: 12px;
+  background: #edf5ef;
+  color: #17352e;
+  text-align: start;
+}
+.payment-email-notice > svg { flex: 0 0 24px; margin-top: 2px; color: #245c3a; }
+.payment-email-notice > div { min-width: 0; }
+.payment-email-notice h2 { margin: 0 0 8px; font-size: 18px; line-height: 1.4; }
+.payment-email-notice p { margin: 0; font-size: 14px; line-height: 1.65; }
+.payment-email-address { display: block; margin-top: 8px; overflow-wrap: anywhere; }
+.payment-email-notice .payment-email-help { margin-top: 12px; color: #496154; font-size: 13px; }
