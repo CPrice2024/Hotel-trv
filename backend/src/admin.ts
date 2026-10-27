@@ -64,8 +64,13 @@ export function createAdminRouter(authorize: (roles?: ("admin" | "staff")[]) => 
         // Both booking holds and edits write this document before touching inventory.
         const room = await Room.findByIdAndUpdate(req.params.id, { $inc: { inventoryVersion: 1 } }, { session, new: true });
         if (!room) throw new Error("ROOM_NOT_FOUND");
-        if (parsed.data.inventory !== room.inventory && await InventoryNight.exists({ room: room._id }).session(session)) {
-          throw new Error("INVENTORY_ALLOCATED");
+          const inventoryDelta = parsed.data.inventory - room.inventory;
+          if (inventoryDelta !== 0) {
+            // Preserve booked quantities while applying capacity changes to every stored night.
+            if (inventoryDelta < 0 && await InventoryNight.exists({ room: room._id, remaining: { $lt: -inventoryDelta } }).session(session)) {
+              throw new Error("INVENTORY_ALLOCATED");
+            }
+            await InventoryNight.updateMany({ room: room._id }, { $inc: { remaining: inventoryDelta } }, { session });
         }
         const { priceUSD, ...details } = parsed.data;
         room.set({ ...details, priceUSDCents: Math.round(priceUSD * 100) });
@@ -73,7 +78,7 @@ export function createAdminRouter(authorize: (roles?: ("admin" | "staff")[]) => 
       });
     } catch (error) {
       if (error instanceof Error && error.message === "ROOM_NOT_FOUND") { res.status(404).json({ error: "Room not found." }); return; }
-      if (error instanceof Error && error.message === "INVENTORY_ALLOCATED") { res.status(409).json({ error: "This room has allocated inventory. Keep its inventory count unchanged; reconcile allocations before changing capacity." }); return; }
+      if (error instanceof Error && error.message === "INVENTORY_ALLOCATED") { res.status(409).json({ error: "Capacity cannot be reduced below the rooms already reserved on a night. Choose a higher room count or cancel those reservations first." }); return; }
       throw error;
     } finally { await session.endSession(); }
     res.json({ message: "Room details saved." });
