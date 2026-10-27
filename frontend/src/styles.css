@@ -443,6 +443,30 @@ h2 em {
 
 .stay-card {
   background: var(--paper);
+  box-shadow: 0 3px 14px rgb(23 53 46 / 4%);
+  transition: transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms ease;
+}
+
+.stay-card:focus-within {
+  transform: translateY(-8px);
+  box-shadow: 0 18px 36px -14px rgb(23 53 46 / 22%),
+    0 -6px 22px -12px rgb(23 53 46 / 12%);
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .stay-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 18px 36px -14px rgb(23 53 46 / 22%),
+      0 -6px 22px -12px rgb(23 53 46 / 12%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stay-card:hover,
+  .stay-card:focus-within {
+    transform: none;
+  }
 }
 
 .stay-image {
